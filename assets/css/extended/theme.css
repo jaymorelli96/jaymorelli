@@ -1,0 +1,22 @@
+.dark {
+    --theme: #2E3440;
+    --entry: #2E3440;
+		--primary: #ECEFF4;
+    --secondary: #81A1C1;
+    --tertiary: #5E81AC;
+		--content: #ECEFF4;
+    --hljs-bg: rgb(46, 46, 51);
+    --code-bg: rgb(55, 56, 62);
+    --border: #5E81AC;
+
+		--snow-storm-2: #E5E9F0;
+		--nord-primary: #88C0D0;
+		--aurora-red: #BF616A;
+		--aurora-orange: #D09770;;
+		--aurora-yellow: #EBCB8B;
+		--aurora-green: #A3BE8C;
+		--aurora-purple: #B48EAD;
+
+		--radius: 0px;
+
+}

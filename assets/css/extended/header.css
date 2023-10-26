@@ -1,0 +1,14 @@
+#menu .active {
+	border-bottom: 3px solid var(--secondary);
+	color: var(--secondary)
+}
+
+#menu span {
+	transition: 0.3s;
+}
+
+#menu span:hover {
+	color: var(--secondary)
+}
+
+

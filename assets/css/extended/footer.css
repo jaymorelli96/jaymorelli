@@ -1,0 +1,19 @@
+.footer {
+	color: var(--snow-storm-2);
+}
+
+.love > .fa-heart {
+	  color: var(--aurora-red);
+    animation: pound .35s infinite alternate;
+		margin-left: 1px;
+}
+
+@keyframes pound {
+	from {
+		transform: scale(1.1);
+	}
+
+	to {
+		transform: scale(1.2);
+	}
+}

@@ -1,0 +1,8 @@
+.main:has(.page-single){
+	max-width: calc(var(--nav-width) + var(--gap) * 2);
+	background-color: rgba(36, 41, 51);
+	padding: 30px 100px;
+	margin-top: var(--gap);
+	box-shadow: 10px 10px 0px 0px var(--secondary);
+	border: 1px solid var(--secondary)
+}

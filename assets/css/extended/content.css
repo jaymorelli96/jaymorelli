@@ -1,0 +1,27 @@
+.post-content h1 {
+    color: var(--aurora-yellow);
+}
+
+.post-content h2 {
+    color: var(--aurora-orange);
+}
+
+.post-content h3 {
+    color: var(--aurora-green);
+}
+
+.post-content h4,
+.post-content h5,
+.post-content h6 { 
+    color: var(--aurora-purple);
+}
+
+
+.post-title {
+	color: rgb(216, 222, 233);
+	color: var(--secondary);
+}
+
+.single-special {
+	color: red;
+}
