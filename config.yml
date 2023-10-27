@@ -17,17 +17,17 @@ params:
 menu:
   main:
     - identifier: now
-      name: Now
+      name: /now
       title: Now
       url: /now/
       weight: 1
     - identifier: about
-      name: About
+      name: /about
       title: About
       url: /about/
       weight: 10
     - identifier: blog
-      name: Blog
+      name: /blog
       title: Blog
       url: /posts/
       weight: 20

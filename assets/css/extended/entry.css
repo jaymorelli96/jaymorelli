@@ -13,6 +13,4 @@
 .post-entry:hover {
 	background: var(--entry);
 	box-shadow: 10px 10px 0px 0px var(--secondary);
-
-	background-clip: content-box;
 }

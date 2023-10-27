@@ -1,8 +1,17 @@
 .main:has(.page-single){
+	min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
 	max-width: calc(var(--nav-width) + var(--gap) * 2);
 	background-color: rgba(36, 41, 51);
 	padding: 30px 100px;
 	margin-top: var(--gap);
 	box-shadow: 10px 10px 0px 0px var(--secondary);
-	border: 1px solid var(--secondary)
+	border: 1px solid var(--secondary);
+	margin-bottom: var(--gap);
+}
+
+
+body {
+	background-image: url("/liquid-cheese.png") !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
 }
