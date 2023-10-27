@@ -1,0 +1,9 @@
+<ul id="menu">
+	{{ range $taxonomy, $val := site.Taxonomies }}
+	<li>
+		<a href="/{{ $taxonomy }}">
+			{{ $taxonomy }}
+		</a>
+	</li>
+	{{ end }}
+</ul>

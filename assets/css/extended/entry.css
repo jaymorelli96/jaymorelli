@@ -1,3 +1,4 @@
+
 .entry-content {
 	color: var(--snow-storm-2);
 }
@@ -13,4 +14,10 @@
 .post-entry:hover {
 	background: var(--entry);
 	box-shadow: 10px 10px 0px 0px var(--secondary);
+}
+
+
+article:first-of-type:has(.entry-content) {
+	padding: 100px 50px;
+	border: 10px solid var(--nord-primary)
 }

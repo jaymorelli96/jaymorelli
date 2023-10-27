@@ -11,7 +11,7 @@
 
 
 body {
-	background-image: url("/liquid-cheese.png") !important;
+	background-image: var(--background) !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
 }

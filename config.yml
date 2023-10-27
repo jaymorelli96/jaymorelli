@@ -29,10 +29,10 @@ menu:
     - identifier: blog
       name: /blog
       title: Blog
-      url: /posts/
+      url: /blog/
       weight: 20
 permalinks:
   page:
-    posts: /posts/:day/:month/:year/:slug/
+    posts: /blog/:day/:month/:year/:slug/
   section:
-    posts: /posts/
+    posts: /blog/

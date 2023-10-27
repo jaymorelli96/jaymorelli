@@ -2,6 +2,10 @@
 title: 'Second Test'
 date: 2023-10-24T16:11:23+01:00
 type: post
+tags:
+- Go
+categories:
+- Development
 ---
 
 # Second post!

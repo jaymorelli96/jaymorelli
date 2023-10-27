@@ -2,6 +2,9 @@
 title: 'First Test'
 date: 2023-10-23T16:55:43+01:00
 type: post
+tags:
+- go
+- vim
 ---
 
 # This is my first post
