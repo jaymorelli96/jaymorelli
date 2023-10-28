@@ -1,0 +1,63 @@
+baseURL: 'https://example.org/'
+languageCode: en-us
+title: Jay Morelli
+theme: PaperMod
+
+params:
+  profileMode:
+    enabled: true
+    title: " " # optional default will be site title
+  socialIcons: 
+    - name: github
+      url: "https://github.com"
+    - name: linkedin
+      url: "https://linkedin.com"
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowShareButtons: true
+  ShowToc: false
+  ShowPostNavLinks: true
+
+menu:
+  main:
+    - identifier: now
+      name: /now
+      title: Now
+      url: /now/
+      weight: 1
+    - identifier: about
+      name: /about
+      title: About
+      url: /about/
+      weight: 10
+    - identifier: blog
+      name: /blog
+      title: Blog
+      url: /blog/
+      weight: 20
+    - identifier: uses
+      name: /uses
+      title: Uses
+      url: /uses/
+      weight: 30
+permalinks:
+  page:
+    posts: /blog/:day/:month/:year/:slug/
+  section:
+    posts: /blog/
+
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    noHl: false
+    style: nord
+    tabWidth: 4

@@ -17,3 +17,20 @@
 		transform: scale(1.2);
 	}
 }
+
+
+.social-icons {
+	text-align: center;
+}
+
+.social-icons a {
+	border: 0px;
+}
+
+.social-icons a:hover {
+	border: 0px;
+}
+
+.social-icons a svg {
+	color: var(--secondary);
+}

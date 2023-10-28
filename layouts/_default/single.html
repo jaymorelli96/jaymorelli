@@ -1,11 +1,7 @@
 
 {{- define "main" }}
 
-{{ with .Params.type }}
-<article class="post-single">
-{{ else }}
 <article class="post-single page-single">
-{{ end }}
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title">
@@ -40,6 +36,7 @@
   </div>
   {{- end }}
 
+  {{- if not (.Param "hideFooter") }}
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
@@ -54,6 +51,7 @@
     {{- partial "share_icons.html" . -}}
     {{- end }}
   </footer>
+	{{- end }}
 
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}

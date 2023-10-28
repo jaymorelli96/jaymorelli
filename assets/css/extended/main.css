@@ -15,3 +15,58 @@ body {
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
 }
+
+.main {
+	min-height: calc(100vh - var(--header-height) - (var(--footer-height) * 2));
+}
+
+
+.main .profile {
+    align-items: center;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 5));
+    text-align: center;
+}
+
+a[href*="/tags/"] {
+	color: var(--aurora-yellow);
+	font-weight: bold;
+}
+
+.highlight-word {
+	color: var(--nord-primary);
+	font-weight: bold;
+}
+
+
+.landing-contact {
+ text-align: left;
+}
+
+.quote-section {
+	margin-top: 50px;
+}
+
+.quote-section .description {
+	font-style: italic;
+	color: var(--snow-storm-1);
+	text-align: right;
+	font-size: 14px;
+}
+
+.quote-section-inner {
+	background: var(--theme);
+	padding: 20px;
+	border: 1px solid var(--secondary);
+}
+
+.quote-section-inner span {
+	display: block;
+}
+
+.quote-section-inner .author {
+	font-style: italic;
+}
+
+.link:hover {
+	cursor: pointer
+}

@@ -1,70 +1,94 @@
 <div class="profile">
-    {{- with site.Params.profileMode }}
-    <div class="profile_inner">
-        {{- if .imageUrl -}}
-        {{- $img := "" }}
-        {{- if not (urls.Parse .imageUrl).IsAbs }}
-            {{- $img = resources.Get .imageUrl }}
-        {{- end }}
-        {{- if $img }}
-            {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-            {{- if hugo.IsExtended -}}
-                {{- $processableFormats = $processableFormats | append "webp" -}}
-            {{- end -}}
-            {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
-                    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
-                {{- else if .imageHeight }}
-                    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
-                {{ else if .imageWidth }}
-                    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
-                {{ else }}
-                    {{- $img = $img.Resize "150x150" }}
-                {{- end }}
-            {{- end }}
-            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-        {{- else }}
-        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-        {{- end }}
-        {{- end }}
+	{{- with site.Params.profileMode }}
+	<div class="profile_inner">
+		{{- if .imageUrl -}}
+		{{- $img := "" }}
+		{{- if not (urls.Parse .imageUrl).IsAbs }}
+		{{- $img = resources.Get .imageUrl }}
+		{{- end }}
+		{{- if $img }}
+		{{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+		{{- if hugo.IsExtended -}}
+		{{- $processableFormats = $processableFormats | append "webp" -}}
+		{{- end -}}
+		{{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+		{{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+		{{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+		{{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+		{{- else if .imageHeight }}
+		{{- $img = $img.Resize (printf "x%d" .imageHeight) }}
+		{{ else if .imageWidth }}
+		{{- $img = $img.Resize (printf "%dx" .imageWidth) }}
+		{{ else }}
+		{{- $img = $img.Resize "150x150" }}
+		{{- end }}
+		{{- end }}
+		<img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default " profile image" }}"
+			title="{{ .imageTitle }}" height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+		{{- else }}
+		<img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default " profile image" }}"
+			title="{{ .imageTitle }}" height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+		{{- end }}
+		{{- end }}
 
-				<div class="landing">
-				<h1> Hi, I'm Jay, a passionate software engineer </h1>
+		<div class="landing">
+			<h1> Hi, I'm Jay, a passionate software engineer </h1>
 
-				<p>
-					This blog is a manifestation of my love for what I do, my space where I explore, learn, and share knowledge about
-					*software craftmanship, Go, Vim, Linux, open-source software, and everything in between*.
-				</p>
+			<p>
+				This blog is a manifestation of my love for what I do. It is my space where I explore, learn, and share
+				knowledge about
+				<span class="highlight-word">Go</span>,
+				<span class="highlight-word">Vim</span>,
+				<span class="highlight-word">Linux</span>,
+				<span class="highlight-word">software craftmanship</span>,
+				<span class="highlight-word">open-source software</span>, and
+				<span class="highlight-word">everything in between</span>.
+			</p>
 
-				<p>
-					Drop me an email at *jcrmorelli@gmail.com*, or get in contact using any of the other social links below.
-				</p>
-				</div>
+			<p>
+				For more information about what I am focused on at this point in my life, check <a class="link"
+					href="/now">/now</a>.
+			</p>
+			<p>
+				If you are interested about my background and want to know more about me, then <a class="link"
+					href="/about">/about</a> is what you are looking for.
+			</p>
+		</div>
 
-        {{- partial "social_icons.html" site.Params.socialIcons -}}
+		<div class="quote-section">
+			<div class="quote-section-inner">
+				<span class="quote">"Design is the art of arranging code to work today, and be changeable forever."</span>
+				<span class="author">— Sandi Metz</span>
+			</div>
+			<p class="description">quote of the day</p>
+		</div>
 
-        {{- with .buttons }}
-        <div class="buttons">
-            {{- range . }}
-            <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
-                <span class="button-inner">
-                    {{ .name }}
-                    {{- if (findRE "://" .url) }}&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                    {{- end }}
-                </span>
-            </a>
-            {{- end }}
-        </div>
-        {{- end }}
-    </div>
-    {{- end}}
+		<!-- <div class="landing-contact"> -->
+		<!-- <p> -->
+		<!-- Drop me an email at <a class="link" href="mailto:jcrmorelli@gmail.com">jcrmorelli@gmail.com</a> or get in contact using any of the other social links below. -->
+		<!-- </p> -->
+		<!-- </div> -->
+		<!-- {{- partial "social_icons.html" site.Params.socialIcons -}} -->
+
+		{{- with .buttons }}
+		<div class="buttons">
+			{{- range . }}
+			<a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
+				<span class="button-inner">
+					{{ .name }}
+					{{- if (findRE "://" .url) }}&nbsp;
+					<svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
+						<path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+						<path d="M15 3h6v6"></path>
+						<path d="M10 14L21 3"></path>
+					</svg>
+					{{- end }}
+				</span>
+			</a>
+			{{- end }}
+		</div>
+		{{- end }}
+	</div>
+	{{- end}}
 </div>

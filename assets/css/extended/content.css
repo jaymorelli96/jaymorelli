@@ -1,27 +1,63 @@
-.post-content h1 {
-    color: var(--aurora-yellow);
-}
-
-.post-content h2 {
-    color: var(--aurora-orange);
-}
-
-.post-content h3 {
-    color: var(--aurora-green);
-}
-
+.post-content h1,
+.post-content h2,
+.post-content h3,
 .post-content h4,
-.post-content h5,
-.post-content h6 { 
-    color: var(--aurora-purple);
-}
-
-
-.post-title {
-	color: rgb(216, 222, 233);
+.post-content h5 {
 	color: var(--secondary);
 }
 
-.single-special {
-	color: red;
+ul li::marker {
+	color: var(--secondary)
+}
+
+.post-title {
+	color: var(--nord-primary);
+}
+
+.post-meta > i {
+	margin-left: 10px;
+	margin-right: 3px;
+	color: var(--aurora-yellow);
+	align-self: center;
+}
+
+.post-meta > a:hover,
+.link:hover {
+	color: var(--theme);
+	background: var(--aurora-yellow);
+}
+
+
+.post-meta > a {
+	padding: 0px 5px;
+}
+
+.post-footer .share-buttons {
+	background: none;
+	border: none;
+}
+
+.post-footer .share-buttons a {
+	color: var(--secondary);
+	transition: .3s
+}
+
+.post-footer .share-buttons a:hover {
+	color: var(--nord-primary);
+}
+
+.post-footer .post-tags {
+	visibility: hidden;
+}
+
+.page-footer .pagination a {
+	border-radius: var(--radius);
+	background: var(--theme);
+	color: var(--primary);
+	border: 1px solid var(--secondary);
+	transition: .3s;
+}
+.page-footer .pagination a:hover {
+	box-shadow: 3px 3px 0px 0px var(--secondary);
+	transform: translate(-0.25rem, -0.1rem);
 }

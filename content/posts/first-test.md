@@ -1,5 +1,5 @@
 ---
-title: 'First Test'
+title: I love Go
 date: 2023-10-23T16:55:43+01:00
 type: post
 tags:
@@ -29,3 +29,14 @@ Testing h
 
 ##### H5 will look like this
 Testing h
+
+## My website
+Please go visit [my website](http://localhost:1313) for more information
+
+
+```go
+func calc(x, y int) int {
+    z := x + y
+    return z
+}
+```

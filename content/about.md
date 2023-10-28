@@ -1,5 +1,8 @@
 ---
 title: /about
+hideMeta: true
+hideFooter: false
+disableShare: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare dignissim tellus id facilisis. Curabitur vel semper neque. Duis tristique dui sit amet orci egestas tincidunt. Suspendisse suscipit, turpis malesuada scelerisque aliquet, ex purus pellentesque est, id fermentum sem massa quis ligula. Mauris pretium ultrices lorem, sit amet consequat odio dignissim vitae. Morbi vitae libero vel leo lacinia porta. Suspendisse dignissim varius dui, eget semper ex sodales eu. Integer vestibulum posuere mattis. Quisque quis hendrerit leo. Praesent eget posuere orci. Duis convallis neque augue, dictum sodales sem blandit vestibulum. Mauris congue metus sapien, tincidunt scelerisque nisi vestibulum a.

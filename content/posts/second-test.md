@@ -3,12 +3,12 @@ title: 'Second Test'
 date: 2023-10-24T16:11:23+01:00
 type: post
 tags:
-- Go
+- go
 categories:
 - Development
 ---
 
-# Second post!
+# Introduction
 Pretty cool! I will be testing colorscheme here
 
 There are a few very important things to notice:
