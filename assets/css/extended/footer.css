@@ -1,11 +1,17 @@
-.footer {
-	color: var(--snow-storm-2);
-}
-
 .love > .fa-heart {
 	  color: var(--aurora-red);
     animation: pound .35s infinite alternate;
 		margin-left: 1px;
+}
+
+.footer {
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: auto;
+    padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
+    text-align: center;
+    line-height: 24px;
+		color: var(--snow-storm-2);
+    font-size: 12px;
 }
 
 @keyframes pound {
@@ -17,7 +23,6 @@
 		transform: scale(1.2);
 	}
 }
-
 
 .social-icons {
 	text-align: center;
@@ -34,3 +39,23 @@
 .social-icons a svg {
 	color: var(--secondary);
 }
+
+.footer a:hover {
+    border-bottom: 1px solid var(--base-elements);
+}
+
+/* page footer */
+
+.page-footer .pagination a {
+	border-radius: var(--radius);
+	background: var(--theme);
+	color: var(--base-elements);
+	border: 1px solid var(--secondary);
+	transition: .3s;
+}
+.page-footer .pagination a:hover {
+	box-shadow: 3px 3px 0px 0px var(--secondary);
+	transform: translate(-0.25rem, -0.1rem);
+}
+
+

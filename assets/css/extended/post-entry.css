@@ -24,19 +24,7 @@
 
 
 .entry-footer > i {
-	color: var(--aurora-yellow);
+	color: var(--link-accent);
 	margin-left: 10px;
 	margin-right: 5px;
-}
-
-.post-content a,
-.link {
-	color: var(--aurora-yellow);
-	transition: 0.3s;
-}
-
-.post-content  a:hover,
-.link:hover {
-	color: var(--theme);
-	background: var(--aurora-yellow)
 }

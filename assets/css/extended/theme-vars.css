@@ -1,0 +1,79 @@
+:root {
+	/* background and area coloring -- base elements (plain text) */
+	--nord0: #2E3440; 
+	--nord6: #ECEFF4;
+	/* elevated ui (panels, modals ...) -- subtle ui text or state animations (button is hovered) */
+	--nord1: #3B4252; 
+	--nord4: #D8DEE9;
+	/* for both ambiances -> brighter/darker variant of nord1/nord4 */
+	--nord2: #434C5E; 
+	--nord5: #E5E9F0;
+	/* for both ambiances -> brighter/darker variant of nord2 */
+	--nord3: #4C566A; 
+
+	/* UI elements that should, next to primary accent color nord8, standout */
+	--nord7: #8FBCBB; 
+	/* accent color */
+	--nord8: #88C0D0; 
+	/* for secondary UI elements */
+	--nord9: #81A1C1; 
+	/* for tertiary UI elements */
+	--nord10: #5E81AC; 
+
+	/* errors */
+	--nord11: #BF616A; 
+	/* advanced or dangerous functionality */
+	--nord12: #D08770; 
+	/* warning states */
+	--nord13: #EBCB8B; 
+	/* sucess states */
+	--nord14: #A3BE8C; 
+	/* uncommon functionality */
+	--nord15: #B48EAD; 
+
+
+	--gap: 24px;
+	--content-gap: 20px;
+	--nav-width: 1024px;
+	--main-width: 720px;
+	--header-height: 60px;
+	--footer-height: 60px;
+	--radius: 0px;
+	--theme: #ECEFF4;
+	--entry: #ECEFF4;
+	--content: rgb(31, 31, 31);
+	--hljs-bg: rgb(28, 29, 33);
+	--code-bg: rgb(245, 245, 245);
+	--background: url("/liquid-cheese-white.png");
+	--primary: var(--nord-3);
+
+}
+
+.dark {
+	--base-elements: var(--nord6);
+
+	--theme: #2E3440;
+	--entry: #2E3440;
+	--secondary: #81A1C1;
+	--tertiary: #5E81AC;
+	--content: #ECEFF4;
+	--border: #5E81AC;
+
+	--link-accent: #EBCB8B;
+
+	--primary: green;
+	--nord-primary: red;
+	--link-accent: red;
+	--secondary: red;
+	--snow-storm-1: red;
+	--tertiary: red;
+	--snow-storm-1: red;
+	--snow-storm-2: red;
+	--aurora-red: red;
+	--aurora-orange: red;;
+	--aurora-yellow: red;
+	--aurora-green: red;
+	--aurora-purple: red;
+	--border: red;
+	--background: url("/liquid-cheese.png")
+}

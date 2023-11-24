@@ -6,31 +6,45 @@
 	color: var(--secondary);
 }
 
-ul li::marker {
-	color: var(--secondary)
-}
-
 .post-title {
 	color: var(--nord-primary);
+}
+
+ul li::marker {
+	color: var(--secondary)
 }
 
 .post-meta > i {
 	margin-left: 10px;
 	margin-right: 3px;
-	color: var(--aurora-yellow);
+	color: var(--link-accent);
 	align-self: center;
 }
 
 .post-meta > a:hover,
 .link:hover {
 	color: var(--theme);
-	background: var(--aurora-yellow);
+	background: var(--link-accent);
 }
 
 
 .post-meta > a {
 	padding: 0px 5px;
 }
+
+
+.post-content a,
+.link {
+	color: var(--link-accent);
+	transition: 0.3s;
+}
+
+.post-content  a:hover,
+.link:hover {
+	color: var(--theme);
+	background: var(--link-accent)
+}
+
 
 .post-footer .share-buttons {
 	background: none;
@@ -48,16 +62,4 @@ ul li::marker {
 
 .post-footer .post-tags {
 	visibility: hidden;
-}
-
-.page-footer .pagination a {
-	border-radius: var(--radius);
-	background: var(--theme);
-	color: var(--primary);
-	border: 1px solid var(--secondary);
-	transition: .3s;
-}
-.page-footer .pagination a:hover {
-	box-shadow: 3px 3px 0px 0px var(--secondary);
-	transform: translate(-0.25rem, -0.1rem);
 }
