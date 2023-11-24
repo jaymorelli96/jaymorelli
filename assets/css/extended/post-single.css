@@ -23,7 +23,7 @@ ul li::marker {
 
 .post-meta > a:hover,
 .link:hover {
-	color: var(--theme);
+	color: var(--background-color);
 	background: var(--link-accent);
 }
 
@@ -35,14 +35,18 @@ ul li::marker {
 
 .post-content a,
 .link {
-	color: var(--link-accent);
+	padding: 0px 5px;
+	font-weight: 600;
+	color: var(--base-elements-secondary);
 	transition: 0.3s;
+  box-shadow: inset 0 -8px 0 var(--link-accent);
 }
 
 .post-content  a:hover,
 .link:hover {
-	color: var(--theme);
-	background: var(--link-accent)
+	color: var(--base-elements);
+  box-shadow: inset 0 -24px 0 var(--link-accent);
+	background: none;
 }
 
 

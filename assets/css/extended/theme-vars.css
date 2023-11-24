@@ -39,41 +39,47 @@
 	--header-height: 60px;
 	--footer-height: 60px;
 	--radius: 0px;
-	--theme: #ECEFF4;
-	--entry: #ECEFF4;
-	--content: rgb(31, 31, 31);
+
 	--hljs-bg: rgb(28, 29, 33);
 	--code-bg: rgb(245, 245, 245);
-	--background: url("/liquid-cheese-white.png");
-	--primary: var(--nord-3);
 
+	--base-elements: var(--nord2);
+	--base-elements-secondary: var(--nord3);
+	--background-color: var(--nord5);
+	--entry: var(--nord5);
+	--border: var(--nord10);
+	--link-accent: var(--nord8);
+	--nord-primary: var(--nord2);
+	--secondary: var(--nord10);
+	--tertiary: var(--nord10);
+	--content: var(--base-elements);
+	--background: url("/liquid-cheese-white.png");
+
+	--theme: red;
+	--primary: green;
 }
 
 .dark {
 	--base-elements: var(--nord6);
-
-	--theme: #2E3440;
-	--entry: #2E3440;
-	--secondary: #81A1C1;
-	--tertiary: #5E81AC;
-	--content: #ECEFF4;
-	--border: #5E81AC;
-
-	--link-accent: #EBCB8B;
+	--base-elements-secondary: var(--nord4);
+	--background-color: var(--nord0);
+	--entry: var(--nord0);
+	--border: var(--nord8);
+	--nord-primary: var(--nord8);
+	--link-accent: var(--nord8);
+	--secondary: var(--nord9);
+	--tertiary: var(--nord10);
+	--content: var(--base-elements);
+	--background: url("/liquid-cheese.png");
 
 	--primary: green;
-	--nord-primary: red;
-	--link-accent: red;
-	--secondary: red;
-	--snow-storm-1: red;
-	--tertiary: red;
-	--snow-storm-1: red;
-	--snow-storm-2: red;
-	--aurora-red: red;
-	--aurora-orange: red;;
-	--aurora-yellow: red;
-	--aurora-green: red;
-	--aurora-purple: red;
-	--border: red;
-	--background: url("/liquid-cheese.png")
+}
+
+
+.list {
+    background: var(--code-bg);
+}
+
+.dark.list {
+    background: var(--background-color);
 }

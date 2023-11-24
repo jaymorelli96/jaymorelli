@@ -29,13 +29,13 @@ a[href*="/tags/"] {
 
 .quote-section .description {
 	font-style: italic;
-	color: var(--snow-storm-1);
+	color: var(--base-elements-secondary);
 	text-align: right;
 	font-size: 14px;
 }
 
 .quote-section-inner {
-	background: var(--theme);
+	background: var(--background-color);
 	padding: 20px;
 	border: 1px solid var(--secondary);
 }

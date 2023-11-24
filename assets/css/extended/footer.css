@@ -1,5 +1,5 @@
 .love > .fa-heart {
-	  color: var(--aurora-red);
+	  color: var(--nord11);
     animation: pound .35s infinite alternate;
 		margin-left: 1px;
 }
@@ -10,8 +10,17 @@
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     text-align: center;
     line-height: 24px;
-		color: var(--snow-storm-2);
+		color: var(--base-elements);
     font-size: 12px;
+}
+
+.top-link {
+	color: var(--base-elements);
+}
+
+.footer a:hover,
+.top-link:hover {
+    color: var(--base-elements-secondary);
 }
 
 @keyframes pound {
@@ -38,17 +47,18 @@
 
 .social-icons a svg {
 	color: var(--secondary);
+	transition: 0.3s;
 }
 
-.footer a:hover {
-    border-bottom: 1px solid var(--base-elements);
+.footer a svg:hover {
+    color: var(--link-accent);
 }
 
 /* page footer */
 
 .page-footer .pagination a {
 	border-radius: var(--radius);
-	background: var(--theme);
+	background: var(--background-color);
 	color: var(--base-elements);
 	border: 1px solid var(--secondary);
 	transition: .3s;

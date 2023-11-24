@@ -1,11 +1,11 @@
 .first-entry {
 	padding: 100px 50px;
-	border: 10px solid var(--nord-primary);
-	background: var(--theme);
+	border: 10px solid var(--border);
+	background: var(--background-color);
 }
 
 .entry-content {
-	color: var(--snow-storm-2);
+	color: var(--base-elements-secondary);
 }
 
 .entry-header, h2 {

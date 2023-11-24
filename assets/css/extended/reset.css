@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--primary);
+	color: var(--base-elements);
 }
 
 body {
@@ -28,6 +28,7 @@ body {
 	font-size: 18px;
 	line-height: 1.6;
 	word-break: break-word;
+  background: var(--background-color);
 	background-image: var(--background) !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
@@ -112,7 +113,7 @@ input[type=submit] {
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-	box-shadow: 0 0 0 50px var(--theme) inset;
+	box-shadow: 0 0 0 50px var(--background-color) inset;
 }
 
 img {

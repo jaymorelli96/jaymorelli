@@ -1,0 +1,12 @@
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border: 5px solid var(--background-color);
+    border-radius: var(--radius);
+}
+
+::-webkit-scrollbar:not(.highlighttable, .highlight table, .gist .highlight) {
+    background: var(--background-color);
+}
+
+
+
