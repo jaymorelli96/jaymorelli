@@ -1,3 +1,13 @@
+::-webkit-scrollbar-track {
+	background: var(--background);
+	background-size: cover;
+}
+
+.list:not(.dark)::-webkit-scrollbar-track {
+	background: var(--background);
+	background-size: cover;
+}
+
 ::-webkit-scrollbar-thumb {
     background: var(--tertiary);
     border: 5px solid var(--background-color);
