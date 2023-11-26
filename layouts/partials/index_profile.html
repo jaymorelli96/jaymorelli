@@ -1,4 +1,5 @@
 <div class="profile">
+
 	{{- with site.Params.profileMode }}
 	<div class="profile_inner">
 		{{- if .imageUrl -}}
@@ -31,6 +32,7 @@
 		{{- end }}
 		{{- end }}
 
+
 		<div class="landing">
 			<h1> Hi, I'm Jay, a passionate software engineer </h1>
 
@@ -57,10 +59,21 @@
 
 		<div class="quote-section">
 			<div class="quote-section-inner">
-				<span class="quote">"Design is the art of arranging code to work today, and be changeable forever."</span>
-				<span class="author">— Sandi Metz</span>
+
+				{{ with $.Site.Data.quotes }}
+				{{ $keys := slice }}
+				{{ range $key, $value := . }}
+				{{ $keys = $keys | append $key }}
+				{{ end }}
+
+				{{ $randomKey := index (shuffle $keys) 0 }}
+				{{ $randomQuote := index . $randomKey }}
+
+				<!-- Display the randomly chosen quote and author -->
+				<span class="quote">{{ $randomQuote.quote }}</span>
+				<span class="author">— {{ $randomQuote.author }}</span>
+				{{ end }}
 			</div>
-			<p class="description">quote of the day</p>
 		</div>
 
 		<!-- <div class="landing-contact"> -->

@@ -15,12 +15,17 @@
 }
 
 .top-link {
-	color: var(--base-elements);
+	color: var(--nord6);
+	filter: drop-shadow(0 0 0 var(--nord-primary));
+}
+
+.top-link svg {
+filter: drop-shadow(0 0 0 var(--nord-primary));
 }
 
 .footer a:hover,
 .top-link:hover {
-    color: var(--base-elements-secondary);
+    color: var(--nord1);
 }
 
 @keyframes pound {
@@ -60,11 +65,12 @@
 	border-radius: var(--radius);
 	background: var(--background-color);
 	color: var(--base-elements);
-	border: 1px solid var(--secondary);
+	border: 1px solid var(--nord-primary);
 	transition: .3s;
 }
+
 .page-footer .pagination a:hover {
-	box-shadow: 3px 3px 0px 0px var(--secondary);
+	box-shadow: 3px 3px 0px 0px var(--nord-primary);
 	transform: translate(-0.25rem, -0.1rem);
 }
 

@@ -1,8 +1,14 @@
 .first-entry {
 	padding: 100px 50px;
-	border: 10px solid var(--border);
+	border: 10px solid var(--nord-primary);
 	background: var(--background-color);
+	transition: 0.3s;
 }
+
+.first-entry:hover {
+	box-shadow: inset 0px -50px 0px 0px var(--nord-primary);
+}
+
 
 .entry-content {
 	color: var(--base-elements-secondary);
@@ -14,11 +20,12 @@
 
 .post-entry {
 	transition: 0.1s;
+	border: 2px solid var(--nord-primary);
 }
 
 .post-entry:hover {
 	background: var(--entry);
-	box-shadow: 10px 10px 0px 0px var(--secondary);
+	box-shadow: 10px 10px 0px 0px var(--nord-primary);
 	transform: translate(-0.25rem, -0.1rem);
 }
 

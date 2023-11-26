@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Jay Morelli</title>
+    <link>https://example.org/blog/</link>
+    <description>Recent content in Posts on Jay Morelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Oct 2023 17:30:51 +0100</lastBuildDate><atom:link href="https://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tools</title>
+      <link>https://example.org/blog/27/10/2023/tools/</link>
+      <pubDate>Fri, 27 Oct 2023 17:30:51 +0100</pubDate>
+      
+      <guid>https://example.org/blog/27/10/2023/tools/</guid>
+      <description>This is my first post Pretty cool! I will be testing colorscheme here
+There are a few very important things to notice:
+List Code blocks and like this Bold and also italic This is also important to test very curious to see H2 will look like this Testing h
+H3 will look like this Testing h
+H4 will look like this Testing h
+H5 will look like this Testing h</description>
+    </item>
+    
+    <item>
+      <title>Second Test</title>
+      <link>https://example.org/blog/24/10/2023/second-test/</link>
+      <pubDate>Tue, 24 Oct 2023 16:11:23 +0100</pubDate>
+      
+      <guid>https://example.org/blog/24/10/2023/second-test/</guid>
+      <description>Introduction Pretty cool! I will be testing colorscheme here
+There are a few very important things to notice:
+List Code blocks and like this Bold and also italic This is also important to test very curious to see Why I love HUGO! Testing h</description>
+    </item>
+    
+    <item>
+      <title>Handling Errors</title>
+      <link>https://example.org/blog/23/10/2023/handling-errors/</link>
+      <pubDate>Mon, 23 Oct 2023 16:55:43 +0100</pubDate>
+      
+      <guid>https://example.org/blog/23/10/2023/handling-errors/</guid>
+      <description>testing</description>
+    </item>
+    
+    <item>
+      <title>I love Go</title>
+      <link>https://example.org/blog/23/10/2023/i-love-go/</link>
+      <pubDate>Mon, 23 Oct 2023 16:55:43 +0100</pubDate>
+      
+      <guid>https://example.org/blog/23/10/2023/i-love-go/</guid>
+      <description>This is my first post Pretty cool! I will be testing colorscheme here
+There are a few very important things to notice:
+List Code blocks and like this Bold and also italic This is also important to test very curious to see H2 will look like this Testing h
+H3 will look like this Testing h
+H4 will look like this Testing h
+H5 will look like this Testing h</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -15,8 +15,10 @@ params:
   ShowReadingTime: true
   ShowCodeCopyButtons: true
   ShowShareButtons: true
+  ShareButtons: ["linkedin", "twitter", "whatsapp", "facebook"] # To customize which share buttons to be enabled on page
   ShowToc: false
   ShowPostNavLinks: true
+  disableSpecial1stPost: true
 
 menu:
   main:
