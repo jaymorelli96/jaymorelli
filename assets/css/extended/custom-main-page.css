@@ -7,11 +7,9 @@
 	border: 1px solid var(--border);
 	margin-bottom: var(--gap);
 	transition: .3s;
-}
-
-.main:has(.page-single):hover {
 	box-shadow: 10px 10px 0px 0px var(--nord-primary);
 }
+
 
 a[href*="/tags/"] {
 	color: var(--link-accent);
@@ -28,7 +26,7 @@ a[href*="/tags/"] {
 }
 
 .quote-section {
-	margin-top: 50px;
+	margin-top: 90px;
 }
 
 .quote-section .description {
@@ -41,15 +39,21 @@ a[href*="/tags/"] {
 .quote-section-inner {
 	background: var(--background-color);
 	padding: 20px;
-	border: 1px solid var(--secondary);
+	border: 1px solid var(--nord-primary);
+	box-shadow: 10px 10px 0px 0px var(--nord-primary);
 }
 
-.quote-section-inner span {
-	display: block;
-}
 
 .quote-section-inner .author {
 	font-style: italic;
+	color: var(--base-elements-secondary)
+}
+
+.quote-section-inner > .quote {
+	font-style: italic;
+	text-align: left;
+	color: var(--base-elements-secondary);
+	display: block;
 }
 
 .link:hover {

@@ -25,7 +25,12 @@ filter: drop-shadow(0 0 0 var(--nord-primary));
 
 .footer a:hover,
 .top-link:hover {
-    color: var(--nord1);
+    color: var(--secondary);
+}
+
+
+.footer a:hover {
+    border-bottom: 1px solid var(--secondary);
 }
 
 @keyframes pound {
