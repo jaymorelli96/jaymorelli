@@ -7,9 +7,6 @@
 
 {{- if not .IsHome | and .Title }}
 
-{{- if eq .Type "blog" }}
-<!-- {{- partial "list_buttons.html" . }} -->
-{{- else }}
 <header class="page-header">
 	{{- partial "breadcrumbs.html" . }}
 	<h1>
@@ -33,7 +30,6 @@
 	</div>
 	{{- end }}
 </header>
-{{- end }}
 {{- end }}
 
 {{- if .Content }}

@@ -10,7 +10,6 @@
 	box-shadow: 10px 10px 0px 0px var(--nord-primary);
 }
 
-
 a[href*="/tags/"] {
 	color: var(--link-accent);
 	font-weight: bold;
