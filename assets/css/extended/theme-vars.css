@@ -65,8 +65,8 @@
 	--base-elements-secondary: var(--nord4);
 	--background-color: var(--nord0);
 	--entry: var(--nord0);
-	--border: var(--nord6);
-	--nord-primary: var(--nord6);
+	--border: var(--nord8);
+	--nord-primary: var(--nord8);
 	--link-accent: var(--nord8);
 	--secondary: var(--nord9);
 	--tertiary: var(--nord10);

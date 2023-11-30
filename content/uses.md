@@ -3,6 +3,7 @@ title: uses
 hideMeta: true
 hideFooter: false
 disableShare: true
+showSlash: true
 ---
 #### Theme
 - **Nord:** I love the color palette and the monochrome aspect. I can't imagine myself returning to a non-monochrome theme; the variety of colors tends to be distracting when programming.

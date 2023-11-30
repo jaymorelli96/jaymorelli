@@ -2,6 +2,7 @@
 title: now
 hideMeta: true
 hideFooter: false
+showSlash: true
 disableShare: true
 ---
 This page is inspired by Derek Sivers's post [_The /now page movement_](https://sivers.org/nowff) and [the Now Movement](https://nownownow.com/about). The purpose of this page is to share what I'm currently focussed on, and will be updated as things change
