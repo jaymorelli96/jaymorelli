@@ -1,5 +1,5 @@
 ---
-title: /about
+title: about
 hideMeta: true
 hideFooter: false
 disableShare: true

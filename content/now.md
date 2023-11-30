@@ -1,5 +1,5 @@
 ---
-title: /now
+title: now
 hideMeta: true
 hideFooter: false
 disableShare: true
@@ -17,9 +17,15 @@ This page is inspired by Derek Sivers's post [_The /now page movement_](https://
 ##### Reading
 - The Unicorn Project: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data by Gene Kim
 - Learning Go, 2nd Edition by Jon Bodner 
-##### Listening
-- The Go Time podcast
-- Cup o' Go podcast: They even created a special mug after me (https://www.store.cupogo.dev/product-page/cup-o-go-coffee-mug-logo-only-no-text-11oz)
+##### Listening 
+- The Go Time 
+- Cup o' Go 
+    - Fun fact: Shay created a [minimalist version of the coffee mug](https://www.store.cupogo.dev/product-page/cup-o-go-coffee-mug-logo-only-no-text-11oz) after my request 
+- Grafana's Big Tent
+- Lex Fridman Podcast
+- Ardan Labs Podcast
+- Ponto Dev Podcast
+- Backend Banter
 
 #### What are my interests?
 ##### Work
@@ -28,9 +34,9 @@ This page is inspired by Derek Sivers's post [_The /now page movement_](https://
 - Software Craftsmanship
 - Linux
 - Open Source
-- Automation
 - DevOps
-- CNCF
+- CNCF (Cloud Native Computing Foundation)
+- Automation
 - Blogging
 ##### Personal
 - Family: I love spending time with my fiancee and our little Schnauzer

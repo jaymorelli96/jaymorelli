@@ -32,15 +32,15 @@ menu:
       title: About
       url: /about/
       weight: 10
-    - identifier: blog
-      name: /blog
-      title: Blog
-      url: /blog/
-      weight: 20
     - identifier: uses
       name: /uses
       title: Uses
       url: /uses/
+      weight: 20
+    - identifier: blog
+      name: /blog
+      title: Blog
+      url: /blog/
       weight: 30
 permalinks:
   page:

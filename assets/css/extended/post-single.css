@@ -11,6 +11,13 @@
 
 .post-title {
 	color: var(--base-elements);
+	font-style: italic;
+	letter-spacing: -4px;
+	font-family: 'JetBrains Mono';
+}
+
+.post-title span {
+	color: var(--secondary)
 }
 
 ul li::marker {
