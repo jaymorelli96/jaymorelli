@@ -4,21 +4,26 @@ hideMeta: true
 hideFooter: false
 disableShare: true
 ---
-#### Tools
-
-- I'm engaged and our wedding will be in 2025!
-- I'm currently at Siemens working on the Industrial Edge
-- I'm actively blogging about technical and personal things
-- I'm looking to surf more often
+#### Theme
+- **Nord:** I love the color palette and the monochrome aspect. I can't imagine myself returning to a non-monochrome theme; the variety of colors tends to be distracting when programming.
+#### Software
+##### Operating System
+- **OpenSUSE Tumbleweed**
+##### Terminal
+- **NeoVim**
+- **zsh** with plugins:
+  - z 
+  - vim motion 
+  - git 
+  - zsh-highlighting 
+- **lsd**
+- **k9s**
+- **bat**
+##### Productivity
+- **Obsidian**: Supports vim motions
+- **Vimium**: Browser extenstion that provides keyboard shorcuts in the spirit of Vim
 
 #### Hardware
-
-- Go — My friends/colleagues call me a Go advocate because I am constantly talking about it.
-- Vim — I also can't stop talking about Vim. I currently have converted 3 people to Vim (including my fiancee).
-- Software Craftmanship
-- Linux
-- Open Source
-- Automation
-- DevOps
-- CNCF
-- Blogging
+- **Keychron K9 Pro 60%:** I absolutely love the support for QMK/VIA. I aim to align my keyboard as closely as possible with vim motions whenever feasible.
+- **Logitech MX Master 3**
+- **Single Monitor:** When programming, I prefer minimal distraction. Knowing keyboard shortcuts makes additional monitors unnecessary.
