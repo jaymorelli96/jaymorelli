@@ -32,7 +32,7 @@ body {
 	font-size: 18px;
 	line-height: 1.6;
 	word-break: break-word;
-  background: var(--background-color) !important;
+  background: linear-gradient(var(--background-color-top), var(--background-color-bottom))!important;;
 }
 
 

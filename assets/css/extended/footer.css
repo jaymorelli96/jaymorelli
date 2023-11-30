@@ -28,7 +28,7 @@ filter: drop-shadow(0 0 0 var(--nord-primary));
 
 .footer a:hover,
 .top-link:hover {
-    color: var(--secondary);
+    color: var(--base-elements);
 }
 
 

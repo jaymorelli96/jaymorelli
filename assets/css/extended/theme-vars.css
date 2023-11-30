@@ -46,6 +46,8 @@
 	--base-elements: var(--nord2);
 	--base-elements-secondary: var(--nord3);
 	--background-color: var(--nord5);
+	--background-color-bottom: var(--nord4);
+	--background-color-top: var(--nord5);
 	--entry: var(--nord5);
 	--border: var(--nord2);
 	--link-accent: var(--nord8);
@@ -64,6 +66,8 @@
 	--base-elements: var(--nord6);
 	--base-elements-secondary: var(--nord4);
 	--background-color: var(--nord0);
+	--background-color-bottom: var(--nord0);
+	--background-color-top: var(--nord1);
 	--entry: var(--nord0);
 	--border: var(--nord8);
 	--nord-primary: var(--nord8);

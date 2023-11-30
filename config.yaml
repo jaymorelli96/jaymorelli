@@ -9,12 +9,12 @@ params:
     title: " " # optional default will be site title
   socialIcons: 
     - name: github
-      url: "https://github.com"
+      url: "https://github.com/jaymorelli96"
     - name: linkedin
-      url: "https://linkedin.com"
+      url: "https://www.linkedin.com/in/jean-morelli-7b0806198/"
   ShowReadingTime: true
   ShowCodeCopyButtons: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShareButtons: ["linkedin", "twitter", "whatsapp", "facebook"] # To customize which share buttons to be enabled on page
   ShowToc: false
   ShowPostNavLinks: true
