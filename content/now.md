@@ -6,23 +6,28 @@ disableShare: true
 ---
 This page is inspired by Derek Sivers's post [_The /now page movement_](https://sivers.org/nowff) and [the Now Movement](https://nownownow.com/about). The purpose of this page is to share what I'm currently focussed on, and will be updated as things change.
 
-This is both for longer-lived interests and shorter-lived "what I'm currently doing".
-
 #### What am I up to right now?
-
-- I'm engaged and our wedding will be in 2025!
-- I'm currently at Siemens working on the Industrial Edge
-- I'm actively blogging about technical and personal things
-- I'm looking to surf more often
+- Engaged, preparing for our wedding in 2025!
+- Currently working at Siemens in the Industrial Edge.
+- Actively blogging about technical and personal topics.
+- Looking forward to surfing more often.
 
 #### What are my interests?
+##### Work
+- Go: My colleagues call me a Go advocate.
+- Vim: Successfully convinced 3 friends to use Vim, including my fiancee.
+- Software Craftsmanship.
+- Linux.
+- Open Source.
+- Automation.
+- DevOps.
+- CNCF.
+- Blogging.
+##### Personal
+- Family, I love spending time with my fiancee and our little Schnauzer.
+- Surfing.
+- Board games.
+- Cooking and Mixology Enthusiast.
+- Formula 1.
 
-- Go — My friends/colleagues call me a Go advocate because I am constantly talking about it.
-- Vim — I also can't stop talking about Vim. I currently have converted 3 people to Vim (including my fiancee).
-- Software Craftmanship
-- Linux
-- Open Source
-- Automation
-- DevOps
-- CNCF
-- Blogging
+

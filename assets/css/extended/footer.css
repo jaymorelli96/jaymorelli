@@ -5,13 +5,16 @@
 }
 
 .footer {
-    max-width: calc(var(--main-width) + var(--gap) * 2);
-    margin: auto;
+    /* max-width: calc(var(--main-width) + var(--gap) * 2); */
+    /* margin: auto; */
+	max-width: none;
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     text-align: center;
     line-height: 24px;
 		color: var(--base-elements);
     font-size: 12px;
+  background: url("/wave-bg.svg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .top-link {
@@ -56,7 +59,7 @@ filter: drop-shadow(0 0 0 var(--nord-primary));
 }
 
 .social-icons a svg {
-	color: var(--secondary);
+	color: var(--nord-primary);
 	transition: 0.3s;
 }
 

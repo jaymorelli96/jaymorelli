@@ -1,13 +1,16 @@
 .post-content h1,
 .post-content h2,
 .post-content h3,
-.post-content h4,
 .post-content h5 {
-	color: var(--base-elements-secondary);
+	color: var(--base-elements);
+}
+
+.post-content h4 {
+	color: var(--secondary);
 }
 
 .post-title {
-	color: var(--base-elements-secondary);
+	color: var(--base-elements);
 }
 
 ul li::marker {
@@ -37,9 +40,9 @@ ul li::marker {
 .link {
 	padding: 0px 5px;
 	font-weight: 600;
-	color: var(--base-elements-secondary);
+	color: var(--base-elements);
 	transition: 0.3s;
-  box-shadow: inset 0 -8px 0 var(--link-accent);
+  box-shadow: inset 0 -7px 0 var(--link-accent);
 }
 
 .post-content  a:hover,

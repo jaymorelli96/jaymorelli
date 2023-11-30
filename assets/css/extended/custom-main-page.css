@@ -26,6 +26,7 @@ a[href*="/tags/"] {
 
 .quote-section {
 	margin-top: 90px;
+	font-size: 90%;
 }
 
 .quote-section .description {
@@ -39,7 +40,7 @@ a[href*="/tags/"] {
 	background: var(--background-color);
 	padding: 20px;
 	border: 1px solid var(--nord-primary);
-	box-shadow: 10px 10px 0px 0px var(--nord-primary);
+	box-shadow: 5px 5px 0px 0px var(--nord-primary);
 }
 
 
