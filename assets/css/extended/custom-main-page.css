@@ -4,10 +4,10 @@
 	background-color: var(--background-color);
 	padding: 30px 100px;
 	margin-top: var(--gap);
-	border: 1px solid var(--border);
+	border: 10px solid var(--border);
 	margin-bottom: var(--gap);
 	transition: .3s;
-	box-shadow: 10px 10px 0px 0px var(--nord-primary);
+	/* box-shadow: 10px 10px 0px 0px var(--nord-primary); */
 }
 
 a[href*="/tags/"] {
