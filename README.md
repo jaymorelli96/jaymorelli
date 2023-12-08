@@ -3,5 +3,6 @@ TODO
 - [ ] write readme
 - [ ] add my photo
 - [ ] CSS style -> links and terminal tools
+- [ ] Awesome list
 
 

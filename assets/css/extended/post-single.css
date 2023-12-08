@@ -46,7 +46,6 @@ ul li::marker {
 .post-content a,
 .link {
 	padding: 0px 5px;
-	font-weight: 600;
 	color: var(--base-elements);
 	transition: 0.3s;
   box-shadow: inset 0 -7px 0 var(--link-accent);

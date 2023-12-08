@@ -5,11 +5,15 @@ hideFooter: false
 disableShare: true
 showSlash: true
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare dignissim tellus id facilisis. Curabitur vel semper neque. Duis tristique dui sit amet orci egestas tincidunt. Suspendisse suscipit, turpis malesuada scelerisque aliquet, ex purus pellentesque est, id fermentum sem massa quis ligula. Mauris pretium ultrices lorem, sit amet consequat odio dignissim vitae. Morbi vitae libero vel leo lacinia porta. Suspendisse dignissim varius dui, eget semper ex sodales eu. Integer vestibulum posuere mattis. Quisque quis hendrerit leo. Praesent eget posuere orci. Duis convallis neque augue, dictum sodales sem blandit vestibulum. Mauris congue metus sapien, tincidunt scelerisque nisi vestibulum a.
+Hi, welcome to my corner on the internet! 
+
+This page is a more detailed and long version of who I am. The [TLDR](#tldr) section provides *me in 1 minute* while the rest of this page will go deeper into my past, present and future.
+
+To get to know what I am currently doing at the moment 
 - explain what is this page and the difference between /about, /now, and /uses
 - mention interests (now page)
 - table of content
-## Table of Contents
+### Table of Contents
 1. [TLDR](#tldr)
 2. [Background and Education](#background-and-education)
 3. [Professional Journey](#professional-journey)

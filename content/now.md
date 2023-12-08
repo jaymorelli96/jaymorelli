@@ -8,6 +8,8 @@ disableShare: true
 This page is inspired by Derek Sivers's post [_The /now page movement_](https://sivers.org/nowff) and [the Now Movement](https://nownownow.com/about). 
 The purpose of this page is to share my interests and what I'm currently focused on.
 
+
+
 #### What am I up to right now?
 - Engaged, preparing for our wedding in 2025
 - Currently working at Siemens in the [Industrial Edge](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-edge.html).
@@ -40,6 +42,7 @@ The purpose of this page is to share my interests and what I'm currently focused
 - CNCF (Cloud Native Computing Foundation)
 - Automation
 - Blogging
+- Rust
 ##### Personal
 - Family: I love spending time with my fiancée and Lua (our black miniature Schnauzer)
 - Surfing
