@@ -4,5 +4,7 @@ TODO
 - [ ] add my photo
 - [ ] CSS style -> links and terminal tools
 - [ ] Awesome list
+- [ ] Responsive design
+- [ ] Create help page (?) that shows shorcuts commands
 
 

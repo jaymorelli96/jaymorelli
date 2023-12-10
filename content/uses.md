@@ -5,6 +5,11 @@ hideFooter: false
 disableShare: true
 showSlash: true
 ---
+This page is a curated list of the tools that empower me as a software developer. Discovering pages like this has been a game-changer for me, providing valuable insights into optimizing workflows and uncovering hidden gems in the tech toolbox. 
+
+Pages like this is a goldmine for discovering new tools that elevate productivity and enhance the developer experience.
+
+If you're interested in exploring similar pages from fellow enthusiasts, be sure to check out the collection in the [awesome-uses repository](https://github.com/wesbos/awesome-uses).
 #### Theme
 - **Nord**: I love the color palette and the monochrome aspect
     - I can't imagine myself returning to a non-monochrome theme. I feel the variety of colors of a non-monochrome theme tends to be distracting when programming
