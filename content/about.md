@@ -13,7 +13,7 @@ Jammie Tanna and his article [Why I Have a Website and You Should Too](https://w
 I hope you can learn something from me as I have learned from many of the citizens of the web.
 
 #### Table of Contents
-- [TL;DR](#tl;dr): *me in 1 minute*
+- [TL;DR](#tldr): *me in 1 minute*
 - [About me](#about-me): *me in 10 minutes*
   - [Background and education](#background-and-education)
   - [Professional Journey](#professional-journey)
@@ -31,63 +31,42 @@ For me, passion is the driving force that transforms the entire process into an 
 
 # About me
 ## Background and education
-### Origin
-I'm originally from Brazil but I am not really the typical Brazilian. I don't like football (soccer if you are American), funk or carnaval but as my fiancee like to point it out I am very a loud person as most Brazilians are. Also, I have left Brazil over 10 years ago and my family have also moved so I don't really have any attatchments there anymore.
+#### Origin
+I'm a non-traditional Brazilian hailing from the vibrant country but defying stereotypes. While I may not share the typical Brazilian enthusiasm for football, funk, or carnival, my personality, often described as loud, aligns with the spirited nature of many Brazilians—as my fiancée loves to point out.
 
-//TODO: talk about study in brazil and that I wanted to study coputer science but I settled for engineering 
-### Leaving Brazil
-I left Brazil for many reasons. I never left like it was my home, went to a breakup and most important I didn't know what to do with my life when I finished high school. 
+My educational journey took unexpected turns. In high school, I was a bit of a rebel, constantly landing my poor mom in meetings with the school principal. Unsure of my path, I initially pursued production engineering but quickly realized it wasn't my calling after just two weeks of classes.
+#### Beyond Brazil
+Seeking a change, I left Brazil for various reasons—never truly feeling at home and fresh from a breakup. With an European passport in hand, I set off for Australia, the surfer's paradise.
+#### Australia Adventures
+My time in Australia was a whirlwind of surfing and diverse jobs, from dishwasher and kitchen hand to strawberry farmer and even working on a crab boat. Amidst the adventure, a desire to keep going and surf fueled my pursuits.
+#### The Irish Interlude
+I moved to Ireland with my Irish girlfriend at the time. Embracing the role of a barista, life was sweet with ample surf, nature, and coffee. Yet, I had an itch for something more significant. Quickly my interest in software engineering began to blossom.
 
-At that point I could only think about surfing and luckily I had an European passport so I decided to go to the surfers paradise, Australia.
+#### The Software Engineering Journey
+I started with the classic trio, JavaScript, HTML, and CSS. The initial struggles with concepts like closures and recursion gradually transformed into a deep passion. One of my best memories of that time was when I created a simple quiz application, I couldn't believe that I created something like that. By far one my favorite aspects of programming is this quick feedback, you can quickly see the work that you have done and I find this feeling to be very rewarding.
 
-I spent most of my time in Australia surfing and working at different sites, mostly doing dish washing and farm work. Learned a lot about being independent, different cultures //TODO
+My curiosity to understand the core of operating systems, the internet, data structures, and algorithms led me study computer science in Portugal.
 
-In Ireland I got a much better job than dish washing, I was a barista. Life was very good, plenty of great surf, nature and coffee. But still didn't know what I kind of profession I wanted to have. At that point I knew that I wanted to work remotely, so I started researching what kind of jobs would allow me to accomplish that. Quickly I realized that software developer was exactly what I was looking for, specially because studying Computer Science was something that I wanted to do in Brazil. 
+#### Portugal
+In Portugal, I evolved into a dedicated student, sitting at the front, conquering math, and making my mom proud as one of the top students in the class. Today, Algarve is my home, where I live with my incredible fiancée, the most wonderful woman in the world! 
 
-Like most people who start studying software development I started with JavaScript, HTML and CSS. I will never forget those times. Learning a for loop was hard, learning recursing was really hard. But the best memory is when I created a small quizz application, with a bare HTML page and JavaScript handling the logic. I couldn't believe it. I was so excited, showing everyone what I had accomplish, but I don't think they were as excited as I was when they used a bare HTML quizz, showing the answers in a browser alert window.
-
-From that moment, I knew that this is what I wanted to be, to dedicate my life to be a professional software engineer. I knew that I could do a bootcamp or just keep learning by myself and I would eventually land a job but I really wanted to study computer science. I wanted to understand the foundations, how the operating system works, how the internet works, how data structure works, I wanted to learn everything. 
-
-Now I had to find a place where I could study, surf and most important, afford the studies. Algarve, Portugal, checked every single box and little did I know that the love of my life would also move there at the same time.
-
-### Portugal
-When I started my studies I promised myself that I would be the best student and I that I would learn as much as I could. //TODO Talk about my dedication and how well I did and a bit more of my time in the university.
-
-Portugal is my home now. We live in the beautiful Algarve, where the sun is always shining. Perfect place for a sunday cycle, surfing, and even watching a few races at the Autodramo de Portimao. Both of my family and my fiancee family lives in Algarve as well. I also spend most of my time speaking English than Portuguese, even though I live in Portugal and that is because my fiancee is from South Africa and at work we use English as we have an international team.
+Our dream is to settle down near the ocean on a small farm along the picturesque west coast. Life has taken me on a unique journey, and I'm thrilled to continue growing personally and professionally in this beautiful corner of the world.
 
 ## Professional Journey
-### Atos July 2021 - May 2022
-At my last year in the university, Atos was opening a new branch in the Algarve with the idea of investing in the fresh graduates.It offered an interesting program, where the first 3 months was a trainee training program with focus on Agile, Domain-Driven Design, Cloud technologies, the Spring ecosystem, and Angular.
+For a detailed overview of my professional experiences, the technologies I've mastered, and the projects I've contributed to, please visit my dedicated [CV]() page.
 
-I also had the chance of doing three certifications: Azure Fundamentals, Oracle Cloud Infrastructure Foundations Associate, and Oracle Cloud Infrastructure Architect Associate.
-#### Training Program
-In a small agile team, we were tasked to create a weather web application using Spring Boot and Angular that would be deployed in Azure. The idea was to learn how to work with scrum, how to use an external API and develop a full stack application, and how to deploy an application in the Cloud. 
-##### Technologies
-- Java with Spring Boot
-- Angular
-- RabbitMQ
-- Maven
-- PostgreSQL
-- Jenkins
-- Azure
+#### Atos IT
+Fresh out of university, I chose to kickstart my career at Atos. The newly established Hub in Algarve, coupled with a compelling training program, made it a logical starting point. 
 
-#### Project Management System R&D
-There was a need of creating a project management system to evaluate risks and efforts of new projects. Me and my colleague were assigned to develop this application for the R&D department. 
+At Atos, I not only had the privilege of engaging in a dynamic learning environment but also benefited from robust support for certifications. In a short timeframe, I earned three certifications—Azure Fundamentals, OCI Associate, and OCI Architect Associate. Additionally, I had the opportunity to lead a small team of trainees, an experience for which I am profoundly grateful, showcasing the trust placed in me.
 
-Being a research and development project, we had a lot of freedom in the design of the application. I contributed in all aspects of the SDLC (software development life cycle), from writing down the technical and functional requirements documents to deploying the application. 
+#### Colt Technology Services
+As a contractor for Colt Technology Services, I immersed myself in the SD-WAN project. With a genuine interest in networking, I found the project to be captivating. The energy within the team was great, and I met great people that I still keep contact. However, my desire to transition into working with Go became undeniable. The prospect of escaping Java stack traces and the sluggish startup times of Spring Boot was too enticing to resist.
 
-At that time I had recently learned about reactive programming and the Spring Webflux project, so we decided to use that along with MongoDB. The rest of the stack was pretty much similar from what I used in the trainee program. Because it was a small team, there were a lot of work to be done and it was very interesting learning about every stage of the SDLC.
+#### Siemens Digital Industry
+Presently, my professional journey unfolds at Siemens, where I contribute to the Industrial Edge project. In this role, I've actively shaped processes, contributed to developer and project documentation, and internal libraries. Working within a collaborative and supportive team at Siemens has been a source of great satisfaction. Recently, my best friend joined me in my team, adding an extra layer of fulfillment to my professional life.
 
-#### Leading Trainees
-Every 3 months a new group of trainees would go to the same process that I had been, and from my performance and attitude I got the opportunity to lead them where I received one-one guidance and training from my team leader. I'm very thankful for the opportunity and trust that was given to me.
-
-### Colt Technology Services May 2022 - June 2023
-My time at Atos was over, I felt I needed to go to a bigger project and the salary didn't meet my expectations. I got an job offer from Team IT, a Portuguese consultancy, to work as a contractor in Colt Technology Services at the SD-WAN project.
-
-I find the world of networking very interesting and intimidating, which made me excited to work with SD-WAN even tough I knew that there were networking engineers who would deal with all the network was nice to be around that environment.
-#### SD-WAN Project
-
-
+My passion lies in crafting tools and libraries for developers. At Siemens, I've had the privilege of working on a parsing library utilizing ANTLR and another library integral to the core of our project's communication system. Every day is an opportunity to innovate and contribute to a cutting-edge project, and I couldn't be happier with the journey so far.
 ## How I like to work
 Donec consectetur lorem nec volutpat pulvinar. Pellentesque eu fermentum quam. Nam ac ante ut nulla dapibus dapibus id ut ligula. Morbi et consequat orci. Maecenas auctor fermentum ultricies. Donec sed sollicitudin quam. In vel tortor facilisis, faucibus erat ac, ultrices augue. Nullam ut egestas felis. Fusce viverra pharetra est in dapibus.
 ## Skills and Expertise 
