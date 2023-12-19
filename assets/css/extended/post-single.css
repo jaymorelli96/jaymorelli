@@ -76,3 +76,9 @@ ul li::marker {
 .post-footer .post-tags {
 	visibility: hidden;
 }
+
+.post-content blockquote {
+    margin: 20px 0;
+    padding: 0 14px;
+		border-inline-start: 3px solid var(--secondary);
+}

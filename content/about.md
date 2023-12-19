@@ -17,7 +17,7 @@ I hope you can learn something from me as I have learned from many of the citize
 - [About me](#about-me): *me in 10 minutes*
   - [Background and education](#background-and-education)
   - [Professional Journey](#professional-journey)
-  - [How I like to work](#how-i-like-to-work)
+  - [Manual of Me](#manual-of-me)
   - [Skills and Expertise](#skills-and-expertise)
   - [Certifications](#certifications)
   - [Future goals](#future-goals)
@@ -67,8 +67,130 @@ As a contractor for Colt Technology Services, I immersed myself in the SD-WAN pr
 Presently, my professional journey unfolds at Siemens, where I contribute to the Industrial Edge project. In this role, I've actively shaped processes, contributed to developer and project documentation, and internal libraries. Working within a collaborative and supportive team at Siemens has been a source of great satisfaction. Recently, my best friend joined me in my team, adding an extra layer of fulfillment to my professional life.
 
 My passion lies in crafting tools and libraries for developers. At Siemens, I've had the privilege of working on a parsing library utilizing ANTLR and another library integral to the core of our project's communication system. Every day is an opportunity to innovate and contribute to a cutting-edge project, and I couldn't be happier with the journey so far.
-## How I like to work
-Donec consectetur lorem nec volutpat pulvinar. Pellentesque eu fermentum quam. Nam ac ante ut nulla dapibus dapibus id ut ligula. Morbi et consequat orci. Maecenas auctor fermentum ultricies. Donec sed sollicitudin quam. In vel tortor facilisis, faucibus erat ac, ultrices augue. Nullam ut egestas felis. Fusce viverra pharetra est in dapibus.
+
+## Manual of Me
+This section is inspired by the [Manual of Me](https://my.manualof.me/), and aims to to be a guide for colleagues in how to best work with me.
+
+{{<html>}}
+<h3 class="manual-me">If I came with a warning label it would say <span>...</span></h3>
+<blockquote class="manual-me-label">
+    Go is the best programming language and NeoVim is the best editor.
+</blockquote>
+{{</html>}}
+
+{{<html>}}
+<h3 class="manual-me">My working hours</h3>
+{{</html>}}
+- **Monday to Friday**: 9:00 to 18:00 UCT+00
+
+{{<html>}}
+<h3 class="manual-me">Structure of my day</h3>
+{{</html>}}
+My peak productivity time is in the morning, making it ideal for deep-focus tasks. Preferably, let's schedule longer meetings post-lunch to maintain a steady workflow. Early standup meetings between 09:15 and 10:00 are optimal, allowing me to dive into problem-solving without interruptions.
+
+I kickstart my day at around 07:30, dedicating this time to studies and personal projects. Depending on the workload, I might begin work before 09:00, but I always reserve time for personal growth.
+
+{{<html>}}
+<h3 class="manual-me">I work best when <span>...</span></h3>
+{{</html>}}
+- I am in deep focus with minimal distraction
+- I appreciate organization but value pragmatism and effective solutions over theoretical considerations
+- I am part of a supportive and like-minded team
+
+{{<html>}}
+<h3 class="manual-me">My preferred channels of communication are <span>...</span></h3>
+{{</html>}}
+In order:
+1. Instant messaging 
+    - I appreciate an asynchronous approach
+    - Please indicate the urgency of your message
+    - Provide context, especially in asynchronous chats (refer to nohello for more info)
+2. Voice/Video chat
+    - Best for complex problem-solving and debugging
+    - Synchronous approach is required
+3. Emails
+    - Useful for CC'ing relevant individuals.
+
+{{<html>}}
+<h3 class="manual-me">I add value to a team by <span>...</span></h3>
+{{</html>}}
+- Focusing on developer documentation to accelerate onboarding
+- Improving code quality through adherence to guidelines and best practices
+- Staying motivated and motivating the team as a whole
+- Actively participating in discussions and proposing ideas
+- Prioritizing performance improvements in terms of memory allocation and overall application enhancement
+
+{{<html>}}
+<h3 class="manual-me">Feedback is best given when <span>...</span></h3>
+{{</html>}}
+
+- **Format**: Written for easy reference and sharing with my manager
+- **Frequency**: Regular microfeedback for ongoing adjustments
+- **Tone**: Honest feedback acknowledging imperfections
+
+{{<html>}}
+<h3 class="manual-me">My personality type is <span>...</span></h3>
+{{</html>}}
+
+{{<html>}}
+<div class="personality">
+    <div class="personality-type">
+        <span>Advocate</span>
+        <span>INFJ-A</span> 
+        <span class="emoji">🥑</span> 
+    </div>
+
+    <div class="personality-quote">
+        <blockquote>
+    Advocates (INFJs) may be the rarest personality type of all, but they certainly leave their mark on the world. Idealistic and principled, they aren’t content to coast through life – they want to stand up and make a difference. For Advocate personalities, success doesn’t come from money or status but from seeking fulfillment, helping others, and being a force for good in the world.
+        </blockquote>
+        <blockquote>
+    While they have lofty goals and ambitions, Advocates shouldn’t be mistaken for idle dreamers. People with this personality type care about integrity, and they’re rarely satisfied until they’ve done what they know to be right. Conscientious to the core, they move through life with a clear sense of their values, and they aim never to lose sight of what truly matters – not according to other people or society at large, but according to their own wisdom and intuition.
+        </blockquote>
+    <a href="https://www.16personalities.com/infj-personality" target="_blank">Discover more about this Personality Type</a>
+    </div>
+</div>
+{{</html>}}
+
+
+{{<html>}}
+<h3 class="manual-me">What motivates me to come to work is <span>...</span></h3>
+{{</html>}}
+- Solving complex problems
+- Delivering value to customers
+- Recognition for my work
+- Assisting others
+- Working with exciting technologies
+
+{{<html>}}
+<h3 class="manual-me">Some other things you should know more about me <span>...</span></h3>
+{{</html>}}
+- I love creating software and tools for developers
+- I thrive when busy—whether with work, personal projects, or continuous learning
+- Confidence is key—I'm not shy about expressing my opinions in team discussions
+- The terminal is my home, where I spend a significant portion of my time
+- I'm a keyboard-centric user, proficient in Vim, with a myriad of bespoke shortcuts
+
+{{<html>}}
+<h3 class="manual-me">Tea or coffee ?</h3>
+{{</html>}}
+Coffee ☕
+
+I considered myself a coffee nerd.
+- I have worked as a barista 
+- I have a v60, espresso machine, aeropress and a french press at home
+- I have a pretty expensive hand grinder
+- I love flat whites and a good v60 pour over
+
+{{<html>}}
+<h3 class="manual-me">Beer or wine ?</h3>
+{{</html>}}
+That is a very hard question.
+
+I will have to cheat:
+- Beer 🍺: Weissbier and IPA - I still need to delve more in the world of beer
+- Wine 🍷: Herdade do Sobroso Grande Reserva is a personal favorite
+- Cocktail 🥃: Negroni
 ## Skills and Expertise 
 Etiam ac lectus sit amet risus facilisis tempor sed id dolor. Aliquam arcu nisi, tristique a luctus iaculis, sodales ut eros. Vestibulum gravida at sem at tempor. Nulla vitae mattis tortor, eu fermentum urna. Vivamus sem enim, dignissim non ipsum in, rutrum dapibus ex. Nunc vel finibus augue, a ultricies dui. Maecenas porttitor consequat tempor. Maecenas dictum tempus ornare. Aliquam nunc nibh, eleifend quis odio nec, pellentesque eleifend nunc. Donec posuere, orci in tincidunt fringilla, augue sapien porta turpis, eget aliquam quam quam at diam. Sed sodales libero eu dui auctor laoreet.
 ## Certifications
