@@ -190,7 +190,66 @@ This one's a tough call:
 - Wine 🍷: Herdade do Sobroso Grande Reserva is a personal favorite
 - Cocktail 🥃: Negroni
 ## Skills and Expertise 
-Etiam ac lectus sit amet risus facilisis tempor sed id dolor. Aliquam arcu nisi, tristique a luctus iaculis, sodales ut eros. Vestibulum gravida at sem at tempor. Nulla vitae mattis tortor, eu fermentum urna. Vivamus sem enim, dignissim non ipsum in, rutrum dapibus ex. Nunc vel finibus augue, a ultricies dui. Maecenas porttitor consequat tempor. Maecenas dictum tempus ornare. Aliquam nunc nibh, eleifend quis odio nec, pellentesque eleifend nunc. Donec posuere, orci in tincidunt fringilla, augue sapien porta turpis, eget aliquam quam quam at diam. Sed sodales libero eu dui auctor laoreet.
+I have a strong focus on Go, investing considerable time in understanding its internals, making it my primary programming language.
+
+Beyond that, I consider myself a well-rounded software engineer with proficiency across diverse areas:
+
+- Kubernetes and Docker
+- Linux
+- Cloud Technologies
+- Software Architecture
+- Software Development Life Cycle
+- Domain Driven Design
+- Automation
+- Computer Science Fundamentals
+- Networking
+- Security
+- Test Driven Development
+- Automated Tests
+- Frontend Technologies
+
+#### Daily Engagements
+My daily work involves navigating through a rich set of tools and technologies, including:
+- Go
+- Vim
+- Git
+- GitLab
+- GitHub
+- Kubernetes (specifically k3s)
+- Linux
+- PostgreSQL
+- Agile Scrum
+- Azure DevOps - TFS
+- OpenAPI
+
+#### Past Collaborations
+In the course of my career, I've garnered experience with various technologies, including:
+- RabbitMQ
+- MongoDB
+- Java and the Spring Ecosystem
+- Azure
+- Angular
+- NodeJS
+- Rancher
+- SOAP
+
+### Soft Skills
+Setting myself apart from the conventional software developer, I take pride in my robust soft skills.
+
+My strengths encompass:
+- Communication
+- Willingness to Learn
+- Empathy
+- Growth Mindset
+- Confidence
+- Persistence
+- Organization
+
+I recognize the importance of continual growth and I'm actively working on:
+- Writing: Starting a blog to improve my written communication skills
+- Delegation: Acknowledging the need to delegate tasks rather than taking on everything
+- Public Speaking: Continuously seeking opportunities for improvement in public speaking
+
 ## Certifications
 Donec eu vulputate mauris. Pellentesque tincidunt ultricies justo, et maximus tortor condimentum sed. Vestibulum sed nulla ac magna dapibus tincidunt. Nunc vel turpis pellentesque, mattis urna et, convallis lorem. Nunc sagittis urna ac turpis blandit condimentum a vel metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse aliquam magna nulla, in tristique enim aliquam nec. Sed non laoreet eros. Aliquam fringilla ut metus non accumsan. Nulla at bibendum nisi. Sed id justo rhoncus, consequat ex eget, fringilla mauris. Nullam auctor, lorem et tincidunt euismod, risus nibh ultricies ligula, in malesuada urna nisl sit amet nisl. Integer cursus fringilla elit, ac consequat felis tempus iaculis. Sed semper sem vel accumsan luctus. Suspendisse rhoncus nisl vitae lectus venenatis, sed tempor mi commodo. Phasellus ac euismod justo.
 ## Future goals
