@@ -15,8 +15,9 @@
 	align-self: center;
 }
 
-.personality  {
+.personality, .certifications  {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .personality .personality-quote  {
@@ -27,6 +28,118 @@
 .personality .personality-type .emoji {
 	font-size: 24px;
 }
+
+.certification-badge {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	height: 250px;
+	width: 250px;
+	padding: 10px;
+	margin: 30px;
+	text-align: center;
+	background: var(--base-elements);
+	color: var(--nord3) !important;
+	margin: 0 auto;
+	font-weight: bold;
+	align-self: center;
+  flex: 0 0 calc(30% - 10px); /* 50% width with a little space between items (adjust as needed) */
+	font-size: 16px;
+	margin-bottom: 20px;
+	transition: all .5s;
+}
+
+.certification-badge:hover {
+	cursor: pointer;
+filter: contrast(120%);
+}
+
+.cert-aws {
+	border: 15px solid var(--nord13);
+	background-image: radial-gradient(circle at left, var(--nord6), var(--nord13));
+  position: relative;
+	z-index: 1;
+	transition: all .5s;
+}
+
+.cert-aws::before {
+	border-radius: 50%;
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	background-image: radial-gradient(circle at right, var(--nord6), var(--nord13));
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.cert-aws:hover::before {
+	opacity: 1;
+}
+
+.cert-azure {
+	border: 15px solid var(--nord10);
+	background: radial-gradient(circle at left, var(--nord6), var(--nord10));
+  position: relative;
+	z-index: 1;
+}
+
+.cert-azure::before {
+	border-radius: 50%;
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	background-image: radial-gradient(circle at right, var(--nord6), var(--nord10));
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.cert-azure:hover::before {
+	opacity: 1;
+}
+
+.cert-oracle {
+	border: 15px solid var(--nord12);
+	background: radial-gradient(circle at left, var(--nord6), var(--nord12));
+  position: relative;
+	z-index: 1;
+}
+
+.cert-oracle::before {
+	border-radius: 50%;
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	background-image: radial-gradient(circle at right, var(--nord6), var(--nord12));
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.certifications .icon {
+	font-size: 32px;
+}
+
+.cert-oracle:hover::before {
+	opacity: 1;
+}
+
+.certifications span {
+	margin: 4px;
+}
+
 
 .manual-me {
 	color: var(--secondary) !important;

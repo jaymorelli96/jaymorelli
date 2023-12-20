@@ -254,12 +254,48 @@ I recognize the importance of continual growth and I'm actively working on:
 While certifications can be a somewhat controversial topic, I personally find them rewarding. It might sound cliché, but for me, it's all about the journey. Pursuing a certification provides a clear goal, serving as motivation to engage in focused study sessions. Successfully passing the exam brings a sense of accomplishment. Of course, the value of certifications is enhanced when supported by the company, especially considering their potential cost.
 
 Currently, I hold the following certifications:
-// TODO: make images
-- AWS Cloud Practitioner
-- Azure Fundamentals
-- Oracle Cloud Infrastructure Architect Associate
-- Oracle Cloud Infrastructure Foundations Associate
-- In the next section, you can explore additional information about certifications I plan to pursue in the future.
+
+{{<html>}}
+<div class="certifications">
+    <div class="certification-badge cert-aws" onclick="redirectToLink('https://www.credly.com/badges/6c8c8fe5-1cd8-4c83-9dd1-6baf4ddcb174/linked_in_profile')">
+        <span>AWS Certified </span>
+        <span>Cloud Practitioner</span>
+        <span class="icon">
+            <i class="fa-brands fa-aws"></i>
+        </span>
+    </div>
+    <div class="certification-badge cert-azure" onclick="redirectToLink('https://www.credly.com/badges/22f919c8-a5cb-41b1-8056-bac2450797d0?source=linked_in_profile')">
+        <span>Microsoft Certified</span>
+        <span>Azure Fundamentals</span>
+        <span class="icon">
+            <i class="fa-brands fa-microsoft"></i>
+        </span>
+    </div>
+    <div class="certification-badge cert-oracle" onclick="redirectToLink('https://catalog-education.oracle.com/pls/certview/sharebadge?id=D0A86BB8331433F9B0E2BF3B015C537925E1C5DA048C226329A6A7D541B8432F')">
+        <span>Oracle Certified Associate</span>
+        <span>Java SE 8 Programmer</span> 
+        <span class="icon">
+            <i class="fa-brands fa-java"></i>
+        </span>
+    </div>
+    <div class="certification-badge cert-oracle" onclick="redirectToLink('https://catalog-education.oracle.com/pls/certview/sharebadge?id=335B62C937812B31926CCA3A8B1B017568A1750DDD644F49321DE73EAB6157ED')">
+        <span>Oracle Cloud Infrastructure</span>
+        <span>Architect Associate</span>
+        <span class="icon">
+            <i class="fa-solid fa-cloud"></i>
+        </span>
+    </div>
+    <div class="certification-badge cert-oracle" onclick="redirectToLink('https://catalog-education.oracle.com/pls/certview/sharebadge_img?id=E9A0EB6128DE28153D7AF8D24FD4F3B94BAD033E7B4935F924C04C16601C1B27')">
+        <span>Oracle Cloud Infrastructure</span>
+        <span>Foundations Associate</span>
+        <span class="icon">
+            <i class="fa-solid fa-cloud"></i>
+        </span>
+    </div>
+</div>
+{{</html>}}
+
+In the next section, you can explore additional information about certifications I plan to pursue in the future.
 
 ## Future goals
 Etiam egestas quam non lorem suscipit, iaculis volutpat nulla facilisis. Sed interdum felis arcu, vitae auctor augue volutpat eu. Proin eget ipsum sed turpis rhoncus volutpat. Aenean ultrices odio eu dolor molestie, et viverra turpis consequat. Nam interdum, lacus ut commodo imperdiet, enim lectus suscipit felis, hendrerit hendrerit lacus dui ac est. Mauris facilisis, arcu quis tempor mollis, lacus nulla imperdiet eros, scelerisque tincidunt felis magna vel velit. Ut eget velit luctus, consectetur est ut, aliquam orci. Nam suscipit condimentum magna, id condimentum ligula. Aliquam erat volutpat. Donec ipsum ipsum, rhoncus et fermentum id, luctus in nulla.
