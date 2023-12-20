@@ -251,7 +251,16 @@ I recognize the importance of continual growth and I'm actively working on:
 - Public Speaking: Continuously seeking opportunities for improvement in public speaking
 
 ## Certifications
-Donec eu vulputate mauris. Pellentesque tincidunt ultricies justo, et maximus tortor condimentum sed. Vestibulum sed nulla ac magna dapibus tincidunt. Nunc vel turpis pellentesque, mattis urna et, convallis lorem. Nunc sagittis urna ac turpis blandit condimentum a vel metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse aliquam magna nulla, in tristique enim aliquam nec. Sed non laoreet eros. Aliquam fringilla ut metus non accumsan. Nulla at bibendum nisi. Sed id justo rhoncus, consequat ex eget, fringilla mauris. Nullam auctor, lorem et tincidunt euismod, risus nibh ultricies ligula, in malesuada urna nisl sit amet nisl. Integer cursus fringilla elit, ac consequat felis tempus iaculis. Sed semper sem vel accumsan luctus. Suspendisse rhoncus nisl vitae lectus venenatis, sed tempor mi commodo. Phasellus ac euismod justo.
+While certifications can be a somewhat controversial topic, I personally find them rewarding. It might sound cliché, but for me, it's all about the journey. Pursuing a certification provides a clear goal, serving as motivation to engage in focused study sessions. Successfully passing the exam brings a sense of accomplishment. Of course, the value of certifications is enhanced when supported by the company, especially considering their potential cost.
+
+Currently, I hold the following certifications:
+// TODO: make images
+- AWS Cloud Practitioner
+- Azure Fundamentals
+- Oracle Cloud Infrastructure Architect Associate
+- Oracle Cloud Infrastructure Foundations Associate
+- In the next section, you can explore additional information about certifications I plan to pursue in the future.
+
 ## Future goals
 Etiam egestas quam non lorem suscipit, iaculis volutpat nulla facilisis. Sed interdum felis arcu, vitae auctor augue volutpat eu. Proin eget ipsum sed turpis rhoncus volutpat. Aenean ultrices odio eu dolor molestie, et viverra turpis consequat. Nam interdum, lacus ut commodo imperdiet, enim lectus suscipit felis, hendrerit hendrerit lacus dui ac est. Mauris facilisis, arcu quis tempor mollis, lacus nulla imperdiet eros, scelerisque tincidunt felis magna vel velit. Ut eget velit luctus, consectetur est ut, aliquam orci. Nam suscipit condimentum magna, id condimentum ligula. Aliquam erat volutpat. Donec ipsum ipsum, rhoncus et fermentum id, luctus in nulla.
 
