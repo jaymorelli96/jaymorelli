@@ -79,16 +79,16 @@ This section is inspired by the [Manual of Me](https://my.manualof.me/), and aim
 {{</html>}}
 
 {{<html>}}
-<h3 class="manual-me">My working hours</h3>
+<h3 class="manual-me">My working hours <span></span></h3>
 {{</html>}}
 - **Monday to Friday**: 9:00 to 18:00 UCT+00
 
 {{<html>}}
-<h3 class="manual-me">Structure of my day</h3>
+<h3 class="manual-me">Structure of my day <span></span></h3>
 {{</html>}}
 My peak productivity time is in the morning, making it ideal for deep-focus tasks. Preferably, let's schedule longer meetings post-lunch to maintain a steady workflow. Early standup meetings between 09:15 and 10:00 are optimal, allowing me to dive into problem-solving without interruptions.
 
-I kickstart my day at around 07:30, dedicating this time to studies and personal projects. Depending on the workload, I might begin work before 09:00, but I always reserve time for personal growth.
+I kickstart my day at around 07:00, dedicating this time to studies and personal projects. Depending on the workload, I might begin work before 09:00, but I always reserve time for personal growth.
 
 {{<html>}}
 <h3 class="manual-me">I work best when <span>...</span></h3>
@@ -169,10 +169,10 @@ In order:
 - I thrive when busy—whether with work, personal projects, or continuous learning
 - Confidence is key—I'm not shy about expressing my opinions in team discussions
 - The terminal is my home, where I spend a significant portion of my time
-- I'm a keyboard-centric user, proficient in Vim, with a myriad of bespoke shortcuts
+- Immersed in the Vim environment, I've tailored a collection of shortcuts to optimize my workflow as a keyboard-centric user. Additionally, I leverage a tiling window manager to further streamline my experience.
 
 {{<html>}}
-<h3 class="manual-me">Tea or coffee ?</h3>
+<h3 class="manual-me">Tea or coffee ? <span></span></h3>
 {{</html>}}
 Coffee ☕
 
@@ -183,11 +183,9 @@ I considered myself a coffee nerd.
 - I love flat whites and a good v60 pour over
 
 {{<html>}}
-<h3 class="manual-me">Beer or wine ?</h3>
+<h3 class="manual-me">Beer or wine ? <span></span></h3>
 {{</html>}}
-That is a very hard question.
-
-I will have to cheat:
+This one's a tough call:
 - Beer 🍺: Weissbier and IPA - I still need to delve more in the world of beer
 - Wine 🍷: Herdade do Sobroso Grande Reserva is a personal favorite
 - Cocktail 🥃: Negroni
