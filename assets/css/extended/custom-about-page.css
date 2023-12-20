@@ -153,3 +153,16 @@ filter: contrast(120%);
 .manual-me-label {
 	font-style: italic !important;
 }
+
+.goals {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.goal-2 {
+  flex: 0 0 calc(40% - 10px); 
+}
+.goal-3 {
+  flex: 0 0 calc(30% - 10px);
+}

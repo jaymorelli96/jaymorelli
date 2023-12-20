@@ -295,8 +295,68 @@ Currently, I hold the following certifications:
 </div>
 {{</html>}}
 
-In the next section, you can explore additional information about certifications I plan to pursue in the future.
+## Goals
+### Work-Related
+{{<html>}}
+    <div class="goals">
+        <div class="goal-2">
+{{</html>}}
+#### Certifications
+- ~~Java S8 Programmer~~
+- ~~AWS Certified Cloud Practitioner~~
+- Certified Kubernetes Application Developer (CKAD)
+- AWS Certified Developer - Associate
+- AWS Certified Solutions Architect - Associate
+- CSSLP – Certified Secure Software Lifecycle Professional by ISC2
+{{<html>}}
+        </div>
+        <div class="goal-2">
+{{</html>}}
+#### Professional Development
+- ~~Create my website~~
+- ~~Lead a small team~~
+- ~~Computer science bachelor's degree~~
+- ~~Work with Go~~
+- Actively contribute to and collaborate on open-source projects
+- Complete leardship training
+- Speak at a Gophercon 
+- Complete a master's degree
+- Become a software architect
+- Learn Rust
+- Inspire others
+- Advocate for Go and Vim
+{{<html>}}
+        </div>
+    </div>
+{{</html>}}
 
-## Future goals
-Etiam egestas quam non lorem suscipit, iaculis volutpat nulla facilisis. Sed interdum felis arcu, vitae auctor augue volutpat eu. Proin eget ipsum sed turpis rhoncus volutpat. Aenean ultrices odio eu dolor molestie, et viverra turpis consequat. Nam interdum, lacus ut commodo imperdiet, enim lectus suscipit felis, hendrerit hendrerit lacus dui ac est. Mauris facilisis, arcu quis tempor mollis, lacus nulla imperdiet eros, scelerisque tincidunt felis magna vel velit. Ut eget velit luctus, consectetur est ut, aliquam orci. Nam suscipit condimentum magna, id condimentum ligula. Aliquam erat volutpat. Donec ipsum ipsum, rhoncus et fermentum id, luctus in nulla.
-
+### Personal Life
+{{<html>}}
+    <div class="goals">
+        <div class="goal-3">
+{{</html>}}
+#### Family
+- ~~Get engaged~~
+- Get married
+- Be a father
+- Be a grand father
+- Own a farm
+{{<html>}}
+        </div>
+        <div class="goal-3">
+{{</html>}}
+#### Fitness
+- Run a half marathon
+- Run a marathon
+- Get barreled (surf)
+{{<html>}}
+        </div>
+        <div class="goal-3">
+{{</html>}}
+#### Misc
+- Drive a Porsche GT3 in a race track
+- Go to Monza F1 Race
+{{<html>}}
+        </div>
+    </div>
+{{</html>}}
