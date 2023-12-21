@@ -59,7 +59,7 @@ filter: drop-shadow(0 0 0 var(--nord-primary));
 }
 
 .social-icons a svg {
-	color: var(--nord-primary);
+	color: var(--base-elements);
 	transition: 0.3s;
 }
 
