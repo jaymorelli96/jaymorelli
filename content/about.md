@@ -20,7 +20,7 @@ I hope you can learn something from me as I have learned from many of the citize
   - [Manual of Me](#manual-of-me)
   - [Skills and Expertise](#skills-and-expertise)
   - [Certifications](#certifications)
-  - [Future goals](#future-goals)
+  - [Goals](#goals)
 
 # TL;DR
 I'm Jay Morelli, a devoted software engineer who finds joy in the art of craftsmanship. Specializing in Go, my favorite programming language, I'm currently working at Siemens in the Industrial Edge, where I have the opportunity to contribute to architectural decisions and thrive in a dynamic project team.
@@ -31,23 +31,23 @@ For me, passion is the driving force that transforms the entire process into an 
 
 # About me
 ## Background and education
-#### Origin
+#### Origin 🏁
 I'm a non-traditional Brazilian hailing from the vibrant country but defying stereotypes. While I may not share the typical Brazilian enthusiasm for football, funk, or carnival, my personality, often described as loud, aligns with the spirited nature of many Brazilians—as my fiancée loves to point out.
 
 My educational journey took unexpected turns. In high school, I was a bit of a rebel, constantly landing my poor mom in meetings with the school principal. Unsure of my path, I initially pursued production engineering but quickly realized it wasn't my calling after just two weeks of classes.
-#### Beyond Brazil
+#### Beyond Brazil 🚀
 Seeking a change, I left Brazil for various reasons—never truly feeling at home and fresh from a breakup. With an European passport in hand, I set off for Australia, the surfer's paradise.
-#### Australia Adventures
+#### Australia Adventures 🏄
 My time in Australia was a whirlwind of surfing and diverse jobs, from dishwasher and kitchen hand to strawberry farmer and even working on a crab boat. Amidst the adventure, a desire to keep going and surf fueled my pursuits.
-#### The Irish Interlude
+#### The Irish Interlude ☘️
 I moved to Ireland with my Irish girlfriend at the time. Embracing the role of a barista, life was sweet with ample surf, nature, and coffee. Yet, I had an itch for something more significant. Quickly my interest in software engineering began to blossom.
 
-#### The Software Engineering Journey
+#### The Software Engineering Journey 👨‍💻
 I started with the classic trio, JavaScript, HTML, and CSS. The initial struggles with concepts like closures and recursion gradually transformed into a deep passion. One of my best memories of that time was when I created a simple quiz application, I couldn't believe that I created something like that. By far one my favorite aspects of programming is this quick feedback, you can quickly see the work that you have done and I find this feeling to be very rewarding.
 
 My curiosity to understand the core of operating systems, the internet, data structures, and algorithms led me study computer science in Portugal.
 
-#### Portugal
+#### Portugal 🏠
 In Portugal, I evolved into a dedicated student, sitting at the front, conquering math, and making my mom proud as one of the top students in the class. Today, Algarve is my home, where I live with my incredible fiancée, the most wonderful woman in the world! 
 
 Our dream is to settle down near the ocean on a small farm along the picturesque west coast. Life has taken me on a unique journey, and I'm thrilled to continue growing personally and professionally in this beautiful corner of the world.
@@ -72,33 +72,33 @@ My passion lies in crafting tools and libraries for developers. At Siemens, I've
 This section is inspired by the [Manual of Me](https://my.manualof.me/), and aims to to be a guide for colleagues in how to best work with me.
 
 {{<html>}}
-<h3 class="manual-me">If I came with a warning label it would say <span>...</span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-tag"></i> If I came with a warning label it would say ... </h3> 
 <blockquote class="manual-me-label">
     Go is the best programming language and NeoVim is the best editor.
 </blockquote>
 {{</html>}}
 
 {{<html>}}
-<h3 class="manual-me">My working hours <span></span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-clock"></i> My working hours</h3>
 {{</html>}}
-- **Monday to Friday**: 9:00 to 18:00 UCT+00
+- Monday to Friday: 9:00 to 18:00 UCT+00
 
 {{<html>}}
-<h3 class="manual-me">Structure of my day <span></span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-diagram-project"></i> Structure of my day</h3>
 {{</html>}}
 My peak productivity time is in the morning, making it ideal for deep-focus tasks. Preferably, let's schedule longer meetings post-lunch to maintain a steady workflow. Early standup meetings between 09:15 and 10:00 are optimal, allowing me to dive into problem-solving without interruptions.
 
 I kickstart my day at around 07:00, dedicating this time to studies and personal projects. Depending on the workload, I might begin work before 09:00, but I always reserve time for personal growth.
 
 {{<html>}}
-<h3 class="manual-me">I work best when <span>...</span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-user-check"></i> I work best when ...</h3>
 {{</html>}}
 - I am in deep focus with minimal distraction
 - I appreciate organization but value pragmatism and effective solutions over theoretical considerations
 - I am part of a supportive and like-minded team
 
 {{<html>}}
-<h3 class="manual-me">My preferred channels of communication are <span>...</span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-tower-broadcast"></i> My preferred channels of communication are ...</h3>
 {{</html>}}
 In order:
 1. Instant messaging 
@@ -112,7 +112,7 @@ In order:
     - Useful for CC'ing relevant individuals.
 
 {{<html>}}
-<h3 class="manual-me">I add value to a team by <span>...</span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-people-group"></i> I add value to a team by ...</h3>
 {{</html>}}
 - Focusing on developer documentation to accelerate onboarding
 - Improving code quality through adherence to guidelines and best practices
@@ -121,15 +121,15 @@ In order:
 - Prioritizing performance improvements in terms of memory allocation and overall application enhancement
 
 {{<html>}}
-<h3 class="manual-me">Feedback is best given when <span>...</span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-comments"></i> Feedback is best given when ...</h3>
 {{</html>}}
 
-- **Format**: Written for easy reference and sharing with my manager
-- **Frequency**: Regular microfeedback for ongoing adjustments
-- **Tone**: Honest feedback acknowledging imperfections
+- Format: Written for easy reference and sharing with my manager
+- Frequency: Regular microfeedback for ongoing adjustments
+- Tone: Honest feedback acknowledging imperfections
 
 {{<html>}}
-<h3 class="manual-me">My personality type is <span>...</span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-person"></i> My personality type is ...</h3>
 {{</html>}}
 
 {{<html>}}
@@ -154,7 +154,7 @@ In order:
 
 
 {{<html>}}
-<h3 class="manual-me">What motivates me to come to work is <span>...</span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-person-walking"></i> What motivates me to come to work is ...</h3>
 {{</html>}}
 - Solving complex problems
 - Delivering value to customers
@@ -163,7 +163,7 @@ In order:
 - Working with exciting technologies
 
 {{<html>}}
-<h3 class="manual-me">Some other things you should know more about me <span>...</span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-circle-user"></i> Some other things you should know more about me ...</h3>
 {{</html>}}
 - I love creating software and tools for developers
 - I thrive when busy—whether with work, personal projects, or continuous learning
@@ -172,7 +172,7 @@ In order:
 - Immersed in the Vim environment, I've tailored a collection of shortcuts to optimize my workflow as a keyboard-centric user. Additionally, I leverage a tiling window manager to further streamline my experience.
 
 {{<html>}}
-<h3 class="manual-me">Tea or coffee ? <span></span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-mug-hot"></i> Tea or coffee ? </h3>
 {{</html>}}
 Coffee ☕
 
@@ -183,7 +183,7 @@ I considered myself a coffee nerd.
 - I love flat whites and a good v60 pour over
 
 {{<html>}}
-<h3 class="manual-me">Beer or wine ? <span></span></h3>
+<h3 class="manual-me"><i class="fa-solid fa-wine-glass"></i> Beer or wine ? </h3>
 {{</html>}}
 This one's a tough call:
 - Beer 🍺: Weissbier and IPA - I still need to delve more in the world of beer
@@ -194,6 +194,10 @@ I have a strong focus on Go, investing considerable time in understanding its in
 
 Beyond that, I consider myself a well-rounded software engineer with proficiency across diverse areas:
 
+{{<html>}}
+    <div class="f">
+        <div class="f-2">
+{{</html>}}
 - Kubernetes and Docker
 - Linux
 - Cloud Technologies
@@ -201,26 +205,47 @@ Beyond that, I consider myself a well-rounded software engineer with proficiency
 - Software Development Life Cycle
 - Domain Driven Design
 - Automation
+
+{{<html>}}
+        </div>
+        <div class="f-2">
+{{</html>}}
 - Computer Science Fundamentals
 - Networking
 - Security
 - Test Driven Development
 - Automated Tests
 - Frontend Technologies
-
+{{<html>}}
+        </div>
+    </div>
+{{</html>}}
 #### Daily Engagements
 My daily work involves navigating through a rich set of tools and technologies, including:
+{{<html>}}
+    <div class="f">
+        <div class="f-2">
+{{</html>}}
 - Go
 - Vim
 - Git
 - GitLab
 - GitHub
 - Kubernetes (specifically k3s)
+
+{{<html>}}
+        </div>
+        <div class="f-2">
+{{</html>}}
 - Linux
 - PostgreSQL
 - Agile Scrum
 - Azure DevOps - TFS
 - OpenAPI
+{{<html>}}
+        </div>
+    </div>
+{{</html>}}
 
 #### Past Collaborations
 In the course of my career, I've garnered experience with various technologies, including:
@@ -308,15 +333,16 @@ Currently, I hold the following certifications:
 - AWS Certified Developer - Associate
 - AWS Certified Solutions Architect - Associate
 - CSSLP – Certified Secure Software Lifecycle Professional by ISC2
+- CPSA – Certified Professional for Software Architecture by iSAQB
 {{<html>}}
         </div>
         <div class="goal-2">
 {{</html>}}
 #### Professional Development
-- ~~Create my website~~
-- ~~Lead a small team~~
 - ~~Computer science bachelor's degree~~
-- ~~Work with Go~~
+- ~~Lead a small team~~
+- ~~Learn Go~~
+- ~~Create my website~~
 - Actively contribute to and collaborate on open-source projects
 - Complete leardship training
 - Speak at a Gophercon 
@@ -346,6 +372,9 @@ Currently, I hold the following certifications:
         <div class="goal-3">
 {{</html>}}
 #### Fitness
+- ~~Surf in Snapper Rocks~~
+- Surf in J-Bay
+- Surf in Mentawais inslands
 - Run a half marathon
 - Run a marathon
 - Get barreled (surf)
@@ -354,8 +383,11 @@ Currently, I hold the following certifications:
         <div class="goal-3">
 {{</html>}}
 #### Misc
+- Learn to play Golf
+- Eat at a 3-star michelin restaurant
 - Drive a Porsche GT3 in a race track
-- Go to Monza F1 Race
+- Go to Monza for the Formula 1 Italian Grand Prix
+
 {{<html>}}
         </div>
     </div>
