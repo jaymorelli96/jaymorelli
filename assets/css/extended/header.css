@@ -45,3 +45,11 @@
 #menu span:hover::before {
   width: 100%;
 }
+
+
+/* Styles for extra small devices */
+@media (max-width: 576px) {
+	.nav {
+		justify-content: center;
+	}
+}

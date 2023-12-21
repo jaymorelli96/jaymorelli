@@ -143,10 +143,16 @@ filter: contrast(120%);
 
 .manual-me {
 	color: var(--secondary) !important;
+	display: flex;
+	align-items: center;
+}
+
+.manual-me i {
+	margin-right: 10px;
 }
 
 .manual-me span {
-    font-size: 3rem;
+	margin-left: 10px;
     letter-spacing: 10px;
 }
 
@@ -165,4 +171,34 @@ filter: contrast(120%);
 }
 .goal-3 {
   flex: 0 0 calc(30% - 10px);
+}
+
+.f {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.f-2 {
+  flex: 0 0 calc(40% - 10px); 
+}
+
+
+@media (max-width: 992px) {
+	.manual-me {
+		font-size: 21px !important;
+	}
+
+	.personality .personality-quote {
+		max-width: 100%;
+	}
+
+	.f-2,
+	.goal-2,
+	.goal-3,
+	.certification-badge {
+		flex: none;
+	}
+
+
 }

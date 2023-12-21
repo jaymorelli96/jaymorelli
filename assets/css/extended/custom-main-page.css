@@ -67,3 +67,12 @@ a[href*="/tags/"] {
 .landing p {
 	margin-bottom: 20px;
 }
+
+@media (max-width: 992px) {
+	.main:has(.page-single){
+		background: none;
+		padding: 30px;
+		padding-top: 0px;
+		border: none;
+	}
+}
