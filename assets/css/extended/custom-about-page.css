@@ -198,6 +198,7 @@ filter: contrast(120%);
 	.goal-3,
 	.certification-badge {
 		flex: none;
+		max-width: 100%;
 	}
 
 
