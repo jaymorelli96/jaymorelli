@@ -53,7 +53,11 @@ In Portugal, I evolved into a dedicated student, sitting at the front, conquerin
 Our dream is to settle down near the ocean on a small farm along the picturesque west coast. Life has taken me on a unique journey, and I'm thrilled to continue growing personally and professionally in this beautiful corner of the world.
 
 ## Professional Journey
-For a detailed overview of my professional experiences, the technologies I've mastered, and the projects I've contributed to, please visit my dedicated [CV]() page.
+This section offers a concise glimpse into my professional journey, providing a brief overview of my contributions to various companies and sharing insights on each experience. 
+
+~~For a more detailed and comprehensive exploration of my professional background, including the technologies mastered and projects contributed to, please visit my dedicated [CV page]()~~. 
+
+\* *My CV page is under construction*.
 
 #### Atos IT
 Fresh out of university, I chose to kickstart my career at Atos. The newly established Hub in Algarve, coupled with a compelling training program, made it a logical starting point. 
