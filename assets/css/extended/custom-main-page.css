@@ -71,7 +71,7 @@ a[href*="/tags/"] {
 @media (max-width: 992px) {
 	.main:has(.page-single){
 		background: none;
-		padding: 30px;
+		padding: 15px;
 		padding-top: 0px;
 		border: none;
 	}
