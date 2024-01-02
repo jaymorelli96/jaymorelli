@@ -11,9 +11,12 @@
 
 .post-title {
 	color: var(--base-elements);
-	font-style: italic;
 	letter-spacing: -2px;
 	font-family: 'Roboto Slab';
+}
+
+.post-description {
+	font-style: italic;
 }
 
 .post-title span {
@@ -24,37 +27,34 @@ ul li::marker {
 	color: var(--secondary)
 }
 
-.post-meta > i {
+.post-meta>i {
 	margin-left: 10px;
 	margin-right: 3px;
 	color: var(--link-accent);
 	align-self: center;
 }
 
-.post-meta > a:hover,
-.link:hover {
+.post-meta>a:hover {
 	color: var(--background-color);
 	background: var(--link-accent);
 }
 
 
-.post-meta > a {
+.post-meta>a {
 	padding: 0px 5px;
 }
 
 
-.post-content a,
-.link {
+.toc a {
 	padding: 0px 5px;
 	color: var(--base-elements);
 	transition: 0.3s;
-  box-shadow: inset 0 -7px 0 var(--link-accent);
+	box-shadow: inset 0 -7px 0 var(--link-accent);
 }
 
-.post-content  a:hover,
-.link:hover {
+.toc a:hover {
 	color: var(--base-elements);
-  box-shadow: inset 0 -24px 0 var(--link-accent);
+	box-shadow: inset 0 -24px 0 var(--link-accent);
 	background: none;
 }
 
@@ -78,7 +78,24 @@ ul li::marker {
 }
 
 .post-content blockquote {
-    margin: 20px 0;
-    padding: 0 14px;
-		border-inline-start: 3px solid var(--secondary);
+	margin: 20px 0;
+	padding: 0 14px;
+	border-inline-start: 3px solid var(--secondary);
+}
+
+.hljs-comment {
+	color: var(--nord3) !important;
+}
+
+.toc {
+	border-radius: 7px !important;
+}
+
+.toc details summary {
+	cursor: pointer !important;
+}
+
+.entry-cover {
+	border: 1px solid var(--border);
+	border-radius: 7px;
 }

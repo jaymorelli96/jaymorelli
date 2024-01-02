@@ -1,0 +1,27 @@
+.terms-tags li {
+    display: inline-block;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.terms-tags a {
+    display: block;
+    padding: 3px 25px;
+    color: var(--base-elements);
+		background: var(--background-color-top);
+		border-radius: 0;
+		border: 2px solid var(--base-elements);
+    transition: transform 0.3s;
+}
+
+.terms-tags a:hover {
+	background: var(--entry);
+	box-shadow: 5px 5px 0px 0px var(--nord-primary);
+	transform: translate(-0.25rem, -0.1rem);
+}
+
+.terms-tags a:active {
+	background: var(--entry);
+	transform: scale(0.96);
+}
+

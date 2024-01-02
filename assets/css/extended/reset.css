@@ -32,7 +32,8 @@ body {
 	font-size: 18px;
 	line-height: 1.6;
 	word-break: break-word;
-  background: linear-gradient(var(--background-color-top), var(--background-color-bottom))!important;;
+	background: linear-gradient(var(--background-color-top), var(--background-color-bottom)) !important;
+	;
 }
 
 
@@ -120,4 +121,19 @@ textarea:-webkit-autofill {
 img {
 	display: block;
 	max-width: 100%;
+}
+
+.anchor {
+	display: none !important;
+}
+
+
+@media (min-width: 992px) {
+	body {
+		font-size: 21px;
+	}
+
+	#menu a {
+		font-size: 18px;
+	}
 }

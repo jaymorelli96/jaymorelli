@@ -1,5 +1,5 @@
 ---
-title: uses
+title: Uses
 hideMeta: true
 hideFooter: false
 disableShare: true
@@ -16,8 +16,7 @@ If you're interested in exploring similar pages from fellow enthusiasts, be sure
     - I use the theme everywhere possible, this includes: NeoVim, terminal emulators, wallpaper/os theme, iphone, apple watch, and any other tools that allows theme customization
 #### Software
 ##### Operating System
-- **OpenSUSE Tumbleweed**: Both at home and in WSL
-- **Windows with WSL**: At work I have to use Windows and I am very glad that WSL exists
+- **OpenSUSE Tumbleweed**: My preferred OS for both WSL and personal laptop. Offers stability, reliability, and I am a big fan of the rolling release model
 ##### Terminal
 - **NeoVim**
 - **zsh** with plugins:

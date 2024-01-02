@@ -1,10 +1,7 @@
-TODO
-- [ ] create a CV and hire me page
-- [ ] write readme
-- [ ] add my photo
-- [ ] CSS style -> links and terminal tools
-- [ ] Awesome list
-- [ ] Responsive design
-- [ ] Create help page (?) that shows shorcuts commands
+Roadmap
+- [x] Responsive design
+- [ ] Create a CV page: With a link to download a PDF version of it
+- [ ] Create a help modal (?): Shows shortcut commands
+- [ ] Create a *My Guidelines* section/page: I give examples of guidelines and conventions I like to follow
 
 

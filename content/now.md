@@ -1,5 +1,5 @@
 ---
-title: now
+title: Now
 hideMeta: true
 hideFooter: false
 showSlash: true

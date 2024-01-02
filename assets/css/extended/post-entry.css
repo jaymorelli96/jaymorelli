@@ -29,6 +29,11 @@
 	transform: translate(-0.25rem, -0.1rem);
 }
 
+.post-entry:active {
+	background: var(--entry);
+	transform: scale(0.96);
+}
+
 
 .entry-footer > i {
 	color: var(--link-accent);

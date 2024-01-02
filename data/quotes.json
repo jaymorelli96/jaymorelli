@@ -1,6 +1,42 @@
-{
-	"1": {
+[
+	{
 		"quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
 		"author": "Martin Fowler"
+	},
+	{
+		"quote": "Software engineering is what happens to programming when you add time and other programmers.",
+		"author": "Russ Cox"
+	},
+	{
+		"quote": "Simplicity is prerequisite for reliability.",
+		"author": "Edsger W. Dijkstra"
+	},
+	{
+		"quote": "Readability is essential for maintainability.",
+		"author": "Mark Reinhold"
+	},
+	{
+		"quote": "Design is the art of arranging code to work today, and be changeable forever.",
+		"author": "Sandi Metz"
+	},
+	{
+		"quote": "Poor naming is symptomatic of poor design.",
+		"author": "Dave Cheney"
+	},
+	{
+		"quote": "Good naming is like a good joke. If you have to explain it, it’s not funny.",
+		"author": "Dave Cheney"
+	},
+	{
+		"quote": "The greater the distance between a name’s declaration and its uses, the longer the name should be.",
+		"author": "Andrew Gerrand"
+	},
+	{
+		"quote": "Good code has lots of comments, bad code requires lots of comments.",
+		"author": "Dave Thomas and Andrew Hunt, The Pragmatic Programmer"
+	},
+	{
+		"quote": "[A little] duplication is far cheaper than the wrong abstraction.",
+		"author": "Sandy Metz"
 	}
-}
+]

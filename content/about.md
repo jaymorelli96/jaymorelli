@@ -1,5 +1,6 @@
 ---
-title: about
+title: About
+titlePage: about
 hideMeta: true
 hideFooter: false
 disableShare: true
@@ -348,13 +349,14 @@ Currently, I hold the following certifications:
 - ~~Learn Go~~
 - ~~Create my website~~
 - Actively contribute to and collaborate on open-source projects
-- Complete leardship training
-- Speak at a Gophercon 
-- Complete a master's degree
-- Become a software architect
 - Learn Rust
-- Inspire others
+- Go to a GopherCon 
+- Speak at a GopherCon 
+- Complete a master's degree
+- Complete leadership training
 - Advocate for Go and Vim
+- Become a Principal Engineer
+- Inspire others
 {{<html>}}
         </div>
     </div>
@@ -369,8 +371,7 @@ Currently, I hold the following certifications:
 - ~~Get engaged~~
 - Get married
 - Be a father
-- Be a grand father
-- Own a farm
+- Own a small farm
 {{<html>}}
         </div>
         <div class="goal-3">
@@ -378,18 +379,18 @@ Currently, I hold the following certifications:
 #### Fitness
 - ~~Surf in Snapper Rocks~~
 - Surf in J-Bay
-- Surf in Mentawais inslands
-- Run a half marathon
+- Surf in Mentawais islands
+- Get barreled 
+- Run a half-marathon
 - Run a marathon
-- Get barreled (surf)
 {{<html>}}
         </div>
         <div class="goal-3">
 {{</html>}}
 #### Misc
 - Learn to play Golf
-- Eat at a 3-star michelin restaurant
-- Drive a Porsche GT3 in a race track
+- Eat at a 3-star Michelin restaurant
+- Drive a Porsche GT3 in a racetrack
 - Go to Monza for the Formula 1 Italian Grand Prix
 
 {{<html>}}

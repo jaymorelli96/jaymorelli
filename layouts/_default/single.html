@@ -1,8 +1,5 @@
 {{- define "main" }}
 
-{{ range .Site.Data.test }}
-{{ .name }}
-{{ end }}
 <article class="post-single page-single">
 	<header class="post-header">
 		{{ partial "breadcrumbs.html" . }}
@@ -10,7 +7,7 @@
 			{{- if not (.Param "showSlash") }}
 			{{ .Title }}
 			{{- else }}
-			<span>/</span>{{ .Title }}
+			<span>/</span>{{ .Title | lower }}
 			{{- end }}
 
 			{{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}

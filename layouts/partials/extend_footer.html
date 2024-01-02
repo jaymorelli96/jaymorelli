@@ -1,9 +1,29 @@
 {{- /* Footer custom content area start */ -}}
 {{- /* Insert any custom code web-analytics, resources, etc. here */ -}}
 {{- /* Footer custom content area end */ -}}
+
+{{ with .Site.Data.quotes }}
 <script>
 	// JavaScript function to redirect to the specified link
 	function redirectToLink(url) {
 		window.open(url, '_blank');
 	}
+	// Function to get a random quote and author
+	function getRandomQuote(quotes) {
+		const randomIndex = Math.floor(Math.random() * quotes.length);
+		return quotes[randomIndex];
+	}
+
+	// Function to update the content of the elements
+	function updateQuote() {
+		const quotes = {{ . | jsonify | safeJS
+	}};
+	const {quote, author} = getRandomQuote(quotes);
+	document.getElementById('quote').textContent = quote;
+	document.getElementById('author').textContent = '— ' + author;
+    }
+
+	// Call the update function when the page reloads
+	window.onload = updateQuote;
 </script>
+{{ end }}

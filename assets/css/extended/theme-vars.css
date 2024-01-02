@@ -1,35 +1,35 @@
 :root {
 	/* background and area coloring -- base elements (plain text) */
-	--nord0: #2E3440; 
+	--nord0: #2E3440;
 	--nord6: #ECEFF4;
 	/* elevated ui (panels, modals ...) -- subtle ui text or state animations (button is hovered) */
-	--nord1: #3B4252; 
+	--nord1: #3B4252;
 	--nord4: #D8DEE9;
 	/* for both ambiances -> brighter/darker variant of nord1/nord4 */
-	--nord2: #434C5E; 
+	--nord2: #434C5E;
 	--nord5: #E5E9F0;
 	/* for both ambiances -> brighter/darker variant of nord2 */
-	--nord3: #4C566A; 
+	--nord3: #4C566A;
 
 	/* UI elements that should, next to primary accent color nord8, standout */
-	--nord7: #8FBCBB; 
+	--nord7: #8FBCBB;
 	/* accent color */
-	--nord8: #88C0D0; 
+	--nord8: #88C0D0;
 	/* for secondary UI elements */
-	--nord9: #81A1C1; 
+	--nord9: #81A1C1;
 	/* for tertiary UI elements */
-	--nord10: #5E81AC; 
+	--nord10: #5E81AC;
 
 	/* errors */
-	--nord11: #BF616A; 
+	--nord11: #BF616A;
 	/* advanced or dangerous functionality */
-	--nord12: #D08770; 
+	--nord12: #D08770;
 	/* warning states */
-	--nord13: #EBCB8B; 
+	--nord13: #EBCB8B;
 	/* sucess states */
-	--nord14: #A3BE8C; 
+	--nord14: #A3BE8C;
 	/* uncommon functionality */
-	--nord15: #B48EAD; 
+	--nord15: #B48EAD;
 
 
 	--gap: 24px;
@@ -40,8 +40,8 @@
 	--footer-height: 60px;
 	--radius: 0px;
 
-	--hljs-bg: rgb(28, 29, 33);
-	--code-bg: rgb(245, 245, 245);
+	--hljs-bg: var(--nord0);
+	--code-bg: var(--nord5);
 
 	--base-elements: var(--nord2);
 	--base-elements-secondary: var(--nord3);
@@ -51,7 +51,8 @@
 	--entry: var(--nord5);
 	--border: var(--nord2);
 	--link-accent: var(--nord8);
-	--link-accent-nav: var(--nord9);
+	--link-accent-nav: var(--nord2);
+	--link-accent-nav2: var(--nord10);
 	--nord-primary: var(--nord2);
 	--secondary: var(--nord10);
 	--tertiary: var(--nord10);
@@ -74,6 +75,7 @@
 	--nord-primary: var(--nord9);
 	--link-accent: var(--nord9);
 	--link-accent-nav: var(--nord4);
+	--link-accent-nav2: var(--nord9);
 	--secondary: var(--nord9);
 	--tertiary: var(--nord10);
 	--content: var(--base-elements-secondary);
@@ -85,13 +87,13 @@
 
 
 .list {
-    background: var(--code-bg);
+	background: var(--background-color-top);
 }
 
 .dark.list {
-    background: var(--background-color);
+	background: var(--background-color);
 }
 
 :root {
---background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='154' height='154' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23272d39' fill-opacity='0.12'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.12'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+	--background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='154' height='154' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23272d39' fill-opacity='0.12'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.12'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
 }

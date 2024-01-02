@@ -1,9 +1,14 @@
-baseURL: 'https://example.org/'
+baseURL: 'https://www.jaymorelli.me/'
 languageCode: en-us
 title: Jay Morelli
 theme: PaperMod
 
 params:
+  assets:
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
   profileMode:
     enabled: true
     title: " " # optional default will be site title
@@ -44,7 +49,7 @@ menu:
       weight: 30
 permalinks:
   page:
-    posts: /blog/:day/:month/:year/:slug/
+    posts: /blog/:slug/
   section:
     posts: /blog/
 
@@ -63,3 +68,9 @@ markup:
     noHl: false
     style: nord
     tabWidth: 4
+
+
+deployment:
+  targets: 
+    - name: "production"
+      URL: "s3://www.jaymorelli.me?region=eu-south-2"

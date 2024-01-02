@@ -70,8 +70,8 @@
 				{{ $randomQuote := index . $randomKey }}
 
 				<!-- Display the randomly chosen quote and author -->
-				<span class="quote">{{ $randomQuote.quote }}</span>
-				<span class="author">— {{ $randomQuote.author }}</span>
+				<span id="quote" class="quote">{{ $randomQuote.quote }}</span>
+				<span id="author" class="author">— {{ $randomQuote.author }}</span>
 				{{ end }}
 			</div>
 		</div>
