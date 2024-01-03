@@ -4,6 +4,12 @@ title: Jay Morelli
 theme: PaperMod
 
 params:
+  env: production
+  homeInfoParams:
+    images:
+      - "og.png"
+    cover:
+      image: "og.png"
   defaultTheme: dark
   assets:
     favicon: "favicon.ico"
@@ -18,7 +24,7 @@ params:
     - name: github
       url: "https://github.com/jaymorelli96"
     - name: linkedin
-      url: "https://www.linkedin.com/in/jean-morelli-7b0806198/"
+      url: "https://www.linkedin.com/in/jaymorelli/"
   ShowReadingTime: true
   ShowCodeCopyButtons: true
   ShowShareButtons: false

@@ -16,12 +16,12 @@ I hope you can learn something from me as I have learned from many of the citize
 #### Table of Contents
 - [TL;DR](#tldr): *me in 1 minute*
 - [About me](#about-me): *me in 10 minutes*
-  - [Background and education](#background-and-education)
-  - [Professional Journey](#professional-journey)
-  - [Manual of Me](#manual-of-me)
-  - [Skills and Expertise](#skills-and-expertise)
-  - [Certifications](#certifications)
-  - [Goals](#goals)
+  - [Background and education](#background-and-education): *short story of my life*
+  - [Professional Journey](#professional-journey): *overview of my experiences and my resume* 
+  - [Manual of Me](#manual-of-me): *working preferences, motivations and needs, so we can all work better together*
+  - [Skills and Expertise](#skills-and-expertise): *technical and soft skills*
+  - [Certifications](#certifications): *yes, I like certifications*
+  - [Goals](#goals): *work and personal related goals*
 
 # TL;DR
 I'm Jay Morelli, a devoted software engineer who finds joy in the art of craftsmanship. Specializing in Go, my favorite programming language, I'm currently working at Siemens in the Industrial Edge, where I have the opportunity to contribute to architectural decisions and thrive in a dynamic project team.
@@ -56,9 +56,7 @@ Our dream is to settle down near the ocean on a small farm along the picturesque
 ## Professional Journey
 This section offers a concise glimpse into my professional journey, providing a brief overview of my contributions to various companies and sharing insights on each experience. 
 
-~~For a more detailed and comprehensive exploration of my professional background, including the technologies mastered and projects contributed to, please visit my dedicated [CV page]()~~. 
-
-\* *My CV page is under construction*.
+For a more detailed and comprehensive exploration of my professional background, please visit my dedicated [_**resume**_](https://www.jaymorelli.me/resume.pdf). 
 
 #### Atos IT
 Fresh out of university, I chose to kickstart my career at Atos. The newly established Hub in Algarve, coupled with a compelling training program, made it a logical starting point. 

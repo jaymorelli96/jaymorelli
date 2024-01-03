@@ -7,6 +7,7 @@
 
 .post-content h4 {
 	color: var(--secondary);
+	font-size: inherit;
 }
 
 .post-title {

@@ -19,8 +19,9 @@ The purpose of this page is to share my interests and what I'm currently focused
 - Kubernetes internals
 - Web socket
 ##### Reading
+- Sapiens: A Brief History of Humankind by Yuval Noah Harari
 - The Unicorn Project: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data by Gene Kim
-- Learning to Go, 2nd Edition by Jon Bodner 
+- Learning Go, 2nd Edition by Jon Bodner: Waiting for the public release as my O'Reilly subscription is finished
 ##### Listening 
 - The Go Time 
 - Cup o' Go 
