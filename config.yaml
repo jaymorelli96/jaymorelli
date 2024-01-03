@@ -4,6 +4,7 @@ title: Jay Morelli
 theme: PaperMod
 
 params:
+  defaultTheme: dark
   assets:
     favicon: "favicon.ico"
     favicon16x16: "favicon-16x16.png"
@@ -12,6 +13,7 @@ params:
   profileMode:
     enabled: true
     title: " " # optional default will be site title
+    imageUrl: "profile_picture.png"
   socialIcons: 
     - name: github
       url: "https://github.com/jaymorelli96"

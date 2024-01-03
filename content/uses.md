@@ -34,7 +34,8 @@ If you're interested in exploring similar pages from fellow enthusiasts, be sure
 - **Vimium**: Browser extension that provides keyboard shortcuts in the spirit of Vim
 ##### Blogging
 - **HUGO**: This website is powered by HUGO. Super fast static generator built in Go
-- **Cloudflare Pages**
+- **AWS S3**
+- **AWS CloudFront**
 - **GitHub**
 
 #### Hardware

@@ -36,6 +36,7 @@ The purpose of this page is to share my interests and what I'm currently focused
 - Go: My colleagues call me a Go advocate
 - Vim: Successfully convinced 3 friends to use Vim, including my fiancée
 - Software Craftsmanship
+- Prompt Engineering and AI
 - Linux
 - Open Source
 - DevOps
@@ -43,6 +44,7 @@ The purpose of this page is to share my interests and what I'm currently focused
 - Automation
 - Blogging
 - Rust
+- Prompt Engineering and AI
 ##### Personal
 - Family: I love spending time with my fiancée and Lua (our black miniature Schnauzer)
 - Surfing

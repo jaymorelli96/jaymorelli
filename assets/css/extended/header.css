@@ -13,6 +13,7 @@
 }
 
 #menu span,
+.toc a,
 .post-content a,
 .link {
 	font-weight: 500;
@@ -30,6 +31,7 @@
 }
 
 #menu span:before,
+.toc a:before,
 .post-content a:before,
 .link:before {
 	content: '';
@@ -44,13 +46,15 @@
 }
 
 #menu span:hover,
+.toc a:hover,
 .post-content a:hover,
 .link:hover {
 	background-position: 0;
 }
 
 #menu span:hover::before,
-.post-content a:hover:before,
+.toc a:hover::before,
+.post-content a:hover::before,
 .link:hover::before {
 	width: 100%;
 }

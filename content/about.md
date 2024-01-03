@@ -195,9 +195,9 @@ This one's a tough call:
 - Wine 🍷: Herdade do Sobroso Grande Reserva is a personal favorite
 - Cocktail 🥃: Negroni
 ## Skills and Expertise 
-I have a strong focus on Go, investing considerable time in understanding its internals, making it my primary programming language.
+Go is my go-to programming language. It's where I put most of my effort and attention to really understand how it works.
 
-Beyond that, I consider myself a well-rounded software engineer with proficiency across diverse areas:
+Beyond that, I consider myself a well-rounded software engineer with knowledge across diverse areas:
 
 {{<html>}}
     <div class="f">
@@ -226,7 +226,7 @@ Beyond that, I consider myself a well-rounded software engineer with proficiency
     </div>
 {{</html>}}
 #### Daily Engagements
-My daily work involves navigating through a rich set of tools and technologies, including:
+In my day-to-day I work with:
 {{<html>}}
     <div class="f">
         <div class="f-2">
@@ -234,9 +234,8 @@ My daily work involves navigating through a rich set of tools and technologies, 
 - Go
 - Vim
 - Git
-- GitLab
-- GitHub
 - Kubernetes (specifically k3s)
+- Docker
 
 {{<html>}}
         </div>
@@ -245,40 +244,48 @@ My daily work involves navigating through a rich set of tools and technologies, 
 - Linux
 - PostgreSQL
 - Agile Scrum
-- Azure DevOps - TFS
 - OpenAPI
+- REST and Websockets
 {{<html>}}
         </div>
     </div>
 {{</html>}}
 
 #### Past Collaborations
-In the course of my career, I've garnered experience with various technologies, including:
+In the course of my career, I've gained experience with various technologies, including:
 - RabbitMQ
 - MongoDB
 - Java and the Spring Ecosystem
 - Azure
+- AWS
 - Angular
 - NodeJS
 - Rancher
+- REST
 - SOAP
 
 ### Soft Skills
-Setting myself apart from the conventional software developer, I take pride in my robust soft skills.
+I really believe that my soft skills set me apart from the conventional software developer
 
-My strengths encompass:
+My strengths:
 - Communication
 - Willingness to Learn
+- Learning agility
 - Empathy
 - Growth Mindset
 - Confidence
 - Persistence
 - Organization
+- Initiative
+- Coaching and mentoring
 
 I recognize the importance of continual growth and I'm actively working on:
 - Writing: Starting a blog to improve my written communication skills
 - Delegation: Acknowledging the need to delegate tasks rather than taking on everything
 - Public Speaking: Continuously seeking opportunities for improvement in public speaking
+
+### Interests
+I decided to keep my interests at my [/now](/now) page as it feels more fitting, and these interests tend to evolve more frequently.
 
 ## Certifications
 While certifications can be a somewhat controversial topic, I personally find them rewarding. It might sound cliché, but for me, it's all about the journey. Pursuing a certification provides a clear goal, serving as motivation to engage in focused study sessions. Successfully passing the exam brings a sense of accomplishment. Of course, the value of certifications is enhanced when supported by the company, especially considering their potential cost.
@@ -378,11 +385,12 @@ Currently, I hold the following certifications:
 {{</html>}}
 #### Fitness
 - ~~Surf in Snapper Rocks~~
-- Surf in J-Bay
+- Surf at J-Bay
 - Surf in Mentawais islands
+- Watch the waves in Pipeline
 - Get barreled 
 - Run a half-marathon
-- Run a marathon
+- Run a full marathon
 {{<html>}}
         </div>
         <div class="goal-3">
@@ -390,8 +398,8 @@ Currently, I hold the following certifications:
 #### Misc
 - Learn to play Golf
 - Eat at a 3-star Michelin restaurant
-- Drive a Porsche GT3 in a racetrack
-- Go to Monza for the Formula 1 Italian Grand Prix
+- Attend the Formula 1 Italian Grand Prix in Monza
+- Own a Porsche 911
 
 {{<html>}}
         </div>

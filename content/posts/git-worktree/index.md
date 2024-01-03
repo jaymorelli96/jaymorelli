@@ -35,7 +35,6 @@ There are plenty of different use cases where a developer needs to switch to a d
 Committing unfinished work just to switch branches is like using a spoon to cut a steak – it might work, but it's far from ideal. 
 - **Unintended Commits**: Committing unfinished work introduces unnecessary commits to the repository, cluttering the commit history and violating the essence of version control.
 - **Loss of Isolation**: The commit-and-switch method compromises the isolation of changes, as incomplete work becomes part of the version history. This can lead to confusion and difficulties in maintaining a clean codebase.
-If you have unfinished work, this is the worst you can do it. It is like using a spoon to cut a steak.
 
 #### Stash the changes
 Attempting to stash changes before switching branches can feel like using a butter knife to cut a steak – it gets the job done, but not without leaving a mess. 
@@ -66,7 +65,7 @@ git worktree add -b <new-branch> <path-to-directory> <branch-or-commit>
 Example:
 ![add example](example-1.png)
 
-This command creates a new branch `feat/kafka-client` from `main`, where the working directory is `.worktrees/kafka`. The branch name and the working directory name doesn't need to match.
+This command creates a new branch `feat/kafka-client` from `main`, where the working directory is `.worktrees/kafka`. The branch name and the working directory name don't need to match.
 
 #### list
 Keep track of existing workingtrees.
@@ -105,9 +104,9 @@ I will show you how I have set up my workflow, but please understand that there 
 - All my worktrees lives under a hidden directory called `wortrees`
 - `main` is the only branch that is not in a worktree
 
-I am using an [empty remote example repository](https://github.com/jaymorelli96/worktrees), feel free to use to practice, create your own* or play a bit with an existing repository.
+I am using an [empty remote example repository](https://github.com/jaymorelli96/worktrees), feel free to use to practice, create your own or play a bit with an existing repository.
 
-*_If you create a new repository, you must first push main to up stream otherwise you won't be able to create worktrees_
+If do you create a new repository with `git init`, you must first push main to up stream otherwise you won't be able to create worktrees
 
 ```bash
 git clone https://github.com/jaymorelli96/worktrees
