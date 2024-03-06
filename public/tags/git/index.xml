@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>git on Jay Morelli</title><link>https://www.jaymorelli.me/tags/git/</link><description>Recent content in git on Jay Morelli</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 Jan 2024 09:56:45 +0000</lastBuildDate><atom:link href="https://www.jaymorelli.me/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Worktree</title><link>https://www.jaymorelli.me/blog/git-worktree/</link><pubDate>Tue, 02 Jan 2024 09:56:45 +0000</pubDate><guid>https://www.jaymorelli.me/blog/git-worktree/</guid><description>The most underrated git feature</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>git on Jay Morelli</title>
+    <link>https://www.jaymorelli.me/tags/git/</link>
+    <description>Recent content in git on Jay Morelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jan 2024 09:56:45 +0000</lastBuildDate><atom:link href="https://www.jaymorelli.me/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Worktree</title>
+      <link>https://www.jaymorelli.me/blog/git-worktree/</link>
+      <pubDate>Tue, 02 Jan 2024 09:56:45 +0000</pubDate>
+      
+      <guid>https://www.jaymorelli.me/blog/git-worktree/</guid>
+      <description>The most underrated git feature</description>
+    </item>
+    
+  </channel>
+</rss>

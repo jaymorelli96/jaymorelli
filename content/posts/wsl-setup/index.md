@@ -12,11 +12,20 @@ slug: "wsl"
 cover: 
     image: thumbnail.png
 ShowToc: true
-draft: true
+draft: false
 ---
 
 
 # Introduction
-There is no need to complain about, working with Windows anymore. In fact, quite the contrary, Window Subsystem for Linux (WSL) is extremely powerful and if you want to work with Linux this is the best option for those who work with corporate companies and are willing to give out Windows or Mac machines.
+Gone are the days of lamenting about Windows, WSL (Windows Subsystem for Linux) is an awesome feature that you should be leveraging. Particularly relevant for those navigating the corporate landscape where Windows is the norm, WSL opens up a seamless gateway to the Linux world.
 
-You can have most of the distributions, including Arch Linux, OpenSUSE, Debian or Ubuntu
+Arch Linux, OpenSUSE, Debian, or Ubuntu. You can have basically any distribution you want. Not only that, you can host multiple distributions concurrently. And no, this is not the same of a virtual machine, it is way better.
+
+Surprisingly, WSL remains somewhat of a hidden gem among developers. Many professionals, while complaining about Windows, are often unaware of WSL.
+
+I will show you why WSL is a game changer and how I have set up my Windows machine to *look and feel* like Linux.
+
+# Window Subsystem for Linux
+The Windows Subsystem for Linux (WSL) is a groundbreaking compatibility layer within the Windows operating system that allows users to run a Linux kernel directly alongside their Windows environment. This innovative feature bridges the gap between Windows and Linux
+
+

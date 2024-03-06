@@ -16,12 +16,12 @@ The purpose of this page is to share my interests and what I'm currently focused
 - Actively blogging about technical and personal topics
 - Looking forward to surfing more often
 ##### Learning
+- Diving deeper in Go concurrency model
 - Kubernetes internals
-- Web socket
+- Getting back with Angular
 ##### Reading
-- Sapiens: A Brief History of Humankind by Yuval Noah Harari
-- The Unicorn Project: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data by Gene Kim
-- Learning Go, 2nd Edition by Jon Bodner: Waiting for the public release as my O'Reilly subscription is finished
+- Concurrency in Go: Tools and Techniques for Developers by Katherine Cox-Buday
+- The History of the Ancient World: From the Earliest Accounts to the Fall of Rome by Susan Wise Bauer
 ##### Listening 
 - The Go Time 
 - Cup o' Go 
@@ -48,6 +48,7 @@ The purpose of this page is to share my interests and what I'm currently focused
 - Prompt Engineering and AI
 ##### Personal
 - Family: I love spending time with my fiancée and Lua (our black miniature Schnauzer)
+- Cycling: Got myself a Canyon Grizl and will be doing a 7 days cycling trip very soon
 - Surfing
 - Board games
 - Cooking and mixology
