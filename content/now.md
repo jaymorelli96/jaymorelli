@@ -8,20 +8,19 @@ disableShare: true
 This page is inspired by Derek Sivers's post [_The /now page movement_](https://sivers.org/nowff) and [the Now Movement](https://nownownow.com/about). 
 The purpose of this page is to share my interests and what I'm currently focused on.
 
-
-
 #### What am I up to right now?
 - Engaged, preparing for our wedding in 2025
 - Currently working at Siemens in the [Industrial Edge](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-edge.html).
 - Actively blogging about technical and personal topics
-- Looking forward to surfing more often
+- Trying to better organize my self with my *Personal Knolwedge Management system*
+- Cycling 🚴
 ##### Learning
 - Diving deeper in Go concurrency model
 - Kubernetes internals
 - Getting back with Angular
 ##### Reading
 - Concurrency in Go: Tools and Techniques for Developers by Katherine Cox-Buday
-- The History of the Ancient World: From the Earliest Accounts to the Fall of Rome by Susan Wise Bauer
+- Building a Second Brain: A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential
 ##### Listening 
 - The Go Time 
 - Cup o' Go 
