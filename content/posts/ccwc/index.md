@@ -11,7 +11,7 @@ tags:
 date: 2024-01-11T13:26:38Z
 slug: "cc/wc"
 cover:
-    image: ccwc-thumbnail.png
+    image: thumbnail.png
 ShowToc: true
 ---
 
@@ -45,7 +45,7 @@ My application will be called `ccwc` (coding challenge wc) and the steps to comp
 *_The code snippets here may not be 100% what I have in my repository. I am still grasping the whole idea of documenting while developing, and the chances of me forgetting to update the snippets are high. The final version of the code is in my [repository](https://github.com/jaymorelli96/codingchallenges)_
 # Development Process
 ### TDD Ranting
-I just want to brief clarify something. I don't and won't follow the TDD rigorously, at least for now. I like to think that we must be pragmatic about it. Furthermore, I get the most value from TDD when:
+I just want to brief clarify something. I don't and won't follow the TDD rigorously, at least for now. I like to think that we must be pragmatic about it and I am also not great at it. Furthermore, I get the most value from TDD when:
 1. I am iterating
 2. My software is tested
 
@@ -239,10 +239,8 @@ func writeBytes(w io.Writer, n int) error {
 
 ```
 
-First step is completed!
-
 ## Step two: Counting number of lines
-First, I create the failing tests:
+I begin this step by creating failing tests to count the number of lines in a file.
 ```go
 func TestWordCountNumberOfLines(t *testing.T) {
 	files := fstest.MapFS{
@@ -287,9 +285,9 @@ func TestWordCountNumberOfLines(t *testing.T) {
 
 ```
 
-I fix the compile errors, tests fails, and I start to think about the easiest way to make this pass.
+After fixing compile errors and observing failing tests, I start to think about the easiest way to make the test pass.
 
-First thing I notice is that I will need to write some number again, so I go ahead and rename my `writeBytes` to `write` for now and then I update my `WordCount`:
+Realizing that I'll need to also write numbers and not just bytes, I rename the writeBytes function to write for clarity. Then, I update the WordCount function to handle counting lines:
 ```go
 func WordCount(r io.Reader, w io.Writer, opts options) error {
 	b := make([]byte, 1024)
@@ -320,9 +318,8 @@ func WordCount(r io.Reader, w io.Writer, opts options) error {
 	return err
 }
 ```
-
 ## Step Three: Counting Words
-As usual, I start with a test:
+As usual, I begin with a test.
 ```go
 func TestWordCountNumberOfWords(t *testing.T) {
 	files := fstest.MapFS{
@@ -368,7 +365,8 @@ func TestWordCountNumberOfWords(t *testing.T) {
 }
 ```
 
-I actually spent more time than I wanted with this step. I started by defining that the _word_ is something that is not white spaces. Splitting the slice of bytes fits very well here and the Go `strings` package provide us a very useful method, the `strings.Fields(s []byte) [][]byte`. It took me a while to realize that because I am initializing the buffer `b := make([]byte, 1024)` with the make function and I must take in considerations the unread portion of the slice. 
+Realizing that defining words as non-white space characters suits this problem, I decide to use `bytes.Fields` from the `strings` package to split the byte slice into words. 
+However, I encounter a challenge when initializing the buffer `b := make([]byte, 1024)`. I must consider the unread portion of the slice.
 ```go
 func WordCount(r io.Reader, w io.Writer, opts options) error {
 	b := make([]byte, 1024)
@@ -408,9 +406,11 @@ func WordCount(r io.Reader, w io.Writer, opts options) error {
 ```
 
 ## Step Four: Counting Characters
-I was a bit confused between `-m` and `-c`, so I decided to read the manual for `wc`. For example (ç) counts as 2 bytes but 1 character. With that in mind, I discover that the `utf8` package provides the `Count(b []byte) int` method, which fits perfectly our use case.
+I was a bit confused between `-m` and `-c`, so I decided to read the manual for `wc`. For example (ç) counts as 2 bytes but 1 character. With that in mind, I discover that the `utf8` package provides the `Count(b []byte) int` method, which fits perfectly the use case.
 
-I won't show the tests anymore as it is pretty similar to the rest, so this is a snippet of the `WordCount` where it contains the logic for the `-m` argument.
+I won't show the tests anymore as it is pretty similar to the rest. 
+
+This is a snippet of the `WordCount` where it contains the logic for the `-m` argument.
 ```go
 //...
 	if opts.m {
@@ -422,3 +422,71 @@ I won't show the tests anymore as it is pretty similar to the rest, so this is a
 
 ## Step Five: Default Option
 This is the time for us to refactor, as I need to be able to format the output and set the default options.
+
+The `WordCount` at the end looks like this:
+```go
+func WordCount(r io.Reader, w io.Writer, opts options) error {
+	var buf bytes.Buffer
+	_, err := io.Copy(&buf, r)
+	if err != nil {
+		if err != io.EOF {
+			return err
+		}
+
+		handleEmptyFile(w, opts)
+
+		return nil
+	}
+
+	b := buf.Bytes()
+
+	if opts.l {
+		count := bytes.Count(b, []byte{'\n'})
+		fmt.Fprintf(w, "%d ", count)
+	}
+
+	if opts.w {
+		f := bytes.Fields(b)
+		fmt.Fprintf(w, "%d ", len(f))
+	}
+
+	if opts.c {
+		fmt.Fprintf(w, "%d ", len(b))
+	}
+
+	if opts.m {
+		n := utf8.RuneCount(b)
+		fmt.Fprintf(w, "%d ", n)
+	}
+
+	return err
+}
+
+func handleEmptyFile(w io.Writer, opts options) {
+	if opts.c {
+		fmt.Fprintf(w, "0 ")
+	}
+	if opts.l {
+		fmt.Fprintf(w, "0 ")
+	}
+	if opts.w {
+		fmt.Fprintf(w, "0 ")
+	}
+	if opts.m {
+		fmt.Fprintf(w, "0 ")
+	}
+
+```
+
+## Running the program
+All the code is [my repository](https://github.com/jaymorelli96/codingchallenges/tree/main/ccwc), feel free to check it out.
+
+I install my program with `go install` and I test against the `art-of-war.txt`
+![ccwc](ccwc-run.png)
+
+
+# Outro
+At the last step I completly forgot to document my process as it happened a few days later. For the next challenges I will try to write a post per step and not per challenge as 
+it gets quite hard to put it all together.
+
+Overall I really enjoyed this experience and I am very excited to go through the whole list of coding challenges.

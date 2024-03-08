@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Coding Challenges - WC | Jay Morelli</title>
+<meta name="keywords" content="coding-challenge, unix, go, tdd">
+<meta name="description" content="Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.
+This is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog/cc/wc/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9d8f541568c4cfd5a0d3295082c8927a10e2b00ee03af42b1b3895733dc509ba.css" integrity="sha256-nY9UFWjEz9Wg0ylQgsiSehDisA7gOvQrGziVcz3FCbo=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/cc/wc/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.1/styles/nord.min.css"
+	integrity="sha512-igI4zzTHEU3IASS/ojMD7tO6hScqpnEnz41u+xVRNZvZEaF3XaCdre0qZ08frR1hri9+aSNeAXlQz1DS3luvxA=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://kit.fontawesome.com/b5ff8d44a6.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+	rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+	rel="stylesheet">
+
+<meta property="og:image" content="https://www.jaymorelli.me/og.png" />
+<meta property="og:title" content="Coding Challenges - WC" />
+<meta property="og:description" content="Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.
+This is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/cc/wc/" />
+<meta property="og:image" content="http://localhost:1313/thumbnail.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-11T13:26:38+00:00" />
+<meta property="article:modified_time" content="2024-01-11T13:26:38+00:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/thumbnail.png" />
+<meta name="twitter:title" content="Coding Challenges - WC"/>
+<meta name="twitter:description" content="Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.
+This is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Coding Challenges - WC",
+      "item": "http://localhost:1313/blog/cc/wc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Coding Challenges - WC",
+  "name": "Coding Challenges - WC",
+  "description": "Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.\nThis is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out.",
+  "keywords": [
+    "coding-challenge", "unix", "go", "tdd"
+  ],
+  "articleBody": "Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.\nThis is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out. I love building stuff and I figure this would be a great opportunity for me to practice TDD and practice documenting my thought process.\nThe Challenge This first exercise is to create my own version of the Unix tool wc.\nThe Unix command line tools are a great metaphor for good software engineering and they follow the Unix Philosophies of:\nWriting simple parts connected by clean interfaces - each tool does just one thing and provides a simple CLI that handles text input from either files or file streams. Design programs to be connected to other programs - each tool can be easily connected to other tools to create incredibly powerful compositions. Following these philosophies has made the simple unix command line tools some of the most widely used software engineering tools - allowing us to create very complex text data processing pipelines from simple command line tools\nJohn Crickett - https://codingchallenges.fyi/challenges/challenge-wc My application will be called ccwc (coding challenge wc) and the steps to complete the challenge are the following:\nOutput the number of bytes ccwc -c test.txt Output the number of lines ccwc -l test.txt Output the number of words ccwc -w test.txt Output the number of characters ccwc -m test.txt Default usage ccwc test.txt: Output number of lines, words and, bytes Read from stdin *The code snippets here may not be 100% what I have in my repository. I am still grasping the whole idea of documenting while developing, and the chances of me forgetting to update the snippets are high. The final version of the code is in my repository Development Process TDD Ranting I just want to brief clarify something. I don’t and won’t follow the TDD rigorously, at least for now. I like to think that we must be pragmatic about it and I am also not great at it. Furthermore, I get the most value from TDD when:\nI am iterating My software is tested I understand that this is the whole point of TDD, but I am ok if sometimes I miss one of the steps or end up rushing it a little bit.\nStep Zero I start by reading about the wc tool.\n$ man wc After reading the manual and with a clear understand of the tool, I open my Obsidian and I write down the necessary the steps needed to accomplish the goal.\nI open up my terminal, set up my project and open my beloved NeoVim.\nStep One - Counting Bytes I start with my tests, feeling unsure about what I want to test and where to begin.\nKnowing that I need a file for testing, I decide to use the fstest library provided by Go.\nMy initial test looks like this:\nfunc TestReadFile(t *testing.T) { files := fstest.MapFS{ \"file1\": {Data: []byte(\"abc\")}, \"file2\": {Data: []byte(\"def\")}, \"file3\": {Data: []byte(\"joão\")}, } type test struct { file string want []byte } tt := []test{ {\"file1\", []byte(\"abc\")}, {\"file2\", []byte(\"def\")}, {\"file3\", []byte(\"joão\")}, } for _, tc := range tt { file, err := files.Open(tc.file) if err != nil { t.Fatal(err) } got, n, err := ReadFile(file) if err != nil { t.Fatal(err) } if !equalBytesFromFile(n, got, tc.want) { t.Errorf(\"readFile(%s) = %s; want %s\", file, got, tc.want) } } } I go ahead and write the ReadFile function to get the green signal (tests are passing).\nfunc ReadFile(file fs.File) ([]byte, int, error) { b := make([]byte, 1024) n, err := file.Read(b) if err != nil { return nil, 0, err } return b, n, nil } After writing the ReadFile function and ensuring that my tests pass, I realize that my approach is inadequate. I’ve essentially created a wrapper around file.Read() without testing the core functionality I need.\nThis is the beauty of TDD!\nWhat I really want to test at this point is that my function can:\nOpen a file Count the bytes: Actually what I really want is to write the number of bytes somewhere, so that I can test that output with my test cases. At this point, I notice something very interesting: I need to read and write. This is the perfect use case to take advantage of the Reader and Writer interface. I can simply write to some buffer for testing and when I run my program I can write to standard output. The same applies for reading the input.\nI update my test function.\nfunc TestWordCountNumberOfBytes(t *testing.T) { files := fstest.MapFS{ \"file1\": {Data: []byte(\"abc\")}, \"file2\": {Data: []byte(\"\")}, \"file3\": {Data: []byte(\"joão\")}, } type test struct { file string want string } tt := []test{ {\"file1\", \"3\"}, {\"file2\", \"0\"}, {\"file3\", \"5\"}, } for _, tc := range tt { file, err := files.Open(tc.file) if err != nil { t.Fatal(err) } defer file.Close() var b bytes.Buffer err = WordCount(file, \u0026b) if err != nil { t.Fatal(err) } if b.String() != tc.want { t.Errorf(\"got %s; want %s\", b.String(), tc.want) } } } I update my function to get rid of the compile errors and go for the green signal.\nfunc WordCount(r io.Reader, w io.Writer) error { b := make([]byte, 1024) n, err := r.Read(b) if err != nil { if err != io.EOF { return err } return fmt.Fprint(w, 0) } _, err = fmt.Fprint(w, n) return err } After making these changes, the functionality is in place. However, I still need to add support for accepting the -c flag as an argument. I update my test and function accordingly.\nfunc TestWordCountNumberOfBytes(t *testing.T) { //... opts := options{c: true} var b bytes.Buffer got, err := WordCount(file, \u0026b, opts) if err != nil { t.Fatal(err) } //... } package main import ( \"fmt\" \"io\" ) type options struct { c bool } func WordCount(r io.Reader, w io.Writer, opts options) error { b := make([]byte, 1024) n, err := r.Read(b) if err != nil { if err != io.EOF { return err } return writeBytes(w, 0) } if opts.c { err = writeBytes(w, n) } return err } func writeBytes(w io.Writer, n int) error { _, err := fmt.Fprint(w, n) return err } Step two: Counting number of lines I begin this step by creating failing tests to count the number of lines in a file.\nfunc TestWordCountNumberOfLines(t *testing.T) { files := fstest.MapFS{ \"file1\": {Data: []byte(\"abc\\ndef\")}, \"file2\": {Data: []byte(\"\")}, \"file3\": {Data: []byte(\"one line\")}, \"file4\": {Data: []byte(\"joão\\n\\n\")}, } type test struct { file string want string } tt := []test{ {\"file1\", \"2\"}, {\"file2\", \"0\"}, {\"file3\", \"1\"}, {\"file4\", \"3\"}, } for _, tc := range tt { file, err := files.Open(tc.file) if err != nil { t.Fatal(err) } defer file.Close() opts := options{l: true} var b bytes.Buffer err = WordCount(file, \u0026b, opts) if err != nil { t.Fatal(err) } if b.String() != tc.want { t.Errorf(\"got %s; want %s\", b.String(), tc.want) } } } After fixing compile errors and observing failing tests, I start to think about the easiest way to make the test pass.\nRealizing that I’ll need to also write numbers and not just bytes, I rename the writeBytes function to write for clarity. Then, I update the WordCount function to handle counting lines:\nfunc WordCount(r io.Reader, w io.Writer, opts options) error { b := make([]byte, 1024) n, err := r.Read(b) if err != nil { if err != io.EOF { return err } return write(w, 0) } if opts.c { err = write(w, n) } if opts.l { count := 1 // unless empty, we always start with one line for _, v := range b { if v == '\\n' { count++ } } err = write(w, count) } return err } Step Three: Counting Words As usual, I begin with a test.\nfunc TestWordCountNumberOfWords(t *testing.T) { files := fstest.MapFS{ \"file1\": {Data: []byte(\"abc\\ndef\\n\")}, \"file2\": {Data: []byte(\"\\n\")}, \"file3\": {Data: []byte(\"thisisonebigword\")}, \"file4\": {Data: []byte(\"five words and two lines\\n\\n\")}, \"file5\": {Data: []byte(\"abc def\")}, } type test struct { file string want string } tt := []test{ {\"file1\", \"2\"}, {\"file2\", \"0\"}, {\"file3\", \"1\"}, {\"file4\", \"5\"}, {\"file5\", \"2\"}, } for _, tc := range tt { file, err := files.Open(tc.file) if err != nil { t.Fatal(err) } defer file.Close() opts := options{w: true} var b bytes.Buffer err = WordCount(file, \u0026b, opts) if err != nil { t.Fatal(err) } if b.String() != tc.want { t.Errorf(\"got %s; want %s\", b.String(), tc.want) } } } Realizing that defining words as non-white space characters suits this problem, I decide to use bytes.Fields from the strings package to split the byte slice into words. However, I encounter a challenge when initializing the buffer b := make([]byte, 1024). I must consider the unread portion of the slice.\nfunc WordCount(r io.Reader, w io.Writer, opts options) error { b := make([]byte, 1024) n, err := r.Read(b) if err != nil { if err != io.EOF { return err } return write(w, 0) } b = b[:n] // slicing out the unread portion if opts.c { err = write(w, n) } if opts.l { count := 1 for _, v := range b { if v == '\\n' { count++ } } err = write(w, count) } if opts.w { f := bytes.Fields(b) err = write(w, len(f)) } return err } Step Four: Counting Characters I was a bit confused between -m and -c, so I decided to read the manual for wc. For example (ç) counts as 2 bytes but 1 character. With that in mind, I discover that the utf8 package provides the Count(b []byte) int method, which fits perfectly the use case.\nI won’t show the tests anymore as it is pretty similar to the rest.\nThis is a snippet of the WordCount where it contains the logic for the -m argument.\n//... if opts.m { n := utf8.RuneCount(b) err = write(w, n) } //... Step Five: Default Option This is the time for us to refactor, as I need to be able to format the output and set the default options.\nThe WordCount at the end looks like this:\nfunc WordCount(r io.Reader, w io.Writer, opts options) error { var buf bytes.Buffer _, err := io.Copy(\u0026buf, r) if err != nil { if err != io.EOF { return err } handleEmptyFile(w, opts) return nil } b := buf.Bytes() if opts.l { count := bytes.Count(b, []byte{'\\n'}) fmt.Fprintf(w, \"%d \", count) } if opts.w { f := bytes.Fields(b) fmt.Fprintf(w, \"%d \", len(f)) } if opts.c { fmt.Fprintf(w, \"%d \", len(b)) } if opts.m { n := utf8.RuneCount(b) fmt.Fprintf(w, \"%d \", n) } return err } func handleEmptyFile(w io.Writer, opts options) { if opts.c { fmt.Fprintf(w, \"0 \") } if opts.l { fmt.Fprintf(w, \"0 \") } if opts.w { fmt.Fprintf(w, \"0 \") } if opts.m { fmt.Fprintf(w, \"0 \") } Running the program All the code is my repository , feel free to check it out.\nI install my program with go install and I test against the art-of-war.txt Outro At the last step I completly forgot to document my process as it happened a few days later. For the next challenges I will try to write a post per step and not per challenge as it gets quite hard to put it all together.\nOverall I really enjoyed this experience and I am very excited to go through the whole list of coding challenges.\n",
+  "wordCount" : "1931",
+  "inLanguage": "en",
+  "image":"http://localhost:1313/thumbnail.png","datePublished": "2024-01-11T13:26:38Z",
+  "dateModified": "2024-01-11T13:26:38Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/blog/cc/wc/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jay Morelli",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Jay Morelli (Alt + H)">Jay Morelli</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/now/" title="Now">
+                    <span>/now</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>/about</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/uses/" title="Uses">
+                    <span>/uses</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/blog/" title="Blog">
+                    <span>/blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single page-single">
+	<header class="post-header">
+		
+		<h1 class="post-title">
+			Coding Challenges - WC
+		</h1>
+		<div class="post-meta"><span title='2024-01-11 13:26:38 +0000 UTC'>January 11, 2024</span>&nbsp;·&nbsp;10 min
+
+<i class="fa fa-tag"></i><a href="http://localhost:1313/tags/coding-challenge/">#coding-challenge</a><a href="http://localhost:1313/tags/unix/">#unix</a><a href="http://localhost:1313/tags/go/">#go</a><a href="http://localhost:1313/tags/tdd/">#tdd</a>
+
+</div>
+	</header> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_360x0_resize_box_3.png 360w ,http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_480x0_resize_box_3.png 480w ,http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_720x0_resize_box_3.png 720w ,http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_1080x0_resize_box_3.png 1080w ,http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_1500x0_resize_box_3.png 1500w ,http://localhost:1313/blog/cc/wc/thumbnail.png 2025w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:1313/blog/cc/wc/thumbnail.png" alt="" 
+            width="2025" height="492">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#intro" aria-label="Intro">Intro</a></li>
+                <li>
+                    <a href="#the-challenge" aria-label="The Challenge">The Challenge</a></li>
+                <li>
+                    <a href="#development-process" aria-label="Development Process">Development Process</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#tdd-ranting" aria-label="TDD Ranting">TDD Ranting</a></li></ul>
+                    
+                <li>
+                    <a href="#step-zero" aria-label="Step Zero">Step Zero</a></li>
+                <li>
+                    <a href="#step-one---counting-bytes" aria-label="Step One - Counting Bytes">Step One - Counting Bytes</a></li>
+                <li>
+                    <a href="#step-two-counting-number-of-lines" aria-label="Step two: Counting number of lines">Step two: Counting number of lines</a></li>
+                <li>
+                    <a href="#step-three-counting-words" aria-label="Step Three: Counting Words">Step Three: Counting Words</a></li>
+                <li>
+                    <a href="#step-four-counting-characters" aria-label="Step Four: Counting Characters">Step Four: Counting Characters</a></li>
+                <li>
+                    <a href="#step-five-default-option" aria-label="Step Five: Default Option">Step Five: Default Option</a></li>
+                <li>
+                    <a href="#running-the-program" aria-label="Running the program">Running the program</a></li></ul>
+                </li>
+                <li>
+                    <a href="#outro" aria-label="Outro">Outro</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+	<div class="post-content"><h1 id="intro">Intro<a hidden class="anchor" aria-hidden="true" href="#intro">#</a></h1>
+<p>Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the <a href="https://codingchallenges.fyi/challenges/intro"  target="_blank" >Coding Challenges by John Crickett</a>
+ using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.</p>
+<p>This is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out. I love building stuff and I figure this would be a great opportunity for me to practice TDD and practice documenting my thought process.</p>
+<h1 id="the-challenge">The Challenge<a hidden class="anchor" aria-hidden="true" href="#the-challenge">#</a></h1>
+<p>This first exercise is to create my own version of the Unix tool <code>wc</code>.</p>
+<blockquote>
+<p>The Unix command line tools are a great metaphor for good software engineering and they follow the Unix Philosophies of:</p>
+<ul>
+<li>Writing simple parts connected by clean interfaces - each tool does just one thing and provides a simple CLI that handles text input from either files or file streams.</li>
+<li>Design programs to be connected to other programs - each tool can be easily connected to other tools to create incredibly powerful compositions.</li>
+</ul>
+<p>Following these philosophies has made the simple unix command line tools some of the most widely used software engineering tools - allowing us to create very complex text data processing pipelines from simple command line tools</p>
+<p>John Crickett - <a href="https://codingchallenges.fyi/challenges/challenge-wc"  target="_blank" >https://codingchallenges.fyi/challenges/challenge-wc</a>
+</p>
+</blockquote>
+<p>My application will be called <code>ccwc</code> (coding challenge wc) and the steps to complete the challenge are the following:</p>
+<ol>
+<li>Output the number of bytes <code>ccwc -c test.txt</code></li>
+<li>Output the number of lines <code>ccwc -l test.txt</code></li>
+<li>Output the number of words <code>ccwc -w test.txt</code></li>
+<li>Output the number of characters <code>ccwc -m test.txt</code></li>
+<li>Default usage <code>ccwc test.txt</code>: Output number of lines, words and, bytes</li>
+<li>Read from <code>stdin</code></li>
+</ol>
+<p>*<em>The code snippets here may not be 100% what I have in my repository. I am still grasping the whole idea of documenting while developing, and the chances of me forgetting to update the snippets are high. The final version of the code is in my <a href="https://github.com/jaymorelli96/codingchallenges"  target="_blank" >repository</a>
+</em></p>
+<h1 id="development-process">Development Process<a hidden class="anchor" aria-hidden="true" href="#development-process">#</a></h1>
+<h3 id="tdd-ranting">TDD Ranting<a hidden class="anchor" aria-hidden="true" href="#tdd-ranting">#</a></h3>
+<p>I just want to brief clarify something. I don&rsquo;t and won&rsquo;t follow the TDD rigorously, at least for now. I like to think that we must be pragmatic about it and I am also not great at it. Furthermore, I get the most value from TDD when:</p>
+<ol>
+<li>I am iterating</li>
+<li>My software is tested</li>
+</ol>
+<p>I understand that this is the whole point of TDD, but <em>I am ok if sometimes I miss one of the steps or end up rushing it a little bit</em>.</p>
+<h2 id="step-zero">Step Zero<a hidden class="anchor" aria-hidden="true" href="#step-zero">#</a></h2>
+<p>I start by reading about the <code>wc</code> tool.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ man wc
+</span></span></code></pre></div><p>After reading the manual and with a clear understand of the tool, I open my Obsidian and I write down the necessary the steps needed to accomplish the goal.</p>
+<p>I open up my terminal, set up my project and open my beloved NeoVim.</p>
+<h2 id="step-one---counting-bytes">Step One - Counting Bytes<a hidden class="anchor" aria-hidden="true" href="#step-one---counting-bytes">#</a></h2>
+<p>I start with my tests, feeling unsure about what I want to test and where to begin.</p>
+<p>Knowing that I need a file for testing, I decide to use the <code>fstest</code> library provided by Go.</p>
+<p>My initial test looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">TestReadFile</span><span style="color:#eceff4">(</span>t <span style="color:#81a1c1">*</span>testing<span style="color:#eceff4">.</span>T<span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	files <span style="color:#81a1c1">:=</span> fstest<span style="color:#eceff4">.</span>MapFS<span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file1&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;abc&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file2&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;def&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file3&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;joão&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">type</span> test <span style="color:#81a1c1;font-weight:bold">struct</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		file <span style="color:#81a1c1">string</span>
+</span></span><span style="display:flex;"><span>		want <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	tt <span style="color:#81a1c1">:=</span> <span style="color:#eceff4">[]</span>test<span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file1&#34;</span><span style="color:#eceff4">,</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;abc&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file2&#34;</span><span style="color:#eceff4">,</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;def&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file3&#34;</span><span style="color:#eceff4">,</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;joão&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">for</span> _<span style="color:#eceff4">,</span> tc <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1;font-weight:bold">range</span> tt <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		file<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> files<span style="color:#eceff4">.</span><span style="color:#88c0d0">Open</span><span style="color:#eceff4">(</span>tc<span style="color:#eceff4">.</span>file<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		got<span style="color:#eceff4">,</span> n<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> <span style="color:#88c0d0">ReadFile</span><span style="color:#eceff4">(</span>file<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> <span style="color:#eceff4">!</span><span style="color:#88c0d0">equalBytesFromFile</span><span style="color:#eceff4">(</span>n<span style="color:#eceff4">,</span> got<span style="color:#eceff4">,</span> tc<span style="color:#eceff4">.</span>want<span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Errorf</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;readFile(%s) = %s; want %s&#34;</span><span style="color:#eceff4">,</span> file<span style="color:#eceff4">,</span> got<span style="color:#eceff4">,</span> tc<span style="color:#eceff4">.</span>want<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><p>I go ahead and write the <code>ReadFile</code> function to get the green signal (tests are passing).</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">ReadFile</span><span style="color:#eceff4">(</span>file fs<span style="color:#eceff4">.</span>File<span style="color:#eceff4">)</span> <span style="color:#eceff4">([]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">,</span> <span style="color:#81a1c1">int</span><span style="color:#eceff4">,</span> <span style="color:#81a1c1">error</span><span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	b <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1">make</span><span style="color:#eceff4">([]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">,</span> <span style="color:#b48ead">1024</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	n<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> file<span style="color:#eceff4">.</span><span style="color:#88c0d0">Read</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">return</span> <span style="color:#81a1c1;font-weight:bold">nil</span><span style="color:#eceff4">,</span> <span style="color:#b48ead">0</span><span style="color:#eceff4">,</span> err
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">return</span> b<span style="color:#eceff4">,</span> n<span style="color:#eceff4">,</span> <span style="color:#81a1c1;font-weight:bold">nil</span>
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><p>After writing the <code>ReadFile</code> function and ensuring that my tests pass, I realize that my approach is inadequate. I&rsquo;ve essentially created a wrapper around <code>file.Read()</code> without testing the core functionality I need.</p>
+<p><em>This is the beauty of TDD!</em></p>
+<p>What I really want to test at this point is that my function can:</p>
+<ol>
+<li>Open a file</li>
+<li>Count the bytes: Actually what I really want is to <strong>write the number of bytes somewhere, so that I can test that output with my test cases</strong>.</li>
+</ol>
+<p>At this point, I notice something very interesting: I need to <em>read</em> and <em>write</em>. This is the perfect use case to take advantage of the <code>Reader</code> and <code>Writer</code> interface. I can simply write to some buffer for testing and when I run my program I can write to standard output. The same applies for reading the input.</p>
+<p>I update my test function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">TestWordCountNumberOfBytes</span><span style="color:#eceff4">(</span>t <span style="color:#81a1c1">*</span>testing<span style="color:#eceff4">.</span>T<span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	files <span style="color:#81a1c1">:=</span> fstest<span style="color:#eceff4">.</span>MapFS<span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file1&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;abc&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file2&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file3&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;joão&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">type</span> test <span style="color:#81a1c1;font-weight:bold">struct</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		file <span style="color:#81a1c1">string</span>
+</span></span><span style="display:flex;"><span>		want <span style="color:#81a1c1">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	tt <span style="color:#81a1c1">:=</span> <span style="color:#eceff4">[]</span>test<span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file1&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;3&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file2&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;0&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file3&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;5&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">for</span> _<span style="color:#eceff4">,</span> tc <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1;font-weight:bold">range</span> tt <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		file<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> files<span style="color:#eceff4">.</span><span style="color:#88c0d0">Open</span><span style="color:#eceff4">(</span>tc<span style="color:#eceff4">.</span>file<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">defer</span> file<span style="color:#eceff4">.</span><span style="color:#88c0d0">Close</span><span style="color:#eceff4">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">var</span> b bytes<span style="color:#eceff4">.</span>Buffer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>file<span style="color:#eceff4">,</span> <span style="color:#81a1c1">&amp;</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> b<span style="color:#eceff4">.</span><span style="color:#88c0d0">String</span><span style="color:#eceff4">()</span> <span style="color:#81a1c1">!=</span> tc<span style="color:#eceff4">.</span>want <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Errorf</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;got %s; want %s&#34;</span><span style="color:#eceff4">,</span> b<span style="color:#eceff4">.</span><span style="color:#88c0d0">String</span><span style="color:#eceff4">(),</span> tc<span style="color:#eceff4">.</span>want<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><p>I update my function to get rid of the compile errors and go for the green signal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>r io<span style="color:#eceff4">.</span>Reader<span style="color:#eceff4">,</span> w io<span style="color:#eceff4">.</span>Writer<span style="color:#eceff4">)</span> <span style="color:#81a1c1">error</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	b <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1">make</span><span style="color:#eceff4">([]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">,</span> <span style="color:#b48ead">1024</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	n<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> r<span style="color:#eceff4">.</span><span style="color:#88c0d0">Read</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> io<span style="color:#eceff4">.</span>EOF <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">return</span> fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprint</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#b48ead">0</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	_<span style="color:#eceff4">,</span> err <span style="color:#eceff4">=</span> fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprint</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> n<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><p>After making these changes, the functionality is in place. However, I still need to add support for accepting the -c flag as an argument. I update my test and function accordingly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">TestWordCountNumberOfBytes</span><span style="color:#eceff4">(</span>t <span style="color:#81a1c1">*</span>testing<span style="color:#eceff4">.</span>T<span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"></span>		opts <span style="color:#81a1c1">:=</span> options<span style="color:#eceff4">{</span>c<span style="color:#eceff4">:</span> <span style="color:#81a1c1;font-weight:bold">true</span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">var</span> b bytes<span style="color:#eceff4">.</span>Buffer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		got<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>file<span style="color:#eceff4">,</span> <span style="color:#81a1c1">&amp;</span>b<span style="color:#eceff4">,</span> opts<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"></span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">import</span> <span style="color:#eceff4">(</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a3be8c">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a3be8c">&#34;io&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">type</span> options <span style="color:#81a1c1;font-weight:bold">struct</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	c <span style="color:#81a1c1">bool</span>
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>r io<span style="color:#eceff4">.</span>Reader<span style="color:#eceff4">,</span> w io<span style="color:#eceff4">.</span>Writer<span style="color:#eceff4">,</span> opts options<span style="color:#eceff4">)</span> <span style="color:#81a1c1">error</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	b <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1">make</span><span style="color:#eceff4">([]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">,</span> <span style="color:#b48ead">1024</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	n<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> r<span style="color:#eceff4">.</span><span style="color:#88c0d0">Read</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> io<span style="color:#eceff4">.</span>EOF <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">return</span> <span style="color:#88c0d0">writeBytes</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#b48ead">0</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>c <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">writeBytes</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> n<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">writeBytes</span><span style="color:#eceff4">(</span>w io<span style="color:#eceff4">.</span>Writer<span style="color:#eceff4">,</span> n <span style="color:#81a1c1">int</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">error</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	_<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprint</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> n<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><h2 id="step-two-counting-number-of-lines">Step two: Counting number of lines<a hidden class="anchor" aria-hidden="true" href="#step-two-counting-number-of-lines">#</a></h2>
+<p>I begin this step by creating failing tests to count the number of lines in a file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">TestWordCountNumberOfLines</span><span style="color:#eceff4">(</span>t <span style="color:#81a1c1">*</span>testing<span style="color:#eceff4">.</span>T<span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	files <span style="color:#81a1c1">:=</span> fstest<span style="color:#eceff4">.</span>MapFS<span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file1&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;abc\ndef&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file2&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file3&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;one line&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file4&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;joão\n\n&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">type</span> test <span style="color:#81a1c1;font-weight:bold">struct</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		file <span style="color:#81a1c1">string</span>
+</span></span><span style="display:flex;"><span>		want <span style="color:#81a1c1">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	tt <span style="color:#81a1c1">:=</span> <span style="color:#eceff4">[]</span>test<span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file1&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;2&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file2&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;0&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file3&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;1&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file4&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;3&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">for</span> _<span style="color:#eceff4">,</span> tc <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1;font-weight:bold">range</span> tt <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		file<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> files<span style="color:#eceff4">.</span><span style="color:#88c0d0">Open</span><span style="color:#eceff4">(</span>tc<span style="color:#eceff4">.</span>file<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">defer</span> file<span style="color:#eceff4">.</span><span style="color:#88c0d0">Close</span><span style="color:#eceff4">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		opts <span style="color:#81a1c1">:=</span> options<span style="color:#eceff4">{</span>l<span style="color:#eceff4">:</span> <span style="color:#81a1c1;font-weight:bold">true</span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">var</span> b bytes<span style="color:#eceff4">.</span>Buffer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>file<span style="color:#eceff4">,</span> <span style="color:#81a1c1">&amp;</span>b<span style="color:#eceff4">,</span> opts<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> b<span style="color:#eceff4">.</span><span style="color:#88c0d0">String</span><span style="color:#eceff4">()</span> <span style="color:#81a1c1">!=</span> tc<span style="color:#eceff4">.</span>want <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Errorf</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;got %s; want %s&#34;</span><span style="color:#eceff4">,</span> b<span style="color:#eceff4">.</span><span style="color:#88c0d0">String</span><span style="color:#eceff4">(),</span> tc<span style="color:#eceff4">.</span>want<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><p>After fixing compile errors and observing failing tests, I start to think about the easiest way to make the test pass.</p>
+<p>Realizing that I&rsquo;ll need to also write numbers and not just bytes, I rename the writeBytes function to write for clarity. Then, I update the WordCount function to handle counting lines:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>r io<span style="color:#eceff4">.</span>Reader<span style="color:#eceff4">,</span> w io<span style="color:#eceff4">.</span>Writer<span style="color:#eceff4">,</span> opts options<span style="color:#eceff4">)</span> <span style="color:#81a1c1">error</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	b <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1">make</span><span style="color:#eceff4">([]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">,</span> <span style="color:#b48ead">1024</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	n<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> r<span style="color:#eceff4">.</span><span style="color:#88c0d0">Read</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> io<span style="color:#eceff4">.</span>EOF <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">return</span> <span style="color:#88c0d0">write</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#b48ead">0</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>c <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">write</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> n<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>l <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		count <span style="color:#81a1c1">:=</span> <span style="color:#b48ead">1</span> <span style="color:#616e87;font-style:italic">// unless empty, we always start with one line
+</span></span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"></span>		<span style="color:#81a1c1;font-weight:bold">for</span> _<span style="color:#eceff4">,</span> v <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1;font-weight:bold">range</span> b <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#81a1c1;font-weight:bold">if</span> v <span style="color:#81a1c1">==</span> <span style="color:#a3be8c">&#39;\n&#39;</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>				count<span style="color:#81a1c1">++</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">write</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> count<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><h2 id="step-three-counting-words">Step Three: Counting Words<a hidden class="anchor" aria-hidden="true" href="#step-three-counting-words">#</a></h2>
+<p>As usual, I begin with a test.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">TestWordCountNumberOfWords</span><span style="color:#eceff4">(</span>t <span style="color:#81a1c1">*</span>testing<span style="color:#eceff4">.</span>T<span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	files <span style="color:#81a1c1">:=</span> fstest<span style="color:#eceff4">.</span>MapFS<span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file1&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;abc\ndef\n&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file2&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;\n&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file3&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;thisisonebigword&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file4&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;five words and two lines\n\n&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a3be8c">&#34;file5&#34;</span><span style="color:#eceff4">:</span> <span style="color:#eceff4">{</span>Data<span style="color:#eceff4">:</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;abc def&#34;</span><span style="color:#eceff4">)},</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">type</span> test <span style="color:#81a1c1;font-weight:bold">struct</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		file <span style="color:#81a1c1">string</span>
+</span></span><span style="display:flex;"><span>		want <span style="color:#81a1c1">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	tt <span style="color:#81a1c1">:=</span> <span style="color:#eceff4">[]</span>test<span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file1&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;2&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file2&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;0&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file3&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;1&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file4&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;5&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">{</span><span style="color:#a3be8c">&#34;file5&#34;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;2&#34;</span><span style="color:#eceff4">},</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">for</span> _<span style="color:#eceff4">,</span> tc <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1;font-weight:bold">range</span> tt <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		file<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> files<span style="color:#eceff4">.</span><span style="color:#88c0d0">Open</span><span style="color:#eceff4">(</span>tc<span style="color:#eceff4">.</span>file<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">defer</span> file<span style="color:#eceff4">.</span><span style="color:#88c0d0">Close</span><span style="color:#eceff4">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		opts <span style="color:#81a1c1">:=</span> options<span style="color:#eceff4">{</span>w<span style="color:#eceff4">:</span> <span style="color:#81a1c1;font-weight:bold">true</span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">var</span> b bytes<span style="color:#eceff4">.</span>Buffer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>file<span style="color:#eceff4">,</span> <span style="color:#81a1c1">&amp;</span>b<span style="color:#eceff4">,</span> opts<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fatal</span><span style="color:#eceff4">(</span>err<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> b<span style="color:#eceff4">.</span><span style="color:#88c0d0">String</span><span style="color:#eceff4">()</span> <span style="color:#81a1c1">!=</span> tc<span style="color:#eceff4">.</span>want <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			t<span style="color:#eceff4">.</span><span style="color:#88c0d0">Errorf</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;got %s; want %s&#34;</span><span style="color:#eceff4">,</span> b<span style="color:#eceff4">.</span><span style="color:#88c0d0">String</span><span style="color:#eceff4">(),</span> tc<span style="color:#eceff4">.</span>want<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><p>Realizing that defining words as non-white space characters suits this problem, I decide to use <code>bytes.Fields</code> from the <code>strings</code> package to split the byte slice into words.
+However, I encounter a challenge when initializing the buffer <code>b := make([]byte, 1024)</code>. I must consider the unread portion of the slice.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>r io<span style="color:#eceff4">.</span>Reader<span style="color:#eceff4">,</span> w io<span style="color:#eceff4">.</span>Writer<span style="color:#eceff4">,</span> opts options<span style="color:#eceff4">)</span> <span style="color:#81a1c1">error</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	b <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1">make</span><span style="color:#eceff4">([]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">,</span> <span style="color:#b48ead">1024</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	n<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> r<span style="color:#eceff4">.</span><span style="color:#88c0d0">Read</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> io<span style="color:#eceff4">.</span>EOF <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">return</span> <span style="color:#88c0d0">write</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#b48ead">0</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	b <span style="color:#eceff4">=</span> b<span style="color:#eceff4">[:</span>n<span style="color:#eceff4">]</span> <span style="color:#616e87;font-style:italic">// slicing out the unread portion 
+</span></span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>c <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">write</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> n<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>l <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		count <span style="color:#81a1c1">:=</span> <span style="color:#b48ead">1</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">for</span> _<span style="color:#eceff4">,</span> v <span style="color:#81a1c1">:=</span> <span style="color:#81a1c1;font-weight:bold">range</span> b <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#81a1c1;font-weight:bold">if</span> v <span style="color:#81a1c1">==</span> <span style="color:#a3be8c">&#39;\n&#39;</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>				count<span style="color:#81a1c1">++</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">write</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> count<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>w <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		f <span style="color:#81a1c1">:=</span> bytes<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fields</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">write</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#81a1c1">len</span><span style="color:#eceff4">(</span>f<span style="color:#eceff4">))</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span></code></pre></div><h2 id="step-four-counting-characters">Step Four: Counting Characters<a hidden class="anchor" aria-hidden="true" href="#step-four-counting-characters">#</a></h2>
+<p>I was a bit confused between <code>-m</code> and <code>-c</code>, so I decided to read the manual for <code>wc</code>. For example (ç) counts as 2 bytes but 1 character. With that in mind, I discover that the <code>utf8</code> package provides the <code>Count(b []byte) int</code> method, which fits perfectly the use case.</p>
+<p>I won&rsquo;t show the tests anymore as it is pretty similar to the rest.</p>
+<p>This is a snippet of the <code>WordCount</code> where it contains the logic for the <code>-m</code> argument.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#616e87;font-style:italic">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"></span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>m <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		n <span style="color:#81a1c1">:=</span> utf8<span style="color:#eceff4">.</span><span style="color:#88c0d0">RuneCount</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		err <span style="color:#eceff4">=</span> <span style="color:#88c0d0">write</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> n<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic">//...
+</span></span></span></code></pre></div><h2 id="step-five-default-option">Step Five: Default Option<a hidden class="anchor" aria-hidden="true" href="#step-five-default-option">#</a></h2>
+<p>This is the time for us to refactor, as I need to be able to format the output and set the default options.</p>
+<p>The <code>WordCount</code> at the end looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">WordCount</span><span style="color:#eceff4">(</span>r io<span style="color:#eceff4">.</span>Reader<span style="color:#eceff4">,</span> w io<span style="color:#eceff4">.</span>Writer<span style="color:#eceff4">,</span> opts options<span style="color:#eceff4">)</span> <span style="color:#81a1c1">error</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">var</span> buf bytes<span style="color:#eceff4">.</span>Buffer
+</span></span><span style="display:flex;"><span>	_<span style="color:#eceff4">,</span> err <span style="color:#81a1c1">:=</span> io<span style="color:#eceff4">.</span><span style="color:#88c0d0">Copy</span><span style="color:#eceff4">(</span><span style="color:#81a1c1">&amp;</span>buf<span style="color:#eceff4">,</span> r<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> <span style="color:#81a1c1;font-weight:bold">nil</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">if</span> err <span style="color:#81a1c1">!=</span> io<span style="color:#eceff4">.</span>EOF <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span>		<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#88c0d0">handleEmptyFile</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> opts<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#81a1c1;font-weight:bold">return</span> <span style="color:#81a1c1;font-weight:bold">nil</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	b <span style="color:#81a1c1">:=</span> buf<span style="color:#eceff4">.</span><span style="color:#88c0d0">Bytes</span><span style="color:#eceff4">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>l <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		count <span style="color:#81a1c1">:=</span> bytes<span style="color:#eceff4">.</span><span style="color:#88c0d0">Count</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">,</span> <span style="color:#eceff4">[]</span><span style="color:#81a1c1">byte</span><span style="color:#eceff4">{</span><span style="color:#a3be8c">&#39;\n&#39;</span><span style="color:#eceff4">})</span>
+</span></span><span style="display:flex;"><span>		fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprintf</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;%d &#34;</span><span style="color:#eceff4">,</span> count<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>w <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		f <span style="color:#81a1c1">:=</span> bytes<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fields</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprintf</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;%d &#34;</span><span style="color:#eceff4">,</span> <span style="color:#81a1c1">len</span><span style="color:#eceff4">(</span>f<span style="color:#eceff4">))</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>c <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprintf</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;%d &#34;</span><span style="color:#eceff4">,</span> <span style="color:#81a1c1">len</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">))</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>m <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		n <span style="color:#81a1c1">:=</span> utf8<span style="color:#eceff4">.</span><span style="color:#88c0d0">RuneCount</span><span style="color:#eceff4">(</span>b<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>		fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprintf</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;%d &#34;</span><span style="color:#eceff4">,</span> n<span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">return</span> err
+</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">func</span> <span style="color:#88c0d0">handleEmptyFile</span><span style="color:#eceff4">(</span>w io<span style="color:#eceff4">.</span>Writer<span style="color:#eceff4">,</span> opts options<span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>c <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprintf</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;0 &#34;</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>l <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprintf</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;0 &#34;</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>w <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprintf</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;0 &#34;</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">if</span> opts<span style="color:#eceff4">.</span>m <span style="color:#eceff4">{</span>
+</span></span><span style="display:flex;"><span>		fmt<span style="color:#eceff4">.</span><span style="color:#88c0d0">Fprintf</span><span style="color:#eceff4">(</span>w<span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#34;0 &#34;</span><span style="color:#eceff4">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#eceff4">}</span>
+</span></span></code></pre></div><h2 id="running-the-program">Running the program<a hidden class="anchor" aria-hidden="true" href="#running-the-program">#</a></h2>
+<p>All the code is <a href="https://github.com/jaymorelli96/codingchallenges/tree/main/ccwc"  target="_blank" >my repository</a>
+, feel free to check it out.</p>
+<p>I install my program with <code>go install</code> and I test against the <code>art-of-war.txt</code>
+<img loading="lazy" src="ccwc-run.png" alt="ccwc"  />
+</p>
+<h1 id="outro">Outro<a hidden class="anchor" aria-hidden="true" href="#outro">#</a></h1>
+<p>At the last step I completly forgot to document my process as it happened a few days later. For the next challenges I will try to write a post per step and not per challenge as
+it gets quite hard to put it all together.</p>
+<p>Overall I really enjoyed this experience and I am very excited to go through the whole list of coding challenges.</p>
+
+
+	</div>
+	<footer class="post-footer">
+		<ul class="post-tags">
+			<li><a href="http://localhost:1313/tags/coding-challenge/">Coding-Challenge</a></li>
+			<li><a href="http://localhost:1313/tags/unix/">Unix</a></li>
+			<li><a href="http://localhost:1313/tags/go/">Go</a></li>
+			<li><a href="http://localhost:1313/tags/tdd/">Tdd</a></li>
+		</ul>
+
+	</footer>
+</article>
+    </main>
+    
+<footer class="footer"><div class="social-icons">
+    <a href="https://github.com/jaymorelli96" target="_blank" rel="noopener noreferrer me" title="Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+    <a href="https://www.linkedin.com/in/jaymorelli/" target="_blank" rel="noopener noreferrer me" title="Linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+    </a>
+</div>
+
+	<span>&copy; 2024 <a href="http://localhost:1313/">Jay Morelli</a></span> -
+	<span class="love">
+		Made with <i class="fa fa-heart"></i>
+	</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+		<path d="M12 6H0l6-6z" />
+	</svg>
+</a>
+<script>
+	
+	function redirectToLink(url) {
+		window.open(url, '_blank');
+	}
+	
+	function getRandomQuote(quotes) {
+		const randomIndex = Math.floor(Math.random() * quotes.length);
+		return quotes[randomIndex];
+	}
+
+	
+	function updateQuote() {
+		const quotes = [{"author":"Benjamin Brewster, Yale Literary Magazine","quote":"In theory, there is no difference between theory and practice, while in practice there is."},{"author":"Martin Fowler","quote":"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."},{"author":"Russ Cox","quote":"Software engineering is what happens to programming when you add time and other programmers."},{"author":"Edsger W. Dijkstra","quote":"Simplicity is prerequisite for reliability."},{"author":"Mark Reinhold","quote":"Readability is essential for maintainability."},{"author":"Sandi Metz","quote":"Design is the art of arranging code to work today, and be changeable forever."},{"author":"Dave Cheney","quote":"Poor naming is symptomatic of poor design."},{"author":"Dave Cheney","quote":"Good naming is like a good joke. If you have to explain it, it’s not funny."},{"author":"Andrew Gerrand","quote":"The greater the distance between a name’s declaration and its uses, the longer the name should be."},{"author":"Dave Thomas and Andrew Hunt, The Pragmatic Programmer","quote":"Good code has lots of comments, bad code requires lots of comments."},{"author":"Sandy Metz","quote":"[A little] duplication is far cheaper than the wrong abstraction."}];
+	const {quote, author} = getRandomQuote(quotes);
+	document.getElementById('quote').textContent = quote;
+	document.getElementById('author').textContent = '— ' + author;
+    }
+
+	
+	window.onload = updateQuote;
+</script>
+
+
+
+<script>
+	let menu = document.getElementById('menu')
+	if (menu) {
+		menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+		menu.onscroll = function () {
+			localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+		}
+	}
+
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener("click", function (e) {
+			e.preventDefault();
+			var id = this.getAttribute("href").substr(1);
+			if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+				document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+					behavior: "smooth"
+				});
+			} else {
+				document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+			}
+			if (id === "top") {
+				history.replaceState(null, null, " ");
+			} else {
+				history.pushState(null, null, `#${id}`);
+			}
+		});
+	});
+
+</script>
+<script>
+	var mybutton = document.getElementById("top-link");
+	window.onscroll = function () {
+		if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+			mybutton.style.visibility = "visible";
+			mybutton.style.opacity = "1";
+		} else {
+			mybutton.style.visibility = "hidden";
+			mybutton.style.opacity = "0";
+		}
+	};
+
+</script>
+<script>
+	document.getElementById("theme-toggle").addEventListener("click", () => {
+		if (document.body.className.includes("dark")) {
+			document.body.classList.remove('dark');
+			localStorage.setItem("pref-theme", 'light');
+		} else {
+			document.body.classList.add('dark');
+			localStorage.setItem("pref-theme", 'dark');
+		}
+	})
+
+</script>
+<script>
+	document.querySelectorAll('pre > code').forEach((codeblock) => {
+		const container = codeblock.parentNode.parentNode;
+
+		const copybutton = document.createElement('button');
+		copybutton.classList.add('copy-code');
+		copybutton.innerHTML = 'copy';
+
+		function copyingDone() {
+			copybutton.innerHTML = 'copied!';
+			setTimeout(() => {
+				copybutton.innerHTML = 'copy';
+			}, 2000);
+		}
+
+		copybutton.addEventListener('click', (cb) => {
+			if ('clipboard' in navigator) {
+				navigator.clipboard.writeText(codeblock.textContent);
+				copyingDone();
+				return;
+			}
+
+			const range = document.createRange();
+			range.selectNodeContents(codeblock);
+			const selection = window.getSelection();
+			selection.removeAllRanges();
+			selection.addRange(range);
+			try {
+				document.execCommand('copy');
+				copyingDone();
+			} catch (e) { };
+			selection.removeRange(range);
+		});
+
+		if (container.classList.contains("highlight")) {
+			container.appendChild(copybutton);
+		} else if (container.parentNode.firstChild == container) {
+			
+		} else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+			
+			codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+		} else {
+			
+			codeblock.parentNode.appendChild(copybutton);
+		}
+	});
+</script>
+</body>
+
+</html>

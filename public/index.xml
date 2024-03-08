@@ -2,45 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jay Morelli</title>
-    <link>https://www.jaymorelli.me/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Jay Morelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jan 2024 09:56:45 +0000</lastBuildDate><atom:link href="https://www.jaymorelli.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Jan 2024 13:26:38 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding Challenges - WC</title>
+      <link>http://localhost:1313/blog/cc/wc/</link>
+      <pubDate>Thu, 11 Jan 2024 13:26:38 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/cc/wc/</guid>
+      <description>Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.
+This is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out.</description>
+    </item>
+    
     <item>
       <title>Git Worktree</title>
-      <link>https://www.jaymorelli.me/blog/git-worktree/</link>
+      <link>http://localhost:1313/blog/git-worktree/</link>
       <pubDate>Tue, 02 Jan 2024 09:56:45 +0000</pubDate>
       
-      <guid>https://www.jaymorelli.me/blog/git-worktree/</guid>
+      <guid>http://localhost:1313/blog/git-worktree/</guid>
       <description>The most underrated git feature</description>
     </item>
     
     <item>
-      <title>Linux In Windows - WSL Developer Enviroment</title>
-      <link>https://www.jaymorelli.me/blog/wsl/</link>
-      <pubDate>Fri, 22 Dec 2023 19:56:45 +0000</pubDate>
-      
-      <guid>https://www.jaymorelli.me/blog/wsl/</guid>
-      <description>No more complaining to your manager about your Windows machine</description>
-    </item>
-    
-    <item>
       <title></title>
-      <link>https://www.jaymorelli.me/cv/</link>
+      <link>http://localhost:1313/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.jaymorelli.me/cv/</guid>
+      <guid>http://localhost:1313/cv/</guid>
       <description>Colt Technology Services May 2022 - June 2023 My time at Atos was over, I felt I needed to go to a bigger project and the salary didn&amp;rsquo;t meet my expectations. I got an job offer from Team IT, a Portuguese consultancy, to work as a contractor in Colt Technology Services at the SD-WAN project.
 I find the world of networking very interesting and intimidating, which made me excited to work with SD-WAN even tough I knew that there were networking engineers who would deal with all the network was nice to be around that environment.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://www.jaymorelli.me/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.jaymorelli.me/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>Hi, welcome to my corner on the internet!
 This site is a place for me to keep my own writting, a place for me to be a citizen of the web. Jammie Tanna and his article Why I Have a Website and You Should Too , was a big inspiration and really resonated with me.
 I hope you can learn something from me as I have learned from many of the citizens of the web.</description>
@@ -48,20 +49,20 @@ I hope you can learn something from me as I have learned from many of the citize
     
     <item>
       <title>Now</title>
-      <link>https://www.jaymorelli.me/now/</link>
+      <link>http://localhost:1313/now/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.jaymorelli.me/now/</guid>
+      <guid>http://localhost:1313/now/</guid>
       <description>This page is inspired by Derek Sivers&amp;rsquo;s post The /now page movement and the Now Movement . The purpose of this page is to share my interests and what I&amp;rsquo;m currently focused on.
 What am I up to right now? Engaged, preparing for our wedding in 2025 Currently working at Siemens in the Industrial Edge . Actively blogging about technical and personal topics Looking forward to surfing more often Learning Diving deeper in Go concurrency model Kubernetes internals Getting back with Angular Reading Concurrency in Go: Tools and Techniques for Developers by Katherine Cox-Buday The History of the Ancient World: From the Earliest Accounts to the Fall of Rome by Susan Wise Bauer Listening The Go Time Cup o&amp;rsquo; Go Fun fact: Shay created a minimalist version of the coffee mug after my request Grafana&amp;rsquo;s Big Tent Lex Fridman Podcast Ardan Labs Podcast Ponto Dev Podcast Backend Banter What are my interests?</description>
     </item>
     
     <item>
       <title>Uses</title>
-      <link>https://www.jaymorelli.me/uses/</link>
+      <link>http://localhost:1313/uses/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.jaymorelli.me/uses/</guid>
+      <guid>http://localhost:1313/uses/</guid>
       <description>This page is a curated list of the tools that empower me as a software developer. Discovering pages like this has been a game-changer for me, providing valuable insights into optimizing workflows and uncovering hidden gems in the tech toolbox.
 Pages like this is a goldmine for discovering new tools that elevate productivity and enhance the developer experience.
 If you&amp;rsquo;re interested in exploring similar pages from fellow enthusiasts, be sure to check out the collection in the awesome-uses repository .</description>

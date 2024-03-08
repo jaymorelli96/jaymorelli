@@ -127,6 +127,10 @@ img {
 	display: none !important;
 }
 
+.lang-switch {
+	display: none !important;
+}
+
 
 @media (min-width: 992px) {
 	body {

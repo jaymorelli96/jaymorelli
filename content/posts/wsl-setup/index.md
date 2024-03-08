@@ -12,7 +12,7 @@ slug: "wsl"
 cover: 
     image: thumbnail.png
 ShowToc: true
-draft: false
+draft: true
 ---
 
 

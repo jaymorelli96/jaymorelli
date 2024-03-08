@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,17 +9,18 @@
 <meta name="keywords" content="git">
 <meta name="description" content="The most underrated git feature">
 <meta name="author" content="">
-<link rel="canonical" href="https://www.jaymorelli.me/blog/git-worktree/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.6d9af6c7497821dfa06a0dc67ff0ef9064c46abfcc480488cb15ed17962ca833.css" integrity="sha256-bZr2x0l4Id&#43;gag3Gf/DvkGTEar/MSASIyxXtF5YsqDM=" rel="preload stylesheet" as="style">
+<link rel="canonical" href="http://localhost:1313/blog/git-worktree/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0125c2a9ec4ac951f49b1ecbd39c279b8a63f492c77aeeccfdc54e0e8e0ba203.css" integrity="sha256-ASXCqexKyVH0mx7L05wnm4pj9JLHeu7M/cVODo4LogM=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://www.jaymorelli.me/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.jaymorelli.me/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.jaymorelli.me/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://www.jaymorelli.me/apple-touch-icon.png">
-<link rel="mask-icon" href="https://www.jaymorelli.me/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/git-worktree/">
 <noscript>
     <style>
         #theme-toggle,
@@ -53,13 +54,13 @@
 <meta property="og:title" content="Git Worktree" />
 <meta property="og:description" content="The most underrated git feature" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.jaymorelli.me/blog/git-worktree/" />
-<meta property="og:image" content="https://www.jaymorelli.me/git-worktree-thumbnail.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/blog/git-worktree/" />
+<meta property="og:image" content="http://localhost:1313/git-worktree-thumbnail.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-02T09:56:45+00:00" />
 <meta property="article:modified_time" content="2024-01-02T09:56:45+00:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.jaymorelli.me/git-worktree-thumbnail.png" />
+<meta name="twitter:image" content="http://localhost:1313/git-worktree-thumbnail.png" />
 <meta name="twitter:title" content="Git Worktree"/>
 <meta name="twitter:description" content="The most underrated git feature"/>
 
@@ -73,7 +74,7 @@
       "@type": "ListItem",
       "position":  2 ,
       "name": "Git Worktree",
-      "item": "https://www.jaymorelli.me/blog/git-worktree/"
+      "item": "http://localhost:1313/blog/git-worktree/"
     }
   ]
 }
@@ -91,18 +92,18 @@
   "articleBody": "Introduction Have you ever found yourself resorting to unnecessary stashing or committing half-finished work just to switch to a different branch? If so, you’re not alone. The struggle to seamlessly manage multiple branches and work on distinct features simultaneously can be pain. Git Worktree is a hidden gem that solves this problem.\nSurprisingly, Git Worktree remains relatively unknown to many developers, despite its ability to eliminate the need for cumbersome stashing and premature commits. It took me years to stumble upon this feature, but now that I have, I can’t imagine going back to the old way of doing things.\nIn this article, I’m excited to introduce you to my favorite Git feature. I will show you the problems it solves, demonstrating how it can revolutionize your workflow by allowing you to effortlessly switch between branches without the need for workaround tactics. Additionally, I’ll guide you through the process of setting up Git Worktree in your IDE, making it a seamless and integral part of your daily development routine.\nWhat Is Git Worktree? Git Worktree is a powerful and often overlooked feature that provides a flexible solution to a common problem in version control workflows. Git Worktree allows developers to maintain multiple working trees within a single Git repository. In simpler terms, it enables you to have multiple, independent checkouts of a repository at the same time.\nYes, multiple and independent checkouts simultaneously!! It blew my mind when I found out that this was possible. How come no one told me this before? You can effortlessly switch branches without checkouts.\nUnlike the traditional Git workflow, where you typically work within a single working directory, Git Worktree lets you create additional working directories. Each working directory, known as a “worktree,” exists independently and can be associated with a specific branch. This means that switching your working directory, you are switching branches.\nThe Problems It Solves There are plenty of different use cases where a developer needs to switch to a different branch with unstaged changes. If you try to checkout to a different branch in this case, git won’t let you do it. This situation often leads to a series of less-than-ideal solutions, each accompanied by its own set of complications.\nCommitting the changes Committing unfinished work just to switch branches is like using a spoon to cut a steak – it might work, but it’s far from ideal.\nUnintended Commits: Committing unfinished work introduces unnecessary commits to the repository, cluttering the commit history and violating the essence of version control. Loss of Isolation: The commit-and-switch method compromises the isolation of changes, as incomplete work becomes part of the version history. This can lead to confusion and difficulties in maintaining a clean codebase. Stash the changes Attempting to stash changes before switching branches can feel like using a butter knife to cut a steak – it gets the job done, but not without leaving a mess.\nNaming Unstaged Changes: Stashing requires naming your unstaged changes, a step that might seem trivial but can become cumbersome in the rush of development. Any name might do, but the result is a messy stash list with a trail of indistinct entries. Managing Stash List: When you return to the initial branch, sifting through the stash list to find the specific changes you need can be like searching for a needle in a haystack. Some developers opt to apply changes without popping the entry, leaving behind a cluttered stash history that grows increasingly confusing over time. Extra Steps: Even with streamlined stash usage, the process isn’t as smooth as desired. It involves extra steps, whether it’s creating new stashes or carefully managing entries, making it less than optimal for a seamless workflow. Using Worktree The steak knife. It provides a straightforward solution to these challenges.\nSmooth Transition: With Git Worktree, switching to a different branch with unstaged changes becomes a seamless process. Simply change to the desired working directory, and you’re ready to continue development without the need for extra steps or compromises. Isolated Working Directories: Each Git Worktree operates in isolation, allowing you to work on different branches concurrently without the clutter and confusion associated with stashing or committing incomplete changes. Usage Basic Commands add The most important command and the one you will use the most. add creates a new working directory at the specified path, checking out the specified branch or commit.\ngit worktree add It is possible to create a new branch.\ngit worktree add -b Example: This command creates a new branch feat/kafka-client from main, where the working directory is .worktrees/kafka. The branch name and the working directory name don’t need to match.\nlist Keep track of existing workingtrees.\ngit worktree list It provides a nice overview of all the worktrees, their associated branches and paths.\nremove Remove worktree at the specified path. It does not delete the associated branch with it.\ngit worktree remove prune Cleans up stale or no longer valid worktrees. It is useful to run if you decide to remove the folder associated with the worktree.\nrm -rf .worktrees/kafka # remove the working directory associated with the worktree created before git worktree prune # clean up switch To switch to a different worktree, simply go to the desired working directory.\ncd .worktrees/kafka # switch to feat/kafka-client branch Setting Up I will show you how I have set up my workflow, but please understand that there are multiple ways to do it. Some people prefer to use a bare repository. I have tried both and for me this is what works the best:\nAll my worktrees lives under a hidden directory called wortrees main is the only branch that is not in a worktree I am using an empty remote example repository , feel free to use to practice, create your own or play a bit with an existing repository.\nIf do you create a new repository with git init, you must first push main to up stream otherwise you won’t be able to create worktrees\ngit clone https://github.com/jaymorelli96/worktrees cd worktrees git status # at main git worktree add -b feat/foo .worktrees/foo main # create foo branch from main as worktree git worktree add -b feat/bar .worktrees/bar main # create bar branch from main as worktree cd .worktrees/foo git status # at feat/foo cd ../bar git status # at feat/bar That is it. Super simple and easy to set up. Simply create worktrees and start using it.\nDemonstration I strongly recommend utilizing a plugin for efficient worktree management and assigning convenient shortcuts for a seamless experience. Personally, my preference is NeoVim, and while I cannot suggest an extension for other editors, I am confident that such solutions are available.\nConclusion In summary, Git Worktree is not just a feature; it’s a paradigm shift, a tool that transforms the way you approach version control. Consider integrating Git Worktree into your toolkit, you won’t look back.\n",
   "wordCount" : "1153",
   "inLanguage": "en",
-  "image":"https://www.jaymorelli.me/git-worktree-thumbnail.png","datePublished": "2024-01-02T09:56:45Z",
+  "image":"http://localhost:1313/git-worktree-thumbnail.png","datePublished": "2024-01-02T09:56:45Z",
   "dateModified": "2024-01-02T09:56:45Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.jaymorelli.me/blog/git-worktree/"
+    "@id": "http://localhost:1313/blog/git-worktree/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Jay Morelli",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.jaymorelli.me/favicon.ico"
+      "url": "http://localhost:1313/favicon.ico"
     }
   }
 }
@@ -120,7 +121,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.jaymorelli.me/" accesskey="h" title="Jay Morelli (Alt + H)">Jay Morelli</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Jay Morelli (Alt + H)">Jay Morelli</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -142,26 +143,28 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.jaymorelli.me/now/" title="Now">
+                <a href="http://localhost:1313/now/" title="Now">
                     <span>/now</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.jaymorelli.me/about/" title="About">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>/about</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.jaymorelli.me/uses/" title="Uses">
+                <a href="http://localhost:1313/uses/" title="Uses">
                     <span>/uses</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.jaymorelli.me/blog/" title="Blog">
+                <a href="http://localhost:1313/blog/" title="Blog">
                     <span>/blog</span>
                 </a>
             </li>
@@ -179,14 +182,14 @@
 		<div class="post-description">
 			The most underrated git feature
 		</div>
-		<div class="post-meta"><span title='2024-01-02 09:56:45 +0000 UTC'>January 2, 2024</span>&nbsp;·&nbsp;6 min<i class="fa fa-tag"></i><a href="https://www.jaymorelli.me/tags/git/">#git</a>
-		
+		<div class="post-meta">&lt;span title=&#39;2024-01-02 09:56:45 &#43;0000 UTC&#39;&gt;January 2, 2024&lt;/span&gt;&amp;nbsp;·&amp;nbsp;6 min<i class="fa fa-tag"></i><a href="http://localhost:1313/tags/git/">#git</a>
+
 
 </div>
 	</header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://www.jaymorelli.me/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_360x0_resize_box_3.png 360w ,https://www.jaymorelli.me/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_480x0_resize_box_3.png 480w ,https://www.jaymorelli.me/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_720x0_resize_box_3.png 720w ,https://www.jaymorelli.me/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_1080x0_resize_box_3.png 1080w ,https://www.jaymorelli.me/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_1500x0_resize_box_3.png 1500w ,https://www.jaymorelli.me/blog/git-worktree/git-worktree-thumbnail.png 2025w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="https://www.jaymorelli.me/blog/git-worktree/git-worktree-thumbnail.png" alt="" 
+        <img loading="lazy" srcset="http://localhost:1313/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_360x0_resize_box_3.png 360w ,http://localhost:1313/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_480x0_resize_box_3.png 480w ,http://localhost:1313/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_720x0_resize_box_3.png 720w ,http://localhost:1313/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_1080x0_resize_box_3.png 1080w ,http://localhost:1313/blog/git-worktree/git-worktree-thumbnail_hud2c79e6cf23833e96b0fcab055efde91_42328_1500x0_resize_box_3.png 1500w ,http://localhost:1313/blog/git-worktree/git-worktree-thumbnail.png 2025w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:1313/blog/git-worktree/git-worktree-thumbnail.png" alt="" 
             width="2025" height="492">
         
 </figure><div class="toc">
@@ -332,7 +335,7 @@ Git Worktree is a powerful and often overlooked feature that provides a flexible
 	</div>
 	<footer class="post-footer">
 		<ul class="post-tags">
-			<li><a href="https://www.jaymorelli.me/tags/git/">git</a></li>
+			<li><a href="http://localhost:1313/tags/git/">Git</a></li>
 		</ul>
 
 	</footer>
@@ -358,7 +361,7 @@ Git Worktree is a powerful and often overlooked feature that provides a flexible
     </a>
 </div>
 
-	<span>&copy; 2024 <a href="https://www.jaymorelli.me/">Jay Morelli</a></span> -
+	<span>&copy; 2024 <a href="http://localhost:1313/">Jay Morelli</a></span> -
 	<span class="love">
 		Made with <i class="fa fa-heart"></i>
 	</span>
