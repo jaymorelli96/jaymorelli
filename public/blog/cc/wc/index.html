@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Coding Challenges - WC | Jay Morelli</title>
 <meta name="keywords" content="coding-challenge, unix, go, tdd">
-<meta name="description" content="Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.
-This is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out.">
+<meta name="description" content="My thought process while developing and practing TDD">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/blog/cc/wc/">
+<link rel="canonical" href="https://www.jaymorelli.me/blog/cc/wc/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.44ab26e564ed62148df823f456b525e84a6e0f30fb2cb8e07b0327bc1c316606.css" integrity="sha256-RKsm5WTtYhSN&#43;CP0VrUl6EpuDzD7LLjgewMnvBwxZgY=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://www.jaymorelli.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.jaymorelli.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.jaymorelli.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.jaymorelli.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.jaymorelli.me/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/cc/wc/">
+<link rel="alternate" hreflang="en" href="https://www.jaymorelli.me/blog/cc/wc/">
 <noscript>
     <style>
         #theme-toggle,
@@ -53,19 +52,17 @@ This is very different from the coding challenges you may have encountered befor
 
 <meta property="og:image" content="https://www.jaymorelli.me/og.png" />
 <meta property="og:title" content="Coding Challenges - WC" />
-<meta property="og:description" content="Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.
-This is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out." />
+<meta property="og:description" content="My thought process while developing and practing TDD" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/blog/cc/wc/" />
-<meta property="og:image" content="http://localhost:1313/thumbnail.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-11T13:26:38+00:00" />
-<meta property="article:modified_time" content="2024-01-11T13:26:38+00:00" />
+<meta property="og:url" content="https://www.jaymorelli.me/blog/cc/wc/" />
+<meta property="og:image" content="https://www.jaymorelli.me/thumbnail.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-08T09:00:38+00:00" />
+<meta property="article:modified_time" content="2024-03-08T09:00:38+00:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/thumbnail.png" />
+<meta name="twitter:image" content="https://www.jaymorelli.me/thumbnail.png" />
 <meta name="twitter:title" content="Coding Challenges - WC"/>
-<meta name="twitter:description" content="Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.
-This is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out."/>
+<meta name="twitter:description" content="My thought process while developing and practing TDD"/>
 
 
 <script type="application/ld+json">
@@ -77,7 +74,7 @@ This is very different from the coding challenges you may have encountered befor
       "@type": "ListItem",
       "position":  2 ,
       "name": "Coding Challenges - WC",
-      "item": "http://localhost:1313/blog/cc/wc/"
+      "item": "https://www.jaymorelli.me/blog/cc/wc/"
     }
   ]
 }
@@ -88,25 +85,25 @@ This is very different from the coding challenges you may have encountered befor
   "@type": "BlogPosting",
   "headline": "Coding Challenges - WC",
   "name": "Coding Challenges - WC",
-  "description": "Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.\nThis is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out.",
+  "description": "My thought process while developing and practing TDD",
   "keywords": [
     "coding-challenge", "unix", "go", "tdd"
   ],
   "articleBody": "Intro Welcome to my blog series Coding Challenges, where I will be documenting my thought process of working through the Coding Challenges by John Crickett using Go and Test Driven Development. I am very excited about this series as I have always wanted to find something similar to what John have done.\nThis is very different from the coding challenges you may have encountered before. John created a curated list of very interesting tools/applications, and I highly recommend you to check those out. I love building stuff and I figure this would be a great opportunity for me to practice TDD and practice documenting my thought process.\nThe Challenge This first exercise is to create my own version of the Unix tool wc.\nThe Unix command line tools are a great metaphor for good software engineering and they follow the Unix Philosophies of:\nWriting simple parts connected by clean interfaces - each tool does just one thing and provides a simple CLI that handles text input from either files or file streams. Design programs to be connected to other programs - each tool can be easily connected to other tools to create incredibly powerful compositions. Following these philosophies has made the simple unix command line tools some of the most widely used software engineering tools - allowing us to create very complex text data processing pipelines from simple command line tools\nJohn Crickett - https://codingchallenges.fyi/challenges/challenge-wc My application will be called ccwc (coding challenge wc) and the steps to complete the challenge are the following:\nOutput the number of bytes ccwc -c test.txt Output the number of lines ccwc -l test.txt Output the number of words ccwc -w test.txt Output the number of characters ccwc -m test.txt Default usage ccwc test.txt: Output number of lines, words and, bytes Read from stdin *The code snippets here may not be 100% what I have in my repository. I am still grasping the whole idea of documenting while developing, and the chances of me forgetting to update the snippets are high. The final version of the code is in my repository Development Process TDD Ranting I just want to brief clarify something. I don’t and won’t follow the TDD rigorously, at least for now. I like to think that we must be pragmatic about it and I am also not great at it. Furthermore, I get the most value from TDD when:\nI am iterating My software is tested I understand that this is the whole point of TDD, but I am ok if sometimes I miss one of the steps or end up rushing it a little bit.\nStep Zero I start by reading about the wc tool.\n$ man wc After reading the manual and with a clear understand of the tool, I open my Obsidian and I write down the necessary the steps needed to accomplish the goal.\nI open up my terminal, set up my project and open my beloved NeoVim.\nStep One - Counting Bytes I start with my tests, feeling unsure about what I want to test and where to begin.\nKnowing that I need a file for testing, I decide to use the fstest library provided by Go.\nMy initial test looks like this:\nfunc TestReadFile(t *testing.T) { files := fstest.MapFS{ \"file1\": {Data: []byte(\"abc\")}, \"file2\": {Data: []byte(\"def\")}, \"file3\": {Data: []byte(\"joão\")}, } type test struct { file string want []byte } tt := []test{ {\"file1\", []byte(\"abc\")}, {\"file2\", []byte(\"def\")}, {\"file3\", []byte(\"joão\")}, } for _, tc := range tt { file, err := files.Open(tc.file) if err != nil { t.Fatal(err) } got, n, err := ReadFile(file) if err != nil { t.Fatal(err) } if !equalBytesFromFile(n, got, tc.want) { t.Errorf(\"readFile(%s) = %s; want %s\", file, got, tc.want) } } } I go ahead and write the ReadFile function to get the green signal (tests are passing).\nfunc ReadFile(file fs.File) ([]byte, int, error) { b := make([]byte, 1024) n, err := file.Read(b) if err != nil { return nil, 0, err } return b, n, nil } After writing the ReadFile function and ensuring that my tests pass, I realize that my approach is inadequate. I’ve essentially created a wrapper around file.Read() without testing the core functionality I need.\nThis is the beauty of TDD!\nWhat I really want to test at this point is that my function can:\nOpen a file Count the bytes: Actually what I really want is to write the number of bytes somewhere, so that I can test that output with my test cases. At this point, I notice something very interesting: I need to read and write. This is the perfect use case to take advantage of the Reader and Writer interface. I can simply write to some buffer for testing and when I run my program I can write to standard output. The same applies for reading the input.\nI update my test function.\nfunc TestWordCountNumberOfBytes(t *testing.T) { files := fstest.MapFS{ \"file1\": {Data: []byte(\"abc\")}, \"file2\": {Data: []byte(\"\")}, \"file3\": {Data: []byte(\"joão\")}, } type test struct { file string want string } tt := []test{ {\"file1\", \"3\"}, {\"file2\", \"0\"}, {\"file3\", \"5\"}, } for _, tc := range tt { file, err := files.Open(tc.file) if err != nil { t.Fatal(err) } defer file.Close() var b bytes.Buffer err = WordCount(file, \u0026b) if err != nil { t.Fatal(err) } if b.String() != tc.want { t.Errorf(\"got %s; want %s\", b.String(), tc.want) } } } I update my function to get rid of the compile errors and go for the green signal.\nfunc WordCount(r io.Reader, w io.Writer) error { b := make([]byte, 1024) n, err := r.Read(b) if err != nil { if err != io.EOF { return err } return fmt.Fprint(w, 0) } _, err = fmt.Fprint(w, n) return err } After making these changes, the functionality is in place. However, I still need to add support for accepting the -c flag as an argument. I update my test and function accordingly.\nfunc TestWordCountNumberOfBytes(t *testing.T) { //... opts := options{c: true} var b bytes.Buffer got, err := WordCount(file, \u0026b, opts) if err != nil { t.Fatal(err) } //... } package main import ( \"fmt\" \"io\" ) type options struct { c bool } func WordCount(r io.Reader, w io.Writer, opts options) error { b := make([]byte, 1024) n, err := r.Read(b) if err != nil { if err != io.EOF { return err } return writeBytes(w, 0) } if opts.c { err = writeBytes(w, n) } return err } func writeBytes(w io.Writer, n int) error { _, err := fmt.Fprint(w, n) return err } Step two: Counting number of lines I begin this step by creating failing tests to count the number of lines in a file.\nfunc TestWordCountNumberOfLines(t *testing.T) { files := fstest.MapFS{ \"file1\": {Data: []byte(\"abc\\ndef\")}, \"file2\": {Data: []byte(\"\")}, \"file3\": {Data: []byte(\"one line\")}, \"file4\": {Data: []byte(\"joão\\n\\n\")}, } type test struct { file string want string } tt := []test{ {\"file1\", \"2\"}, {\"file2\", \"0\"}, {\"file3\", \"1\"}, {\"file4\", \"3\"}, } for _, tc := range tt { file, err := files.Open(tc.file) if err != nil { t.Fatal(err) } defer file.Close() opts := options{l: true} var b bytes.Buffer err = WordCount(file, \u0026b, opts) if err != nil { t.Fatal(err) } if b.String() != tc.want { t.Errorf(\"got %s; want %s\", b.String(), tc.want) } } } After fixing compile errors and observing failing tests, I start to think about the easiest way to make the test pass.\nRealizing that I’ll need to also write numbers and not just bytes, I rename the writeBytes function to write for clarity. Then, I update the WordCount function to handle counting lines:\nfunc WordCount(r io.Reader, w io.Writer, opts options) error { b := make([]byte, 1024) n, err := r.Read(b) if err != nil { if err != io.EOF { return err } return write(w, 0) } if opts.c { err = write(w, n) } if opts.l { count := 1 // unless empty, we always start with one line for _, v := range b { if v == '\\n' { count++ } } err = write(w, count) } return err } Step Three: Counting Words As usual, I begin with a test.\nfunc TestWordCountNumberOfWords(t *testing.T) { files := fstest.MapFS{ \"file1\": {Data: []byte(\"abc\\ndef\\n\")}, \"file2\": {Data: []byte(\"\\n\")}, \"file3\": {Data: []byte(\"thisisonebigword\")}, \"file4\": {Data: []byte(\"five words and two lines\\n\\n\")}, \"file5\": {Data: []byte(\"abc def\")}, } type test struct { file string want string } tt := []test{ {\"file1\", \"2\"}, {\"file2\", \"0\"}, {\"file3\", \"1\"}, {\"file4\", \"5\"}, {\"file5\", \"2\"}, } for _, tc := range tt { file, err := files.Open(tc.file) if err != nil { t.Fatal(err) } defer file.Close() opts := options{w: true} var b bytes.Buffer err = WordCount(file, \u0026b, opts) if err != nil { t.Fatal(err) } if b.String() != tc.want { t.Errorf(\"got %s; want %s\", b.String(), tc.want) } } } Realizing that defining words as non-white space characters suits this problem, I decide to use bytes.Fields from the strings package to split the byte slice into words. However, I encounter a challenge when initializing the buffer b := make([]byte, 1024). I must consider the unread portion of the slice.\nfunc WordCount(r io.Reader, w io.Writer, opts options) error { b := make([]byte, 1024) n, err := r.Read(b) if err != nil { if err != io.EOF { return err } return write(w, 0) } b = b[:n] // slicing out the unread portion if opts.c { err = write(w, n) } if opts.l { count := 1 for _, v := range b { if v == '\\n' { count++ } } err = write(w, count) } if opts.w { f := bytes.Fields(b) err = write(w, len(f)) } return err } Step Four: Counting Characters I was a bit confused between -m and -c, so I decided to read the manual for wc. For example (ç) counts as 2 bytes but 1 character. With that in mind, I discover that the utf8 package provides the Count(b []byte) int method, which fits perfectly the use case.\nI won’t show the tests anymore as it is pretty similar to the rest.\nThis is a snippet of the WordCount where it contains the logic for the -m argument.\n//... if opts.m { n := utf8.RuneCount(b) err = write(w, n) } //... Step Five: Default Option This is the time for us to refactor, as I need to be able to format the output and set the default options.\nThe WordCount at the end looks like this:\nfunc WordCount(r io.Reader, w io.Writer, opts options) error { var buf bytes.Buffer _, err := io.Copy(\u0026buf, r) if err != nil { if err != io.EOF { return err } handleEmptyFile(w, opts) return nil } b := buf.Bytes() if opts.l { count := bytes.Count(b, []byte{'\\n'}) fmt.Fprintf(w, \"%d \", count) } if opts.w { f := bytes.Fields(b) fmt.Fprintf(w, \"%d \", len(f)) } if opts.c { fmt.Fprintf(w, \"%d \", len(b)) } if opts.m { n := utf8.RuneCount(b) fmt.Fprintf(w, \"%d \", n) } return err } func handleEmptyFile(w io.Writer, opts options) { if opts.c { fmt.Fprintf(w, \"0 \") } if opts.l { fmt.Fprintf(w, \"0 \") } if opts.w { fmt.Fprintf(w, \"0 \") } if opts.m { fmt.Fprintf(w, \"0 \") } Running the program All the code is my repository , feel free to check it out.\nI install my program with go install and I test against the art-of-war.txt Outro At the last step I completly forgot to document my process as it happened a few days later. For the next challenges I will try to write a post per step and not per challenge as it gets quite hard to put it all together.\nOverall I really enjoyed this experience and I am very excited to go through the whole list of coding challenges.\n",
   "wordCount" : "1931",
   "inLanguage": "en",
-  "image":"http://localhost:1313/thumbnail.png","datePublished": "2024-01-11T13:26:38Z",
-  "dateModified": "2024-01-11T13:26:38Z",
+  "image":"https://www.jaymorelli.me/thumbnail.png","datePublished": "2024-03-08T09:00:38Z",
+  "dateModified": "2024-03-08T09:00:38Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/blog/cc/wc/"
+    "@id": "https://www.jaymorelli.me/blog/cc/wc/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Jay Morelli",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:1313/favicon.ico"
+      "url": "https://www.jaymorelli.me/favicon.ico"
     }
   }
 }
@@ -124,7 +121,7 @@ This is very different from the coding challenges you may have encountered befor
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Jay Morelli (Alt + H)">Jay Morelli</a>
+            <a href="https://www.jaymorelli.me/" accesskey="h" title="Jay Morelli (Alt + H)">Jay Morelli</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -152,22 +149,22 @@ This is very different from the coding challenges you may have encountered befor
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/now/" title="Now">
+                <a href="https://www.jaymorelli.me/now/" title="Now">
                     <span>/now</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="About">
+                <a href="https://www.jaymorelli.me/about/" title="About">
                     <span>/about</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/uses/" title="Uses">
+                <a href="https://www.jaymorelli.me/uses/" title="Uses">
                     <span>/uses</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/blog/" title="Blog">
+                <a href="https://www.jaymorelli.me/blog/" title="Blog">
                     <span>/blog</span>
                 </a>
             </li>
@@ -182,15 +179,18 @@ This is very different from the coding challenges you may have encountered befor
 		<h1 class="post-title">
 			Coding Challenges - WC
 		</h1>
-		<div class="post-meta"><span title='2024-01-11 13:26:38 +0000 UTC'>January 11, 2024</span>&nbsp;·&nbsp;10 min
+		<div class="post-description">
+			My thought process while developing and practing TDD
+		</div>
+		<div class="post-meta"><span title='2024-03-08 09:00:38 +0000 UTC'>March 8, 2024</span>&nbsp;·&nbsp;10 min
 
-<i class="fa fa-tag"></i><a href="http://localhost:1313/tags/coding-challenge/">#coding-challenge</a><a href="http://localhost:1313/tags/unix/">#unix</a><a href="http://localhost:1313/tags/go/">#go</a><a href="http://localhost:1313/tags/tdd/">#tdd</a>
+<i class="fa fa-tag"></i><a href="https://www.jaymorelli.me/tags/coding-challenge/">#coding-challenge</a><a href="https://www.jaymorelli.me/tags/unix/">#unix</a><a href="https://www.jaymorelli.me/tags/go/">#go</a><a href="https://www.jaymorelli.me/tags/tdd/">#tdd</a>
 
 </div>
 	</header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_360x0_resize_box_3.png 360w ,http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_480x0_resize_box_3.png 480w ,http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_720x0_resize_box_3.png 720w ,http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_1080x0_resize_box_3.png 1080w ,http://localhost:1313/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_1500x0_resize_box_3.png 1500w ,http://localhost:1313/blog/cc/wc/thumbnail.png 2025w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:1313/blog/cc/wc/thumbnail.png" alt="" 
+        <img loading="lazy" srcset="https://www.jaymorelli.me/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_360x0_resize_box_3.png 360w ,https://www.jaymorelli.me/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_480x0_resize_box_3.png 480w ,https://www.jaymorelli.me/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_720x0_resize_box_3.png 720w ,https://www.jaymorelli.me/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_1080x0_resize_box_3.png 1080w ,https://www.jaymorelli.me/blog/cc/wc/thumbnail_hu494c96c0a6b8af28adf9d5aa314958bd_55743_1500x0_resize_box_3.png 1500w ,https://www.jaymorelli.me/blog/cc/wc/thumbnail.png 2025w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.jaymorelli.me/blog/cc/wc/thumbnail.png" alt="" 
             width="2025" height="492">
         
 </figure><div class="toc">
@@ -659,10 +659,10 @@ it gets quite hard to put it all together.</p>
 	</div>
 	<footer class="post-footer">
 		<ul class="post-tags">
-			<li><a href="http://localhost:1313/tags/coding-challenge/">Coding-Challenge</a></li>
-			<li><a href="http://localhost:1313/tags/unix/">Unix</a></li>
-			<li><a href="http://localhost:1313/tags/go/">Go</a></li>
-			<li><a href="http://localhost:1313/tags/tdd/">Tdd</a></li>
+			<li><a href="https://www.jaymorelli.me/tags/coding-challenge/">Coding-Challenge</a></li>
+			<li><a href="https://www.jaymorelli.me/tags/unix/">Unix</a></li>
+			<li><a href="https://www.jaymorelli.me/tags/go/">Go</a></li>
+			<li><a href="https://www.jaymorelli.me/tags/tdd/">Tdd</a></li>
 		</ul>
 
 	</footer>
@@ -688,7 +688,7 @@ it gets quite hard to put it all together.</p>
     </a>
 </div>
 
-	<span>&copy; 2024 <a href="http://localhost:1313/">Jay Morelli</a></span> -
+	<span>&copy; 2024 <a href="https://www.jaymorelli.me/">Jay Morelli</a></span> -
 	<span class="love">
 		Made with <i class="fa fa-heart"></i>
 	</span>

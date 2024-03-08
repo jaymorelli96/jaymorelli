@@ -1,14 +1,14 @@
 ---
 title: "Coding Challenges - WC"
-description: ""
-summary: ""
+description: "My thought process while developing and practing TDD"
+summary: "Coding Challenge Number 1 - My thought process while developing the `wc` unix tool practing TDD"
 type: post
 tags: 
 - coding-challenge
 - unix
 - go
 - tdd
-date: 2024-01-11T13:26:38Z
+date: 2024-03-08T09:00:38Z
 slug: "cc/wc"
 cover:
     image: thumbnail.png
