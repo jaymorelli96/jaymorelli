@@ -42,15 +42,11 @@ My application will be called `ccwc` (coding challenge wc) and the steps to comp
 6. Read from `stdin`
 
 
-*_The code snippets here may not be 100% what I have in my repository. I am still grasping the whole idea of documenting while developing, and the chances of me forgetting to update the snippets are high. The final version of the code is in my [repository](https://github.com/jaymorelli96/codingchallenges)_
+*_The code snippets here may not be 100% what I have in my repository. I am still grasping the whole idea of documenting while developing so there is a chance of me forgetting to update the snippets. The final version of the code will always be in my [repository](https://github.com/jaymorelli96/codingchallenges)_
+
+
+*_I won't follow TDD rigorously, at least for now. I like to think that we must be pragmatic about it. _It is ok for me if sometimes I miss one of the steps or end up rushing it a little bit_._
 # Development Process
-### TDD Ranting
-I just want to brief clarify something. I don't and won't follow the TDD rigorously, at least for now. I like to think that we must be pragmatic about it and I am also not great at it. Furthermore, I get the most value from TDD when:
-1. I am iterating
-2. My software is tested
-
-I understand that this is the whole point of TDD, but _I am ok if sometimes I miss one of the steps or end up rushing it a little bit_.
-
 ## Step Zero
 I start by reading about the `wc` tool.
 ```bash
